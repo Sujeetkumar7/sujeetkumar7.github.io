@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "Java 17 Features You Should Use in 2025"
-date: 2025-08-15
+title: "First Post"
 categories: java features
 ---
 
