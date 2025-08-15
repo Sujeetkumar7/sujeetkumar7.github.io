@@ -35,7 +35,7 @@ javac -version
 
 Let's write a simple Java program to print a greeting.
 
-```aiignore
+```bash
 public class HelloJava {
     public static void main(String[] args) {
         System.out.println("Hello, Java World!");
@@ -51,13 +51,13 @@ Explanation:
 - System.out.println("Hello, Java World!"); – Prints text to the console.
 
 Run the program using:
-```aiignore
+```bash
 javac HelloJava.java
 java HelloJava
 
 ```
 Output:
-```aiignore
+```bash
 Hello, Java World!
 ```
 ---
@@ -74,4 +74,4 @@ Pro Tip
 - Practice regularly and build small projects. Even creating a simple calculator or to-do list app in Java will help solidify your understanding.
 
 ---
-###### Java is not just a language; it's a toolkit to build everything from small apps to enterprise-level systems. Start small, stay consistent, and soon you'll be writing powerful Java applications confidently!
+### Java is not just a language; it's a toolkit to build everything from small apps to enterprise-level systems. Start small, stay consistent, and soon you'll be writing powerful Java applications confidently!
