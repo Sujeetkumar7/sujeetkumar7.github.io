@@ -1,21 +1,21 @@
-name: Deploy Jekyll Site
+name: Deploy Jekyll User Site
 
 on:
   push:
     branches:
-      - mastr  # change to 'master' if your default branch is master
+      - master  # or master if your default branch is master
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
+      # Step 1: Checkout code
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Ruby
-      - name: Set up Ruby
+      # Step 2: Setup Ruby
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
@@ -24,19 +24,19 @@ jobs:
       - name: Install dependencies
         run: bundle install
 
-      # Step 4: Build the Jekyll site
+      # Step 4: Build Jekyll site
       - name: Build site
         run: bundle exec jekyll build
 
-      # Step 5: Add CNAME (optional if using custom domain)
+      # Step 5: Optional: Add CNAME if using custom domain
 #      - name: Add CNAME
 #        if: success()
 #        run: echo 'www.sujeetblog.com' > _site/CNAME
 
-      # Step 6: Deploy to GitHub Pages
+      # Step 6: Deploy to main branch
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          publish_branch: gh-pages
+          publish_branch: main
