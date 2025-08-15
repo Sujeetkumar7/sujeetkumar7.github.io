@@ -13,28 +13,46 @@ Boost your Java skills with these **quick, practical tutorials** covering core J
 
 ---
 
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-between;">
 
-  <div style="flex: 1; min-width: 300px;">
+  <!-- Video 1 -->
+  <div style="flex: 1 1 300px; max-width: 33%;">
     <h3>1. Java 7 Course Overview</h3>
-    <iframe width="100%" height="250" src="https://www.youtube.com/embed/rCfuYjpV42s?si=M418qZxyMJJeUV4_" 
-      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe src="https://www.youtube.com/embed/rCfuYjpV42s?si=M418qZxyMJJeUV4_" 
+        title="Java 7 Course Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+        style="position: absolute; top:0; left:0; width:100%; height:100%;">
+      </iframe>
+    </div>
   </div>
 
-  <div style="flex: 1; min-width: 300px;">
+  <!-- Video 2 -->
+  <div style="flex: 1 1 300px; max-width: 33%;">
     <h3>2. Introduction to Java | Core Concepts</h3>
-    <iframe width="100%" height="250" src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" 
-      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" 
+        title="Introduction to Java | Core Concepts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+        style="position: absolute; top:0; left:0; width:100%; height:100%;">
+      </iframe>
+    </div>
   </div>
 
-  <div style="flex: 1; min-width: 300px;">
-    <h3>3. Fist Step Towards Java Program</h3>
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <!-- Video 3 -->
+  <div style="flex: 1 1 300px; max-width: 33%;">
+    <h3>3. First Step Towards Java Program</h3>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" 
+        title="First Step Towards Java Program" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+        style="position: absolute; top:0; left:0; width:100%; height:100%;">
+      </iframe>
+    </div>
   </div>
 
 </div>
+
 
 
 ## Java 8 Tutorials

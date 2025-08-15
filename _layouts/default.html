@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} — {{ site.title }}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines }}">
-  <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} — {{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines }}">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
+<header class="site-header">
     <div class="container header-bar">
-      <a class="brand" href="{{ '/' | relative_url }}">☕ {{ site.author }}</a>
-      <nav class="nav">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/projects' | relative_url }}">Projects</a>
-        <a href="{{ '/blog' | relative_url }}">Blog</a>
-          <a href="{{ '/videos' | relative_url }}">Videos</a>
-        <a href="{{ '/resume' | relative_url }}">Resume</a>
-        <a href="{{ '/contact' | relative_url }}">Contact</a>
-          <a href="{{ '/about' | relative_url }}">About Me</a>
-        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
-      </nav>
+        <a class="brand" href="{{ '/' | relative_url }}">☕ {{ site.author }}</a>
+        <nav class="nav">
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/projects' | relative_url }}">Projects</a>
+            <a href="{{ '/blog' | relative_url }}">Blog</a>
+            <a href="{{ '/videos' | relative_url }}">Videos</a>
+            <a href="{{ '/resume' | relative_url }}">Resume</a>
+            <a href="{{ '/contact' | relative_url }}">Contact</a>
+            <a href="{{ '/about' | relative_url }}">About Me</a>
+            <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        </nav>
     </div>
-  </header>
-  <main class="container">
-    {{ content }}
-  </main>
-  <footer class="site-footer">
+</header>
+
+<!-- Main container with left and right space for future content -->
+<main class="container" style="display: flex; gap: 20px;">
+
+    <!-- Left sidebar (empty for now) -->
+    <aside class="sidebar-left" style="flex: 1 1 200px; min-width: 150px;">
+        <!-- Future left content goes here -->
+    </aside>
+
+    <!-- Main content -->
+    <div class="main-content" style="flex: 3 1 600px;">
+        {{ content }}
+    </div>
+
+    <!-- Right sidebar (empty for now) -->
+    <aside class="sidebar-right" style="flex: 1 1 200px; min-width: 150px;">
+        <!-- Future right content goes here -->
+    </aside>
+
+</main>
+
+<footer class="site-footer">
     <div class="container">
-      <p>© {{ site.time | date: "%Y" }} {{ site.author }} — Lets Learn Together</p>
-        <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
-      <p><a href="{{ '/feed.xml' | relative_url }}"></a><a href="https://github.com"></a></p>
+        <p>© {{ site.time | date: "%Y" }} {{ site.author }} — Lets Learn Together</p>
+        <p><a href="{{ '/feed.xml' | relative_url }}"></a><a href="https://github.com"></a></p>
     </div>
-  </footer>
-  <script src="{{ '/assets/script.js' | relative_url }}"></script>
+</footer>
+
+<script src="{{ '/assets/script.js' | relative_url }}"></script>
 </body>
 </html>
