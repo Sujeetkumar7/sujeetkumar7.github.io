@@ -11,7 +11,10 @@ layout: default
     <div class="post-body">
         {{ content }}
     </div>
-
+    <!-- Add visit count here -->
+    <p style="margin-top: 20px; font-size: 14px; color: #555;">
+        👁️ Page Visits: <span id="visit-count">0</span>
+    </p>
     <!-- ======= Interactive Section ======= -->
     <div class="post-interactions">
 
@@ -104,4 +107,15 @@ layout: default
     document.querySelector('.share-btn.twitter').href = `https://twitter.com/intent/tweet?url=${shareURL}&text=${shareTitle}`;
     document.querySelector('.share-btn.linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareURL}&title=${shareTitle}`;
     document.querySelector('.share-btn.whatsapp').href = `https://api.whatsapp.com/send?text=${shareTitle}%20${shareURL}`;
+</script>
+<script>
+    const pageSlug = "{{ page.url | slugify }}";
+    const apiUrl = `https://api.countapi.xyz/hit/yourusername.github.io/${pageSlug}`;
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visit-count').innerText = data.value;
+      })
+      .catch(err => console.log('CountAPI error:', err));
 </script>

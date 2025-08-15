@@ -53,3 +53,7 @@ code {
     padding: 2px 4px;
     border-radius: 3px;
 }
+#visit-count {
+  font-weight: bold;
+  color: #1a73e8;
+}
