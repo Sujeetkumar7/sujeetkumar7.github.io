@@ -3,12 +3,105 @@ layout: default
 ---
 
 <article class="post-content container">
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
-  </header>
+    <header>
+        <h1>{{ page.title }}</h1>
+        <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
+    </header>
 
-  <div class="post-body">
-    {{ content }}
-  </div>
+    <div class="post-body">
+        {{ content }}
+    </div>
+
+    <!-- ======= Interactive Section ======= -->
+    <div class="post-interactions">
+
+        <!-- 1️⃣ Stylish Share Buttons -->
+        <div class="share-buttons">
+            <a class="share-btn facebook" href="#" target="_blank" title="Share on Facebook">F</a>
+            <a class="share-btn twitter" href="#" target="_blank" title="Share on Twitter">T</a>
+            <a class="share-btn linkedin" href="#" target="_blank" title="Share on LinkedIn">L</a>
+            <a class="share-btn whatsapp" href="#" target="_blank" title="Share on WhatsApp">W</a>
+        </div>
+
+        <!-- AddThis fallback (optional) -->
+        <div class="addthis_inline_share_toolbox" style="display:none;"></div>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-YOUR_ADDTHIS_ID" async></script>
+
+        <!-- 2️⃣ Like Button -->
+        <div class="like-button">
+            <a class="likebtn-wrapper"
+               data-identifier="post-{{ page.slug }}"
+               data-theme="github"
+               data-ef_voting="bounce"
+               data-counter_clickable="true">
+            </a>
+            <script type="text/javascript" src="//w.likebtn.com/js/w/widget.js" async></script>
+        </div>
+
+        <!-- 3️⃣ Utterances Comments -->
+        <div id="comments"></div>
+        <script src="https://utteranc.es/client.js"
+                repo="sujeetkumar7/sujeetkumar7.github.io"
+                issue-term="pathname"
+                label="💬 comment"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+
+    </div>
+    <!-- ======= End Interactive Section ======= -->
 </article>
+
+<style>
+    .post-interactions {
+      border-top: 1px solid #ddd;
+      padding-top: 30px;
+      margin-top: 40px;
+    }
+
+    /* Share Buttons Styling */
+    .share-buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .share-btn {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .share-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .facebook { background: #3b5998; }
+    .twitter { background: #1da1f2; }
+    .linkedin { background: #0077b5; }
+    .whatsapp { background: #25d366; }
+
+    /* Like Button Styling */
+    .like-button {
+      margin-bottom: 30px;
+    }
+</style>
+
+<script>
+    // Optional: Dynamic sharing URLs
+    const shareURL = encodeURIComponent(window.location.href);
+    const shareTitle = encodeURIComponent(document.title);
+
+    document.querySelector('.share-btn.facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${shareURL}`;
+    document.querySelector('.share-btn.twitter').href = `https://twitter.com/intent/tweet?url=${shareURL}&text=${shareTitle}`;
+    document.querySelector('.share-btn.linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareURL}&title=${shareTitle}`;
+    document.querySelector('.share-btn.whatsapp').href = `https://api.whatsapp.com/send?text=${shareTitle}%20${shareURL}`;
+</script>

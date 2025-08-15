@@ -2,6 +2,8 @@
 layout: post
 title: "First Steps into Java: A Beginner's Guide"
 categories: java, programming
+date: 2025-08-15
+description: "How to run your first java program"
 ---
 
 # Welcome to the World of Java!
