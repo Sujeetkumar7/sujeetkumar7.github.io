@@ -13,29 +13,32 @@ Boost your Java skills with these **quick, practical tutorials** covering core J
 
 ---
 
-## 1. 🌟 Java 7 Course Overview
+## 1. Java 7 Course Overview
 [Watch Video](https://youtu.be/rCfuYjpV42s?si=djtnj4lG3vuwy4eN)
 
 ---
 
-## 2. 📘 Introduction to Java | Core Concepts
+## 2. Introduction to Java | Core Concepts
 Start your Java journey with the **fundamentals of Core Java**, perfect for beginners.  
 [Watch Video](https://youtu.be/fqSknFfWVJk?si=x-jUQzyrRaB0sT1p)
 
 ---
-## 3. 🛠️ First Steps Towards a Java Program
+## 3. First Steps Towards a Java Program
 Learn how to **write your very first Java program** and understand the structure of Java applications.  
 [Watch Video](https://youtu.be/oAEcUft7SsM?si=ZQmOskVWv-T4nXYC)
 ---
-## 4. ✏️ Naming Conventions and Data Types
+## 4. Naming Conventions and Data Types
 Master **Java naming conventions** and data types to write **cleaner and error-free code**.  
-[Watch Video](https://youtu.be/ZIk38jdep9U?si=pFkTmWWZeM844ycF)
+[Watch Video](https://youtu.be/mITpCECqT5Y?si=RJTMTcGwPClQDhy6)
 ---
-## 5. ⚡ Operators in Java
+## 5. Operators in Java
 Understand all **types of operators in Java** and how to use them effectively in your programs.  
 [Watch Video](https://youtu.be/lOYvWDarIoE?si=nE8FeDS98DCLX6Vq)
 ---
 
+## 6. Master Java’s control flow with If…Else, If…Else If…Else, While, and Do…While loops to make your programs smart and decision-ready!
+[Watch Video](https://youtu.be/lOYvWDarIoE?si=nE8FeDS98DCLX6Vq)
+---
 
 
 ## Java 8 Tutorials
