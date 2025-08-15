@@ -4,7 +4,7 @@ title: "First Post"
 categories: java features
 ---
 
-Java 17 introduced several **game-changing features** for backend developers.
+First Sample Post.
 
 ```java
 public class SwitchExample {
