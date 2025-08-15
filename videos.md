@@ -13,32 +13,36 @@ Boost your Java skills with these **quick, practical tutorials** covering core J
 
 ---
 
-## 1. Java 7 Course Overview
-[Watch Video](https://youtu.be/rCfuYjpV42s?si=djtnj4lG3vuwy4eN)
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
 
----
+  <div style="flex: 1; min-width: 300px;">
+    <h3>1. Java 7 Course Overview</h3>
+    <iframe width="100%" height="250" src="https://www.youtube.com/embed/rCfuYjpV42s?si=M418qZxyMJJeUV4_" 
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 
-## 2. Introduction to Java | Core Concepts
-Start your Java journey with the **fundamentals of Core Java**, perfect for beginners.  
-[Watch Video](https://youtu.be/fqSknFfWVJk?si=x-jUQzyrRaB0sT1p)
+  <div style="flex: 1; min-width: 300px;">
+    <h3>2. Introduction to Java | Core Concepts</h3>
+    <iframe width="100%" height="250" src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" 
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 
----
-## 3. First Steps Towards a Java Program
-Learn how to **write your very first Java program** and understand the structure of Java applications.  
-[Watch Video](https://youtu.be/oAEcUft7SsM?si=ZQmOskVWv-T4nXYC)
----
-## 4. Naming Conventions and Data Types
-Master **Java naming conventions** and data types to write **cleaner and error-free code**.  
-[Watch Video](https://youtu.be/mITpCECqT5Y?si=RJTMTcGwPClQDhy6)
----
-## 5. Operators in Java
-Understand all **types of operators in Java** and how to use them effectively in your programs.  
-[Watch Video](https://youtu.be/lOYvWDarIoE?si=nE8FeDS98DCLX6Vq)
----
+</div>
 
-## 6. Master Java’s control flow with If…Else, If…Else If…Else, While, and Do…While loops to make your programs smart and decision-ready!
-[Watch Video](https://youtu.be/lOYvWDarIoE?si=nE8FeDS98DCLX6Vq)
----
+<table>
+  <tr>
+    <td>
+      <h3>1. Java 7 Course Overview</h3>
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/rCfuYjpV42s?si=M418qZxyMJJeUV4_" frameborder="0" allowfullscreen></iframe>
+    </td>
+    <td>
+      <h3>2. Introduction to Java | Core Concepts</h3>
+      <iframe width="300" height="200" src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" frameborder="0" allowfullscreen></iframe>
+    </td>
+  </tr>
+</table>
 
 
 ## Java 8 Tutorials
