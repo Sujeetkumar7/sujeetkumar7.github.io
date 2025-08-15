@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Steps into Java: A Beginner's Guide — Sujeet Prajapati — Java Developer</title>
+    <meta name="description" content="Welcome to the World of Java!">
+    <link rel="stylesheet" href="/new-repo-name/assets/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="Sujeet Prajapati — Java Developer" href="/new-repo-name/feed.xml">
+    <style>
+        /* Flex layout for main content */
+        .flex-container {
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+
+        .sidebar-left,
+        .sidebar-right {
+          flex: 0 0 10%; /* Fixed 10% width */
+          min-width: 50px; /* minimum width to prevent collapsing */
+        }
+
+        .main-content {
+          flex: 0 0 80%; /* Main content takes 80% */
+          min-width: 300px;
+        }
+
+        /* Responsive: stack columns on small screens */
+        @media (max-width: 900px) {
+          .flex-container {
+            flex-direction: column;
+          }
+
+          .sidebar-left,
+          .sidebar-right,
+          .main-content {
+            min-width: 100%;
+            flex: 1 1 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-bar">
+        <a class="brand" href="/new-repo-name/">☕ Sujeet Prajapati</a>
+        <nav class="nav">
+            <a href="/new-repo-name/">Home</a>
+            <a href="/new-repo-name/projects">Projects</a>
+            <a href="/new-repo-name/blog">Blog</a>
+            <a href="/new-repo-name/videos">Videos</a>
+            <a href="/new-repo-name/resume">Resume</a>
+            <a href="/new-repo-name/contact">Contact</a>
+            <a href="/new-repo-name/about">About Me</a>
+            <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        </nav>
+    </div>
+</header>
+
+<!-- Main container with flexible sidebars -->
+<main class="container flex-container">
+
+    <!-- Left sidebar -->
+    <aside class="sidebar-left">
+        <!-- Future left content -->
+    </aside>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <article class="post-content container">
+    <header>
+        <h1>First Steps into Java: A Beginner's Guide</h1>
+        <p class="post-date">August 15, 2025</p>
+    </header>
+
+    <div class="post-body">
+        <h1 id="welcome-to-the-world-of-java">Welcome to the World of Java!</h1>
+
+<p>Java is everywhere – from your Android apps to enterprise-level backend systems. It’s one of the most popular programming languages in the world, known for its simplicity, portability, and powerful features. Whether you are a beginner or coming from another programming language, Java is a great place to start.</p>
+
+<hr />
+
+<h2 id="why-learn-java">Why Learn Java?</h2>
+
+<ul>
+  <li><strong>Platform Independent:</strong> Write once, run anywhere (thanks to JVM).</li>
+  <li><strong>Object-Oriented:</strong> Helps in designing modular and reusable code.</li>
+  <li><strong>Rich Ecosystem:</strong> Tons of libraries, frameworks, and tools.</li>
+  <li><strong>Community Support:</strong> A massive global community to help you learn and grow.</li>
+</ul>
+
+<hr />
+
+<h2 id="installing-java">Installing Java</h2>
+
+<ol>
+  <li>Download and install <strong>Java JDK</strong> from <a href="https://www.oracle.com/java/technologies/javase-jdk17-downloads.html">Oracle</a> or <a href="https://openjdk.org/">OpenJDK</a>.</li>
+  <li>Set the <code class="language-plaintext highlighter-rouge">JAVA_HOME</code> environment variable.</li>
+  <li>Verify installation:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java <span class="nt">-version</span>
+javac <span class="nt">-version</span>
+
+</code></pre></div></div>
+<hr />
+<h2 id="your-first-java-program">Your First Java Program</h2>
+
+<p>Let’s write a simple Java program to print a greeting.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class HelloJava <span class="o">{</span>
+    public static void main<span class="o">(</span>String[] args<span class="o">)</span> <span class="o">{</span>
+        System.out.println<span class="o">(</span><span class="s2">"Hello, Java World!"</span><span class="o">)</span><span class="p">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<p>Explanation:</p>
+
+<ul>
+  <li>public class HelloJava – Defines a class named HelloJava.</li>
+  <li>public static void main(String[] args) – The entry point of any Java program.</li>
+  <li>System.out.println(“Hello, Java World!”); – Prints text to the console.</li>
+</ul>
+
+<p>Run the program using:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac HelloJava.java
+java HelloJava
+
+</code></pre></div></div>
+<p>Output:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, Java World!
+</code></pre></div></div>
+<hr />
+<h2 id="core-concepts-to-explore-next">Core Concepts to Explore Next</h2>
+<ol>
+  <li>Variables &amp; Data Types – Store and manipulate data.</li>
+  <li>Operators &amp; Expressions – Perform calculations.</li>
+  <li>Control Flow Statements – if, for, while for decision making.</li>
+  <li>Methods – Reusable blocks of code.</li>
+  <li>Object-Oriented Programming – Classes, Objects, Inheritance, Polymorphism.</li>
+</ol>
+
+<hr />
+<p>Pro Tip</p>
+
+<ul>
+  <li>Practice regularly and build small projects. Even creating a simple calculator or to-do list app in Java will help solidify your understanding.</li>
+</ul>
+
+<hr />
+<h3 id="java-is-not-just-a-language-its-a-toolkit-to-build-everything-from-small-apps-to-enterprise-level-systems-start-small-stay-consistent-and-soon-youll-be-writing-powerful-java-applications-confidently">Java is not just a language; it’s a toolkit to build everything from small apps to enterprise-level systems. Start small, stay consistent, and soon you’ll be writing powerful Java applications confidently!</h3>
+
+    </div>
+    <!-- Add visit count here -->
+    <p style="margin-top: 20px; font-size: 14px; color: #555;">
+        👁️ Page Visits: <span id="visit-count">0</span>
+    </p>
+    <!-- ======= Interactive Section ======= -->
+    <div class="post-interactions">
+
+        <!-- 1️⃣ Stylish Share Buttons -->
+        <div class="share-buttons">
+            <a class="share-btn facebook" href="#" target="_blank" title="Share on Facebook">F</a>
+            <a class="share-btn twitter" href="#" target="_blank" title="Share on Twitter">T</a>
+            <a class="share-btn linkedin" href="#" target="_blank" title="Share on LinkedIn">L</a>
+            <a class="share-btn whatsapp" href="#" target="_blank" title="Share on WhatsApp">W</a>
+        </div>
+
+        <!-- AddThis fallback (optional) -->
+        <div class="addthis_inline_share_toolbox" style="display:none;"></div>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-YOUR_ADDTHIS_ID" async></script>
+
+        <!-- 2️⃣ Like Button -->
+        <div class="like-button">
+            <a class="likebtn-wrapper"
+               data-identifier="post-first-post"
+               data-theme="github"
+               data-ef_voting="bounce"
+               data-counter_clickable="true">
+            </a>
+            <script type="text/javascript" src="//w.likebtn.com/js/w/widget.js" async></script>
+        </div>
+
+        <!-- 3️⃣ Utterances Comments -->
+        <div id="comments"></div>
+        <script src="https://utteranc.es/client.js"
+                repo="sujeetkumar7/sujeetkumar7.github.io"
+                issue-term="pathname"
+                label="💬 comment"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+
+    </div>
+    <!-- ======= End Interactive Section ======= -->
+</article>
+
+<style>
+    .post-interactions {
+      border-top: 1px solid #ddd;
+      padding-top: 30px;
+      margin-top: 40px;
+    }
+
+    /* Share Buttons Styling */
+    .share-buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .share-btn {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .share-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .facebook { background: #3b5998; }
+    .twitter { background: #1da1f2; }
+    .linkedin { background: #0077b5; }
+    .whatsapp { background: #25d366; }
+
+    /* Like Button Styling */
+    .like-button {
+      margin-bottom: 30px;
+    }
+</style>
+
+<script>
+    // Optional: Dynamic sharing URLs
+    const shareURL = encodeURIComponent(window.location.href);
+    const shareTitle = encodeURIComponent(document.title);
+
+    document.querySelector('.share-btn.facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${shareURL}`;
+    document.querySelector('.share-btn.twitter').href = `https://twitter.com/intent/tweet?url=${shareURL}&text=${shareTitle}`;
+    document.querySelector('.share-btn.linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareURL}&title=${shareTitle}`;
+    document.querySelector('.share-btn.whatsapp').href = `https://api.whatsapp.com/send?text=${shareTitle}%20${shareURL}`;
+</script>
+<script>
+    const pageSlug = "java-programming-2025-08-15-first-post";
+    const apiUrl = `https://api.countapi.xyz/hit/sujeetkumar7.github.io/${pageSlug}`;
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visit-count').innerText = data.value;
+      })
+      .catch(err => console.log('CountAPI error:', err));
+</script>
+
+    </div>
+
+    <!-- Right sidebar -->
+    <aside class="sidebar-right">
+        <!-- Future right content -->
+    </aside>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Sujeet Prajapati — Lets Learn Together</p>
+        <p><a href="/new-repo-name/feed.xml"></a><a href="https://github.com"></a></p>
+    </div>
+</footer>
+
+<script src="/new-repo-name/assets/script.js"></script>
+</body>
+</html>
