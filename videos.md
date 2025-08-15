@@ -1,66 +1,37 @@
----
-title: Java Tutorials
----
+<!-- Main content area: Video Gallery -->
+<div class="main-content">
 
-# Java Tutorials
+<h2>Java 7 Tutorials</h2>
 
-- Welcome to my Java Tutorials section! Whether you’re a beginner or an experienced developer, these tutorials are designed to help you learn Java efficiently and practically.
----
+  <div class="video-gallery" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
 
-# 🚀 Java 7 Tutorials: Learn the Essentials
-
-Boost your Java skills with these **quick, practical tutorials** covering core Java 7 features and concepts.
-
----
-
-<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-between;">
-
-  <!-- Video 1 -->
-  <div style="flex: 1 1 300px; max-width: 33%;">
-    <h3>1. Java 7 Course Overview</h3>
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <!-- Video 1 -->
+    <div style="flex: 1 1 30%; min-width: 250px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
       <iframe src="https://www.youtube.com/embed/rCfuYjpV42s?si=M418qZxyMJJeUV4_" 
-        title="Java 7 Course Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+        title="Java 7 Course Overview" frameborder="0" allowfullscreen
         style="position: absolute; top:0; left:0; width:100%; height:100%;">
       </iframe>
+      <h4 style="text-align:center; margin-top:5px;">1. Java 7 Course Overview</h4>
     </div>
-  </div>
 
-  <!-- Video 2 -->
-  <div style="flex: 1 1 300px; max-width: 33%;">
-    <h3>2. Introduction to Java | Core Concepts</h3>
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <!-- Video 2 -->
+    <div style="flex: 1 1 30%; min-width: 250px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
       <iframe src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" 
-        title="Introduction to Java | Core Concepts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+        title="Introduction to Java | Core Concepts" frameborder="0" allowfullscreen
         style="position: absolute; top:0; left:0; width:100%; height:100%;">
       </iframe>
+      <h4 style="text-align:center; margin-top:5px;">2. Introduction to Java | Core Concepts</h4>
     </div>
-  </div>
 
-  <!-- Video 3 -->
-  <div style="flex: 1 1 300px; max-width: 33%;">
-    <h3>3. First Step Towards Java Program</h3>
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <!-- Video 3 -->
+    <div style="flex: 1 1 30%; min-width: 250px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
       <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" 
-        title="First Step Towards Java Program" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+        title="First Step Towards Java Program" frameborder="0" allowfullscreen
         style="position: absolute; top:0; left:0; width:100%; height:100%;">
       </iframe>
+      <h4 style="text-align:center; margin-top:5px;">3. First Step Towards Java Program</h4>
     </div>
+
   </div>
 
-</div>
-
-
-
-## Java 8 Tutorials
----
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-
-  <div style="flex: 1; min-width: 300px;">
-    <h3>1. Java 7 Course Overview</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/LH_7l0zZjZI?si=usVitowmD1bDTIIz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
 </div>

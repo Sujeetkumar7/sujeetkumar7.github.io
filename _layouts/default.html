@@ -7,6 +7,39 @@
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines }}">
     <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+    <style>
+        /* Flex layout for main content */
+        .flex-container {
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+
+        .sidebar-left,
+        .sidebar-right {
+          flex: 0 0 10%; /* Fixed 10% width */
+          min-width: 50px; /* minimum width to prevent collapsing */
+        }
+
+        .main-content {
+          flex: 0 0 80%; /* Main content takes 80% */
+          min-width: 300px;
+        }
+
+        /* Responsive: stack columns on small screens */
+        @media (max-width: 900px) {
+          .flex-container {
+            flex-direction: column;
+          }
+
+          .sidebar-left,
+          .sidebar-right,
+          .main-content {
+            min-width: 100%;
+            flex: 1 1 100%;
+          }
+        }
+    </style>
 </head>
 <body>
 <header class="site-header">
@@ -25,22 +58,22 @@
     </div>
 </header>
 
-<!-- Main container with left and right space for future content -->
-<main class="container" style="display: flex; gap: 20px;">
+<!-- Main container with flexible sidebars -->
+<main class="container flex-container">
 
-    <!-- Left sidebar (empty for now) -->
-    <aside class="sidebar-left" style="flex: 1 1 200px; min-width: 150px;">
-        <!-- Future left content goes here -->
+    <!-- Left sidebar -->
+    <aside class="sidebar-left">
+        <!-- Future left content -->
     </aside>
 
     <!-- Main content -->
-    <div class="main-content" style="flex: 3 1 600px;">
+    <div class="main-content">
         {{ content }}
     </div>
 
-    <!-- Right sidebar (empty for now) -->
-    <aside class="sidebar-right" style="flex: 1 1 200px; min-width: 150px;">
-        <!-- Future right content goes here -->
+    <!-- Right sidebar -->
+    <aside class="sidebar-right">
+        <!-- Future right content -->
     </aside>
 
 </main>
