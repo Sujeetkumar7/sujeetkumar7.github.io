@@ -2,7 +2,7 @@ title: "Sujeet Prajapati — Java Developer"
 description: "Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume."
 author: "Sujeet Prajapati"
 url: "https://sujeetblog.github.io/"
-baseurl: "" # leave empty for user.github.io root
+baseurl: "/new-repo-name" # leave empty for user.github.io root
 theme: null
 markdown: kramdown
 highlighter: rouge
