@@ -1,14 +1,8 @@
 ---
-layout: default
 title: About
 ---
 
-## About Me
+# About Me
 
-Hi, I’m **Sujeet Prajapati**, a Senior Java Developer with years of experience in:
-- Java 8/17/21
-- Spring Boot & Microservices
-- AWS Cloud
-- PostgreSQL & MongoDB
-
-I created this blog to share my knowledge with other developers.
+I’m **Sujeet Prajapati**, a Senior Java Developer. I build scalable backend systems with Java, Spring Boot, and AWS.
+I enjoy sharing best practices on my blog and contributing to engineering culture through mentorship and design reviews.

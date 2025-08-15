@@ -1,7 +1,22 @@
-title: "Sujeet's Java Blog"
-description: "Java, Spring Boot, Microservices, and Backend Best Practices"
+title: "Sujeet Prajapati — Java Developer"
+description: "Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume."
 author: "Sujeet Prajapati"
-theme: minima
+url: "" # set to https://<your-username>.github.io later
+baseurl: "" # leave empty for user.github.io root
+theme: null
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:year/:month/:day/:title
+permalink: /:categories/:year/:month/:day/:title/
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

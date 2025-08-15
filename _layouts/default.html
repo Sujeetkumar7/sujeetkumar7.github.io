@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="/assets/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — {{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines }}">
+  <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
 <body>
-    <header>
-        <h1><a href="/">{{ site.title }}</a></h1>
-        <nav>
-            <a href="/">Home</a> |
-            <a href="/about">About</a>
-        </nav>
-        <hr>
-    </header>
-    <main>
-        {{ content }}
-    </main>
-    <footer>
-        <hr>
-        <p>© {{ site.time | date: "%Y" }} {{ site.author }} | Powered by Jekyll</p>
-    </footer>
+  <header class="site-header">
+    <div class="container header-bar">
+      <a class="brand" href="{{ '/' | relative_url }}">☕ {{ site.author }}</a>
+      <nav class="nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/projects' | relative_url }}">Projects</a>
+        <a href="{{ '/blog' | relative_url }}">Blog</a>
+        <a href="{{ '/resume' | relative_url }}">Resume</a>
+        <a href="{{ '/contact' | relative_url }}">Contact</a>
+        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© {{ site.time | date: "%Y" }} {{ site.author }} — Built with Jekyll & GitHub Pages</p>
+      <p><a href="{{ '/feed.xml' | relative_url }}">RSS</a> • <a href="https://github.com">Source</a></p>
+    </div>
+  </footer>
+  <script src="{{ '/assets/script.js' | relative_url }}"></script>
 </body>
 </html>
