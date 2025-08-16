@@ -1,29 +1,52 @@
-<div style="display:flex; gap:10px; margin-top:1rem; flex-wrap:wrap;">
-    <div style="background:#4f46e5; color:white; padding:6px 12px; border-radius:20px; font-weight:500; display:flex; align-items:center; gap:6px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
-        <span>📄 Page Visits:</span>
+<!-- VISITOR COUNTER -->
+<div style="display:flex; gap:12px; margin-top:1.5rem; flex-wrap:wrap;">
+
+    <!-- Page Visits -->
+    <div style="background:#4f46e5; color:white; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); position:relative; cursor:default;"
+         title="Number of visitors to this page">
+        <span style="font-size:1.1rem;">🤖</span>
+        <span>Page Visits:</span>
         <span id="page-visit-count">0</span>
     </div>
-    <div style="background:#10b981; color:white; padding:6px 12px; border-radius:20px; font-weight:500; display:flex; align-items:center; gap:6px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
-        <span>🌍 Total Visits:</span>
+
+    <!-- Total Visits -->
+    <div style="background:#10b981; color:white; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); position:relative; cursor:default;"
+         title="Total visitors across all pages">
+        <span style="font-size:1.1rem;">🌐</span>
+        <span>Total Visits:</span>
         <span id="total-visit-count">0</span>
     </div>
+
 </div>
 
 <script>
-    // Use page.url slug for each post, default to "home" if undefined
     const pageSlug = "{{ page.url | slugify | default: 'home' }}";
     const pageApiUrl = `https://api.countapi.xyz/hit/sujeetkumar7.github.io/${pageSlug}`;
     const totalApiUrl = `https://api.countapi.xyz/hit/sujeetkumar7.github.io/total`;
+
+    // Animated counting function
+    function animateCount(element, target) {
+      let count = 0;
+      const increment = Math.ceil(target / 50); // 50 steps animation
+      const interval = setInterval(() => {
+        count += increment;
+        if (count >= target) {
+          count = target;
+          clearInterval(interval);
+        }
+        element.innerText = count;
+      }, 20);
+    }
 
     async function updateVisits() {
       try {
         const pageRes = await fetch(pageApiUrl);
         const pageData = await pageRes.json();
-        document.getElementById('page-visit-count').innerText = pageData.value;
+        animateCount(document.getElementById('page-visit-count'), pageData.value);
 
         const totalRes = await fetch(totalApiUrl);
         const totalData = await totalRes.json();
-        document.getElementById('total-visit-count').innerText = totalData.value;
+        animateCount(document.getElementById('total-visit-count'), totalData.value);
       } catch(err) {
         console.error('CountAPI error:', err);
         document.getElementById('page-visit-count').innerText = 'N/A';
