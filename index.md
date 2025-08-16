@@ -26,16 +26,10 @@ title: Home
   <h2>Featured Projects</h2>
   <div class="grid cards">
     <div class="card project-card">
-      <h3>Audit Service (Spring Boot + Kafka)</h3>
-      <p class="small">Event-sourced audit trail with PostgreSQL history tables.</p>
-      <span class="tag">Spring Boot</span><span class="tag">Kafka</span><span class="tag">PostgreSQL</span>
-      <p><a class="btn" href="/projects/audit-service">Details</a></p>
-    </div>
-    <div class="card project-card">
-      <h3>Entity Store Publisher</h3>
-      <p class="small">Contracts, schema evolution & CDC with GoldenGate.</p>
-      <span class="tag">CDC</span><span class="tag">Kafka</span><span class="tag">Schema</span>
-      <p><a class="btn" href="/projects/entity-store">Details</a></p>
+    <h3>LLM Observability Dashboard (In Progress)</h3>
+    <p class="small">Metrics & tracing for AI services, prompt latency, quality, and safety events.</p>
+    <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">OpenTelemetry</span>
+    <p><a class="btn" href="/projects/llm-obs.md">Details</a></p>
     </div>
   </div>
 </div>

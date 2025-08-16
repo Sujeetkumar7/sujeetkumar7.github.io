@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "First Steps into Java: A Beginner's Guide"
-categories: java, programming
+categories: [java]
 date: 2025-08-15
 description: "How to run your first java program"
 ---
