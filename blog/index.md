@@ -35,7 +35,7 @@ layout: default
       {% for post in site.posts %}
         <li class="post-item" style="margin-bottom:1rem;">
           <a href="{{ post.url }}" style="font-weight:600; color:var(--accent); text-decoration:none;">{{ post.title }}</a>
-          <span class="badge">{{ post.date | date: "%b %d, %Y" }}</span>
+          <span class="tag">{{ post.date | date: "%b %d, %Y" }}</span>
           <div class="small">{{ post.excerpt | strip_html | truncate: 140 }}</div>
         </li>
       {% endfor %}
