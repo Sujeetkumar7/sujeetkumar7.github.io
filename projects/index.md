@@ -1,5 +1,6 @@
 ---
 title: Projects
+layout: default
 ---
 
 <p class="text-gray-600 mb-6">

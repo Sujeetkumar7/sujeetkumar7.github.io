@@ -1,5 +1,6 @@
 ---
 title: Blog
+layout: default
 ---
 Welcome to my **Blog**, where I share insights, tutorials, and experiences from my journey as a developer.
 
