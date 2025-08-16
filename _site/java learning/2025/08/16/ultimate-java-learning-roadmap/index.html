@@ -8,35 +8,146 @@
     <link rel="stylesheet" href="/assets/styles.css">
     <link rel="alternate" type="application/rss+xml" title="Sujeet Prajapati — Java Developer" href="/feed.xml">
     <style>
-        /* Flex layout for main content */
-        .flex-container {
-          display: flex;
-          gap: 20px;
-          flex-wrap: wrap;
+        /* Reset */
+        html, body {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          font-family: Arial, sans-serif;
         }
 
-        .sidebar-left,
-        .sidebar-right {
-          flex: 0 0 2%; /* Fixed 10% width */
-          min-width: 50px; /* minimum width to prevent collapsing */
+        body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
+        header, footer {
+          width: 100%;
+        }
+
+        /* Header styles */
+        .site-header {
+          background: #222;
+          color: #fff;
+        }
+
+        .header-bar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+        }
+
+        .brand {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #fff;
+          text-decoration: none;
+        }
+
+        nav {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+        }
+
+        nav a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+          color: #f39c12;
+        }
+
+        #themeToggle {
+          background: none;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          font-size: 1.2rem;
+        }
+
+        /* Hamburger button */
+        .hamburger {
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          cursor: pointer;
+          gap: 5px;
+          width: 30px;
+          height: 24px;
+          position: relative;
+          z-index: 1001; /* stay above nav */
+        }
+
+        .hamburger span {
+          height: 3px;
+          width: 100%;
+          background: #fff;
+          border-radius: 3px;
+          transition: all 0.3s ease-in-out;
+        }
+
+        /* Animation to "X" */
+        .hamburger.active span:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Main content full width */
+        main {
+          flex: 1;
+          width: 100%;
+          padding: 20px;
+          box-sizing: border-box;
         }
 
         .main-content {
-          flex: 0 0 96%; /* Main content takes 80% */
-          min-width: 300px;
+          width: 100%;
         }
 
-        /* Responsive: stack columns on small screens */
-        @media (max-width: 900px) {
-          .flex-container {
+        /* Footer styles */
+        .site-footer {
+          background: #f4f4f4;
+          text-align: center;
+          padding: 15px;
+          font-size: 0.9rem;
+          color: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          nav {
+            display: none;
             flex-direction: column;
+            background: #333;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px 0;
           }
 
-          .sidebar-left,
-          .sidebar-right,
-          .main-content {
-            min-width: 100%;
-            flex: 1 1 100%;
+          nav a {
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+          }
+
+          nav.show {
+            display: flex;
+          }
+
+          .hamburger {
+            display: flex;
           }
         }
     </style>
@@ -45,7 +156,15 @@
 <header class="site-header">
     <div class="container header-bar">
         <a class="brand" href="/">☕ Sujeet Prajapati</a>
-        <nav class="nav">
+
+        <!-- Hamburger for mobile -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav" id="navMenu">
             <a href="/">Home</a>
             <a href="/projects">Projects</a>
             <a href="/blog">Blog</a>
@@ -58,18 +177,11 @@
     </div>
 </header>
 
-<!-- Main container with flexible sidebars -->
-<main class="container flex-container">
-
-    <!-- Left sidebar -->
-    <aside class="sidebar-left">
-        <!-- Future left content -->
-    </aside>
-
-    <!-- Main content -->
+<!-- Main content full width -->
+<main>
     <div class="main-content">
-        <article class="post-content container">
-    <header>
+        <article class="post-content">
+    <header class="post-header">
         <h1>Ultimate Java Learning Roadmap: From Classic to Latest Features</h1>
         <p class="post-date">August 16, 2025</p>
     </header>
@@ -238,6 +350,7 @@
 <p>A modern Java developer should combine <strong>solid core Java knowledge</strong> with <strong>latest language features</strong> and <strong>framework expertise</strong>. Start from fundamentals, then explore streams, lambda expressions, modules, and finally embrace Java 17–21 innovations like virtual threads, records, and structured concurrency.</p>
 
     </div>
+
     <!-- Visitor Counter -->
     <!-- VISITOR COUNTER (Clean & Neutral Style) -->
 <div style="display:flex; gap:12px; margin-top:1.5rem; flex-wrap:wrap; font-family:sans-serif;">
@@ -298,6 +411,7 @@
     fetchCount(totalApiUrl, 'total-visit-count');
 </script>
 
+
     <!-- ======= Interactive Section ======= -->
     <div class="post-interactions">
 
@@ -340,6 +454,38 @@
 </article>
 
 <style>
+    /* Full-width post container */
+    .post-content {
+      width: 100%;
+      max-width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .post-header {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .post-header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #222;
+    }
+
+    .post-date {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .post-body {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
     .post-interactions {
       border-top: 1px solid #ddd;
       padding-top: 30px;
@@ -351,6 +497,7 @@
       display: flex;
       gap: 12px;
       margin-bottom: 25px;
+      flex-wrap: wrap;
     }
 
     .share-btn {
@@ -379,10 +526,21 @@
     .like-button {
       margin-bottom: 30px;
     }
+
+    /* Responsive typography */
+    @media (max-width: 768px) {
+      .post-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .post-body {
+        font-size: 1rem;
+      }
+    }
 </style>
 
 <script>
-    // Optional: Dynamic sharing URLs
+    // Dynamic sharing URLs
     const shareURL = encodeURIComponent(window.location.href);
     const shareTitle = encodeURIComponent(document.title);
 
@@ -393,12 +551,6 @@
 </script>
 
     </div>
-
-    <!-- Right sidebar -->
-    <aside class="sidebar-right">
-        <!-- Future right content -->
-    </aside>
-
 </main>
 
 <footer class="site-footer">
@@ -409,5 +561,15 @@
 </footer>
 
 <script src="/assets/script.js"></script>
+<script>
+    // Toggle mobile menu + hamburger animation
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("show");
+    });
+</script>
 </body>
 </html>

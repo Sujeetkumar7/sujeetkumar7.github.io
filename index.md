@@ -3,9 +3,9 @@ title: Home
 ---
 
 <!-- HERO SECTION -->
-<section class="hero" style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem; padding:3rem 1rem; background: linear-gradient(135deg, #1f2937, #4f46e5); color:white; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
-  <div style="flex:1; min-width:300px;">
-    <h1 style="font-size:2.5rem; margin-bottom:0.5rem;">Hi, I'm Sujeet — Senior Java Specialist and Good Understanding of AI</h1>
+<section class="hero" style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem; padding:3rem 1rem; background: linear-gradient(135deg, #f9fafb, #e5e7eb); color:#111; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+  <div style="flex:1; min-width:250px;">
+   <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:1rem;">Welcome to My Java Blog 👋</h1>
     <p class="small" style="font-size:1rem; opacity:0.85; margin-bottom:1rem;">
       Java • Spring Boot • Microservices • AWS • Kafka • PostgreSQL • AI/ML • NLP • Observability
     </p>
@@ -14,7 +14,7 @@ title: Home
     </p>
     <p>
       <a class="btn" href="/projects" style="background:#4f46e5; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; margin-right:10px; transition:0.3s;">View Projects</a>
-      <a class="btn ghost" href="/blog" style="background:transparent; border:2px solid white; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; transition:0.3s;">Read Blog</a>
+      <a class="btn ghost" href="/blog" style="background:#4f46e5; border:2px solid white; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; transition:0.3s;">Read Blog</a>
     </p>
     <ul class="list-unstyled" style="margin-top:1.5rem; line-height:1.8;">
       <li>✅ Delivered 10+ production microservices with AI/ML components</li>
