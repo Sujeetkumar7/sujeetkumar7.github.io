@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ultimate Java Learning Roadmap: From Classic to Latest Features"
-categories: [java learning]
+categories: [java-learning]
 date: 2025-08-16
 description: "Java in 2025, covering both latest features (Java 17, 21) and the classic/older Java topics"
 ---

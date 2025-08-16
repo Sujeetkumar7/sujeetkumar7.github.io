@@ -1,0 +1,54 @@
+I"×<p>&lt;!DOCTYPE html&gt;</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Professional Resume Generator</h1>
+    <form id="resumeForm">
+        <label>Full Name:</label>
+        <input type="text" id="name" required="" />
+
+        <label>Profile Image URL:</label>
+        <input type="text" id="profileImage" placeholder="Optional" />
+
+        <label>Email:</label>
+        <input type="email" id="email" required="" />
+
+        <label>Phone:</label>
+        <input type="text" id="phone" />
+
+        <label>LinkedIn:</label>
+        <input type="text" id="linkedin" />
+
+        <label>Summary:</label>
+        <textarea id="summary"></textarea>
+
+        <label>Skills (comma separated):</label>
+        <input type="text" id="skills" />
+
+        <label>Education:</label>
+        <textarea id="education"></textarea>
+
+        <label>Experience:</label>
+        <textarea id="experience"></textarea>
+
+        <label>Projects:</label>
+        <textarea id="projects"></textarea>
+
+        <label>Achievements:</label>
+        <textarea id="achievements"></textarea>
+
+        <button type="submit">Generate PDF</button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+:ET

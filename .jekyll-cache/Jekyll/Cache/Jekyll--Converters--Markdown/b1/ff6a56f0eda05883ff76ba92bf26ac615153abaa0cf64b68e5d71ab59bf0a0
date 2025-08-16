@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home — Sujeet Prajapati — Java Developer</title>
-    <meta name="description" content="Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume.">
-
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="/assets/styles.css">
-    <link rel="alternate" type="application/rss+xml" title="Sujeet Prajapati — Java Developer" href="/feed.xml">
-
-    <!-- Script (load once, deferred) -->
-    <script src="/assets/script.js" defer></script>
-</head>
-<body>
-<header class="site-header">
-    <div class="container header-bar">
-        <a class="brand" href="/">☕ Sujeet Prajapati</a>
-
-        <!-- Hamburger for mobile -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Navigation -->
-        <nav class="nav" id="navMenu">
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/blog">Blog</a>
-            <a href="/videos">Videos</a>
-            <a href="/resume">Resume</a>
-            <a href="/contact">Contact</a>
-            <a href="/about">About Me</a>
-            <!-- Theme toggle button (floating) -->
-            <button id="themeToggle" aria-label="Toggle theme">🌓</button>
-        </nav>
-    </div>
-</header>
-
-<main>
-    <div class="main-content">
-        <!-- HERO SECTION -->
+I"�'<!-- HERO SECTION -->
 <section class="hero" style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem; padding:3rem 1rem; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
   <div style="flex:1; min-width:250px;">
    <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:1rem;">Welcome to My Java Blog 👋</h1>
@@ -159,7 +115,7 @@
   <div class="grid cards" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
     
     <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
-      <h3 style="margin-bottom:0.5rem;"><a href="/java-learning/2025/08/16/ultimate-java-learning-roadmap/" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">Ultimate Java Learning Roadmap: From Classic to Latest Features</a></h3>
+      <h3 style="margin-bottom:0.5rem;"><a href="/java%20learning/2025/08/16/ultimate-java-learning-roadmap/" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">Ultimate Java Learning Roadmap: From Classic to Latest Features</a></h3>
       <p class="small" style="color:#555; font-size:0.9rem; margin-bottom:0.5rem;">
         Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new fe...
       </p>
@@ -169,13 +125,13 @@
     </div>
     
     <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
-      <h3 style="margin-bottom:0.5rem;"><a href="/java-best-practices/2025/08/16/data-types-variables/" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">Mastering Java Data Types &amp; Variables: Primitive Types, Wrappers, and Type Casting</a></h3>
+      <h3 style="margin-bottom:0.5rem;"><a href="/java/2025/08/15/data-types-variables/" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">First Steps into Java: A Beginner's Guide</a></h3>
       <p class="small" style="color:#555; font-size:0.9rem; margin-bottom:0.5rem;">
-        Java Data Types &amp; Variables – Primitive Types, Wrapper Classes, and Type Casting
+        Welcome to the World of Java!
 
       </p>
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
-        <span class="badge" style="background:#e0e7ff; color:#1e3a8a; font-size:0.75rem; padding:2px 6px; border-radius:6px;">Aug 16, 2025</span>
+        <span class="badge" style="background:#e0e7ff; color:#1e3a8a; font-size:0.75rem; padding:2px 6px; border-radius:6px;">Aug 15, 2025</span>
         </div>
     </div>
     
@@ -193,15 +149,4 @@
   </div>
   <p style="margin-top:1.5rem;"><a class="btn" href="/blog" style="background:#4f46e5; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; transition:0.3s;">See All Posts</a></p>
 </div>
-
-    </div>
-</main>
-
-<footer class="site-footer">
-    <div class="container">
-        <p>© 2025 Sujeet Prajapati — let's learn together and grow together</p>
-        <p><a href="/feed.xml"></a><a href="https://github.com"></a></p>
-    </div>
-</footer>
-</body>
-</html>
+:ET

@@ -1,0 +1,98 @@
+I"d<section class="hero" style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:2rem; padding:2rem 1rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+  <div style="flex:1; min-width:300px;">
+
+    <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:1rem;">Create Your Resume</h2>
+
+    <div class="resume-form" style="display:flex; flex-direction:column; gap:1rem;">
+
+      <!-- Name -->
+      <input type="text" id="name" placeholder="Full Name" style="padding:8px; border-radius:6px; border:1px solid #ccc;" />
+
+      <!-- Profile Image URL -->
+      <input type="text" id="profileImage" placeholder="Profile Image URL (optional)" style="padding:8px; border-radius:6px; border:1px solid #ccc;" />
+
+      <!-- Email -->
+      <input type="email" id="email" placeholder="Email" style="padding:8px; border-radius:6px; border:1px solid #ccc;" />
+
+      <!-- Phone -->
+      <input type="text" id="phone" placeholder="Phone Number" style="padding:8px; border-radius:6px; border:1px solid #ccc;" />
+
+      <!-- LinkedIn -->
+      <input type="text" id="linkedin" placeholder="LinkedIn URL" style="padding:8px; border-radius:6px; border:1px solid #ccc;" />
+
+      <!-- Summary -->
+      <textarea id="summary" placeholder="Professional Summary" style="padding:8px; border-radius:6px; border:1px solid #ccc;"></textarea>
+
+      <!-- Skills -->
+      <input type="text" id="skills" placeholder="Skills (comma separated)" style="padding:8px; border-radius:6px; border:1px solid #ccc;" />
+
+      <!-- Education -->
+      <textarea id="education" placeholder="Education Details" style="padding:8px; border-radius:6px; border:1px solid #ccc;"></textarea>
+
+      <!-- Experience -->
+      <textarea id="experience" placeholder="Work Experience" style="padding:8px; border-radius:6px; border:1px solid #ccc;"></textarea>
+
+      <!-- Projects -->
+      <textarea id="projects" placeholder="Projects" style="padding:8px; border-radius:6px; border:1px solid #ccc;"></textarea>
+
+      <!-- Achievements -->
+      <textarea id="achievements" placeholder="Achievements" style="padding:8px; border-radius:6px; border:1px solid #ccc;"></textarea>
+
+      <!-- Generate PDF Button -->
+      <button id="generatePDF" style="padding:12px; border:none; border-radius:6px; background:#007bff; color:white; font-weight:600; cursor:pointer;">Generate PDF</button>
+    </div>
+
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+document.getElementById("generatePDF").addEventListener("click", function() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  let y = 10;
+
+  const name = document.getElementById("name").value;
+  const profileImage = document.getElementById("profileImage").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const linkedin = document.getElementById("linkedin").value;
+  const summary = document.getElementById("summary").value;
+  const skills = document.getElementById("skills").value;
+  const education = document.getElementById("education").value;
+  const experience = document.getElementById("experience").value;
+  const projects = document.getElementById("projects").value;
+  const achievements = document.getElementById("achievements").value;
+
+  if(profileImage) doc.addImage(profileImage, 'JPEG', 150, 10, 40, 40);
+
+  doc.setFontSize(22);
+  doc.text(name, 10, y); y += 10;
+
+  doc.setFontSize(12);
+  doc.text(`Email: ${email}`, 10, y); y += 6;
+  doc.text(`Phone: ${phone}`, 10, y); y += 6;
+  doc.text(`LinkedIn: ${linkedin}`, 10, y); y += 10;
+
+  const addSection = (title, content) => {
+    if(!content) return;
+    doc.setFontSize(16); doc.text(title, 10, y); y += 7;
+    doc.setFontSize(12);
+    const splitContent = doc.splitTextToSize(content, 180);
+    doc.text(splitContent, 10, y);
+    y += splitContent.length * 7 + 5;
+  };
+
+  addSection("Summary", summary);
+  addSection("Skills", skills);
+  addSection("Education", education);
+  addSection("Experience", experience);
+  addSection("Projects", projects);
+  addSection("Achievements", achievements);
+
+  doc.save(`${name}-Resume.pdf`);
+});
+</script>
+
+:ET

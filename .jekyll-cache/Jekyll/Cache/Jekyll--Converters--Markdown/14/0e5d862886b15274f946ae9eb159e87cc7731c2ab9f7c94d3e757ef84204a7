@@ -1,0 +1,30 @@
+I"†<section class="hero" style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:2rem; padding:2rem 1rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+  <div style="flex:1; min-width:300px;">
+
+    <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:1rem;">Create Your Professional Resume</h2>
+
+    <div class="resume-form" style="display:flex; flex-direction:column; gap:1rem;">
+
+      <input type="text" id="name" placeholder="Full Name" />
+      <input type="text" id="profileImage" placeholder="Profile Image URL (optional)" />
+      <input type="email" id="email" placeholder="Email" />
+      <input type="text" id="phone" placeholder="Phone Number" />
+      <input type="text" id="linkedin" placeholder="LinkedIn URL" />
+      <textarea id="summary" placeholder="Professional Summary"></textarea>
+      <input type="text" id="skills" placeholder="Skills (comma separated)" />
+      <textarea id="education" placeholder="Education Details"></textarea>
+      <textarea id="experience" placeholder="Work Experience"></textarea>
+      <textarea id="projects" placeholder="Projects"></textarea>
+      <textarea id="achievements" placeholder="Achievements"></textarea>
+
+      <button id="generatePDF">Generate PDF</button>
+    </div>
+
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="script.js"></script>
+
+:ET

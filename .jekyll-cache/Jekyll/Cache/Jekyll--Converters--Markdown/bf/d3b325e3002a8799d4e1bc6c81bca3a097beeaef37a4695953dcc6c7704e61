@@ -1,0 +1,294 @@
+I"9<h1 id="java-data-types--variables--primitive-types-wrapper-classes-and-type-casting">Java Data Types &amp; Variables – Primitive Types, Wrapper Classes, and Type Casting</h1>
+
+<p>Java is a <strong>strongly-typed language</strong>, which means every variable has a type, and understanding these types is key to writing robust, efficient code.<br />
+In this guide, we explore <strong>primitive types</strong>, <strong>wrapper classes</strong>, and <strong>type casting</strong>, complete with examples, tips, and visual explanations.</p>
+
+<hr />
+
+<h2 id="1️⃣-java-variables-the-basics">1️⃣ Java Variables: The Basics</h2>
+
+<p>A <strong>variable</strong> is a named memory location that stores a value.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">30</span><span class="o">;</span>          
+<span class="kt">double</span> <span class="n">salary</span> <span class="o">=</span> <span class="mf">45000.75</span><span class="o">;</span> 
+<span class="kt">char</span> <span class="n">grade</span> <span class="o">=</span> <span class="sc">'A'</span><span class="o">;</span>      
+<span class="kt">boolean</span> <span class="n">isActive</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span> 
+</code></pre></div></div>
+
+<div class="tip">
+ <strong>Tips:</strong>
+<ul>
+<li>Use descriptive variable names: <code>userAge</code>, <code>totalSalary</code>.</li>
+<li>Initialize variables when declaring whenever possible.</li>
+<li>Follow <strong>camelCase</strong> for variables and <strong>PascalCase</strong> for classes.</li>
+</ul>
+</div>
+
+<hr />
+
+<h2 id="2️⃣-primitive-data-types">2️⃣ Primitive Data Types</h2>
+
+<p>Java has <strong>8 primitive types</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Default Value</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>byte</td>
+      <td>1 byte</td>
+      <td>0</td>
+      <td><code class="language-plaintext highlighter-rouge">byte b = 10;</code></td>
+    </tr>
+    <tr>
+      <td>short</td>
+      <td>2 bytes</td>
+      <td>0</td>
+      <td><code class="language-plaintext highlighter-rouge">short s = 100;</code></td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>4 bytes</td>
+      <td>0</td>
+      <td><code class="language-plaintext highlighter-rouge">int i = 1000;</code></td>
+    </tr>
+    <tr>
+      <td>long</td>
+      <td>8 bytes</td>
+      <td>0L</td>
+      <td><code class="language-plaintext highlighter-rouge">long l = 10000L;</code></td>
+    </tr>
+    <tr>
+      <td>float</td>
+      <td>4 bytes</td>
+      <td>0.0f</td>
+      <td><code class="language-plaintext highlighter-rouge">float f = 10.5f;</code></td>
+    </tr>
+    <tr>
+      <td>double</td>
+      <td>8 bytes</td>
+      <td>0.0d</td>
+      <td><code class="language-plaintext highlighter-rouge">double d = 99.99;</code></td>
+    </tr>
+    <tr>
+      <td>char</td>
+      <td>2 bytes</td>
+      <td>‘\u0000’</td>
+      <td><code class="language-plaintext highlighter-rouge">char c = 'A';</code></td>
+    </tr>
+    <tr>
+      <td>boolean</td>
+      <td>1 bit</td>
+      <td>false</td>
+      <td><code class="language-plaintext highlighter-rouge">boolean flag = true;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="primitive-type-hierarchy-mermaid-diagram">Primitive Type Hierarchy (Mermaid Diagram)</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Byte</span> <span class="o">--&gt;</span> <span class="nc">Short</span> <span class="o">--&gt;</span> <span class="nc">Int</span> <span class="o">--&gt;</span> <span class="nc">Long</span> <span class="o">--&gt;</span> <span class="nc">Float</span> <span class="o">--&gt;</span> <span class="nc">Double</span>
+<span class="nc">Char</span> <span class="o">--&gt;</span> <span class="nc">Int</span>
+<span class="nc">Boolean</span> <span class="o">--&gt;</span> <span class="nc">Boolean</span>
+</code></pre></div></div>
+
+<div class="tip">
+<strong>Best Practices:</strong>
+<ul>
+<li>Use the smallest data type to save memory.</li>
+<li>Use <code>int</code> for arithmetic unless <code>long</code> is required.</li>
+<li>Use <code>boolean</code> for flags.</li>
+</ul>
+</div>
+
+<hr />
+
+<h2 id="3️⃣-wrapper-classes">3️⃣ Wrapper Classes</h2>
+
+<p>Primitive types have <strong>object counterparts</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Primitive</th>
+      <th>Wrapper Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>byte</td>
+      <td>Byte</td>
+    </tr>
+    <tr>
+      <td>short</td>
+      <td>Short</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>Integer</td>
+    </tr>
+    <tr>
+      <td>long</td>
+      <td>Long</td>
+    </tr>
+    <tr>
+      <td>float</td>
+      <td>Float</td>
+    </tr>
+    <tr>
+      <td>double</td>
+      <td>Double</td>
+    </tr>
+    <tr>
+      <td>char</td>
+      <td>Character</td>
+    </tr>
+    <tr>
+      <td>boolean</td>
+      <td>Boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+<span class="nc">Integer</span> <span class="n">wrapperNum</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">num</span><span class="o">);</span> <span class="c1">// Boxing</span>
+<span class="kt">int</span> <span class="n">primitiveNum</span> <span class="o">=</span> <span class="n">wrapperNum</span><span class="o">.</span><span class="na">intValue</span><span class="o">();</span> <span class="c1">// Unboxing</span>
+
+<span class="nc">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">"123"</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">parsedNum</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">str</span><span class="o">);</span> <span class="c1">// String -&gt; int</span>
+</code></pre></div></div>
+
+<div class="tip">
+ <strong>Why use wrappers?</strong>
+<ul>
+<li>Collections cannot store primitives (<code>ArrayList&lt;Integer&gt;</code> instead of <code>ArrayList&lt;int&gt;</code>).</li>
+<li>Utility methods: parsing, comparison, conversion.</li>
+<li>Works with generics and reflection.</li>
+</ul>
+</div>
+
+<hr />
+
+<h2 id="4️⃣-type-casting-in-java">4️⃣ Type Casting in Java</h2>
+
+<p><strong>Type casting</strong> converts one type to another.</p>
+
+<h3 id="a-implicit-casting-widening">a) Implicit Casting (Widening)</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+<span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span> <span class="c1">// int -&gt; double</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">d</span><span class="o">);</span> <span class="c1">// 100.0</span>
+</code></pre></div></div>
+
+<h3 id="b-explicit-casting-narrowing">b) Explicit Casting (Narrowing)</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">123.45</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">d</span><span class="o">;</span> <span class="c1">// double -&gt; int</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span> <span class="c1">// 123</span>
+</code></pre></div></div>
+
+<h3 id="c-primitives--wrappers">c) Primitives &amp; Wrappers</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Integer</span> <span class="n">wrapperInt</span> <span class="o">=</span> <span class="mi">50</span><span class="o">;</span>
+<span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="n">wrapperInt</span><span class="o">;</span> <span class="c1">// auto-unboxing + widening</span>
+<span class="nc">Integer</span> <span class="n">anotherInt</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">d</span><span class="o">;</span> <span class="c1">// narrowing + boxing</span>
+</code></pre></div></div>
+
+<div class="tip">
+ <strong>Tips:</strong>
+<ul>
+<li>Prefer implicit casting for safety.</li>
+<li>Avoid unnecessary explicit casting to prevent precision loss.</li>
+<li>Handle potential <code>NumberFormatException</code> when converting strings.</li>
+</ul>
+</div>
+
+<hr />
+
+<h2 id="5️⃣-common-mistakes">5️⃣ Common Mistakes</h2>
+
+<ul>
+  <li><strong>Mixing types in arithmetic</strong></li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="kt">double</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">3.5</span><span class="o">;</span>
+<span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span> <span class="c1">// result is double</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Null wrappers</strong></li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Integer</span> <span class="n">num</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="c1">// int val = num; // NullPointerException</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Precision issues</strong></li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">0.1f</span><span class="o">;</span>
+<span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">f</span> <span class="o">==</span> <span class="n">d</span><span class="o">);</span> <span class="c1">// false</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="6️⃣-example-bringing-it-all-together">6️⃣ Example: Bringing It All Together</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DataTypeDemo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">28</span><span class="o">;</span>
+        <span class="kt">double</span> <span class="n">salary</span> <span class="o">=</span> <span class="mf">45000.75</span><span class="o">;</span>
+
+        <span class="c1">// Type casting</span>
+        <span class="kt">int</span> <span class="n">roundedSalary</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">salary</span><span class="o">;</span>
+
+        <span class="c1">// Wrapper usage</span>
+        <span class="nc">Integer</span> <span class="n">ageWrapper</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span> <span class="c1">// Autoboxing</span>
+        <span class="kt">int</span> <span class="n">agePrimitive</span> <span class="o">=</span> <span class="n">ageWrapper</span><span class="o">;</span> <span class="c1">// Unboxing</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Age: "</span> <span class="o">+</span> <span class="n">agePrimitive</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Salary: "</span> <span class="o">+</span> <span class="n">salary</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Rounded Salary: "</span> <span class="o">+</span> <span class="n">roundedSalary</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Output:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Age: 28
+Salary: 45000.75
+Rounded Salary: 45000
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="7️⃣-key-takeaways">7️⃣ Key Takeaways</h2>
+
+<p>-Use <strong>primitives</strong> for performance, <strong>wrappers</strong> when objects are needed.</p>
+<ul>
+  <li>Initialize variables and follow naming conventions.</li>
+  <li>Use <strong>implicit casting</strong> where possible.</li>
+  <li>
+    <h2 id="watch-for-nulls-and-precision-issues">Watch for nulls and precision issues.</h2>
+  </li>
+</ul>
+
+<style>
+.tip {
+  border-left: 6px solid #2196F3;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 5px;
+}
+</style>
+
+:ET
