@@ -40,16 +40,35 @@ layout: default
         </div>
 
         <!-- 3️⃣ Utterances Comments -->
-        <div id="comments"></div>
-        <script src="https://utteranc.es/client.js"
-                repo="sujeetkumar7/sujeetkumar7.github.io"
-                issue-term="pathname"
-                label="💬 comment"
-                theme="github-light"
-                crossorigin="anonymous"
-                async>
-        </script>
-
+        <div id="comments">
+            <h2>Leave a Comment</h2>
+            <form method="POST" action="https://staticman3.herokuapp.com/v3/entry/github/sujeetkumar7/sujeetkumar7.github.io/main/comments">
+                <input type="hidden" name="options[redirect]" value="https://YOUR_SITE_URL">
+                <p>
+                    <label for="name">Name:</label><br>
+                    <input type="text" name="fields[name]" required>
+                </p>
+                <p>
+                    <label for="message">Comment:</label><br>
+                    <textarea name="fields[message]" rows="5" required></textarea>
+                </p>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <h2>Comments</h2>
+        {% assign comments = site.data.comments[page.slug] %}
+        {% if comments %}
+        <ul>
+            {% for comment in comments %}
+            <li>
+                <strong>{{ comment.name }}</strong> ({{ comment.date }}):
+                <p>{{ comment.message }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No comments yet. Be the first to comment!</p>
+        {% endif %}
     </div>
     <!-- ======= End Interactive Section ======= -->
 </article>

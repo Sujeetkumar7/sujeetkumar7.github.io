@@ -1,0 +1,13 @@
+comments:
+  allowedFields: ["name", "message"]
+  branch: "main"
+  commitMessage: "Add new comment by {fields.name}"
+  path: "_data/comments/{options.slug}"
+  filename: "comment-{@timestamp}"
+  format: "yaml"
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: iso8601
+  moderation: false

@@ -1,18 +1,16 @@
-<!-- VISITOR COUNTER -->
-<div style="display:flex; gap:12px; margin-top:1.5rem; flex-wrap:wrap;">
+<!-- VISITOR COUNTER (Clean & Neutral Style) -->
+<div style="display:flex; gap:12px; margin-top:1.5rem; flex-wrap:wrap; font-family:sans-serif;">
 
     <!-- Page Visits -->
-    <div style="background:#4f46e5; color:white; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); position:relative; cursor:default;"
-         title="Number of visitors to this page">
-        <span style="font-size:1.1rem;">🤖</span>
+    <div style="background:#f3f4f6; color:#1f2937; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);" title="Number of visitors to this page">
+        <span>📄</span>
         <span>Page Visits:</span>
         <span id="page-visit-count">0</span>
     </div>
 
     <!-- Total Visits -->
-    <div style="background:#10b981; color:white; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); position:relative; cursor:default;"
-         title="Total visitors across all pages">
-        <span style="font-size:1.1rem;">🌐</span>
+    <div style="background:#f3f4f6; color:#1f2937; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);" title="Total visitors across all pages">
+        <span>🌐</span>
         <span>Total Visits:</span>
         <span id="total-visit-count">0</span>
     </div>
@@ -20,16 +18,19 @@
 </div>
 
 <script>
+    // Page slug: home for homepage, slugified URL for posts
     const pageSlug = "{{ page.url | slugify | default: 'home' }}";
-    const pageApiUrl = `https://api.countapi.xyz/hit/sujeetkumar7.github.io/${pageSlug}`;
-    const totalApiUrl = `https://api.countapi.xyz/hit/sujeetkumar7.github.io/total`;
+    const namespace = "sujeetkumar7.github.io";
 
-    // Animated counting function
+    const pageApiUrl = `https://api.countapi.xyz/hit/${namespace}/${pageSlug}`;
+    const totalApiUrl = `https://api.countapi.xyz/hit/${namespace}/total`;
+
+    // Animate number counting
     function animateCount(element, target) {
       let count = 0;
-      const increment = Math.ceil(target / 50); // 50 steps animation
+      const step = Math.ceil(target / 50);
       const interval = setInterval(() => {
-        count += increment;
+        count += step;
         if (count >= target) {
           count = target;
           clearInterval(interval);
@@ -38,21 +39,20 @@
       }, 20);
     }
 
-    async function updateVisits() {
+    // Fetch count from CountAPI
+    async function fetchCount(url, elementId) {
       try {
-        const pageRes = await fetch(pageApiUrl);
-        const pageData = await pageRes.json();
-        animateCount(document.getElementById('page-visit-count'), pageData.value);
-
-        const totalRes = await fetch(totalApiUrl);
-        const totalData = await totalRes.json();
-        animateCount(document.getElementById('total-visit-count'), totalData.value);
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('API error');
+        const data = await res.json();
+        animateCount(document.getElementById(elementId), data.value);
       } catch(err) {
-        console.error('CountAPI error:', err);
-        document.getElementById('page-visit-count').innerText = 'N/A';
-        document.getElementById('total-visit-count').innerText = 'N/A';
+        console.error('CountAPI error:', err, url);
+        document.getElementById(elementId).innerText = 'N/A';
       }
     }
 
-    updateVisits();
+    // Initialize visitor count
+    fetchCount(pageApiUrl, 'page-visit-count');
+    fetchCount(totalApiUrl, 'total-visit-count');
 </script>
