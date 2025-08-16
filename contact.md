@@ -1,24 +1,56 @@
 ---
 title: Contact
+layout: default
 ---
-# 📬 Contact Me
 
-I love connecting with fellow developers, tech enthusiasts, and collaborators! Whether you want to discuss **cloud architecture, full-stack development, or AI innovations**, feel free to reach out. Let’s create something amazing together! 🚀
+<section class="hero" style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:2rem; padding:3rem 1rem; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
 
----
-<form action="https://formspree.io/f/mgvzqdzb" method="POST">
-  <label for="name">Name</label>
-  <input id="name" name="name" required>
-  <label for="email">Email</label>
-  <input id="email" name="email" type="email" required>
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
-  <p><button class="btn" type="submit">Send</button></p>
-</form>
+  <div style="flex:1; min-width:250px;">
 
----
-or 
+    <!-- Intro -->
+    <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:1rem;">
+      📬 Contact Me
+    </h2>
 
-### [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sujitprajapati557@gmail.com)  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sujeet-kumar-prajapati-a0572877) [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC_brLz0bAwFTpwbWHvOi48A) [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/yourhandle)
----
-> 💡 *“Collaboration fuels innovation — reach out, and let’s turn ideas into reality!”*
+    <p style="margin-bottom:1.5rem; font-size:0.95rem; line-height:1.5;">
+      I love connecting with fellow developers, tech enthusiasts, and collaborators! Whether you want to discuss <strong>cloud architecture, full-stack development, or AI innovations</strong>, feel free to reach out. Let’s create something amazing together! 🚀
+    </p>
+
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/mgvzqdzb" method="POST" style="display:flex; flex-direction:column; gap:12px; max-width:400px;">
+      <label for="name">Name</label>
+      <input id="name" name="name" required style="padding:8px 10px; border-radius:8px; border:1px solid var(--muted); background:transparent; color:var(--fg);">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required style="padding:8px 10px; border-radius:8px; border:1px solid var(--muted); background:transparent; color:var(--fg);">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required style="padding:8px 10px; border-radius:8px; border:1px solid var(--muted); background:transparent; color:var(--fg);"></textarea>
+
+      <button class="btn" type="submit" style="padding:10px 14px; border-radius:10px; font-weight:600; max-width:150px;">Send</button>
+    </form>
+
+    <!-- Social Links -->
+<div style="margin-top:2rem; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+  <a href="mailto:sujitprajapati557@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+  </a>
+  <a href="https://www.linkedin.com/in/sujeet-kumar-prajapati-a0572877">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="https://www.youtube.com/channel/UC_brLz0bAwFTpwbWHvOi48A">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
+  </a>
+  <a href="https://www.instagram.com/yourhandle">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+  </a>
+</div>
+
+    <!-- Quote -->
+    <p style="margin-top:2rem; font-size:0.9rem; font-style:italic; color:var(--muted);">
+      💡 *“Collaboration fuels innovation — reach out, and let’s turn ideas into reality!”*
+    </p>
+
+  </div>
+
+</section>

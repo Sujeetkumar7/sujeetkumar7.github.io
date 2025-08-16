@@ -1,0 +1,65 @@
+I"�<section class="hero" style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem; padding:3rem 1rem; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+  <div style="flex:1; min-width:250px;">
+   <h2 style="font-size:2.5rem; font-weight:700; margin-bottom:1rem;">Welcome to my Blog, where I share insights, tutorials, and experiences from my journey as a developer.</h2>
+    <p class="small" style="font-size:1rem; opacity:0.85; margin-bottom:1rem;">
+      Here, you’ll find
+    </p>
+    <h4 style="font-size:12; font-weight:700; margin-bottom:1rem;">
+        Java &amp; Backend Development** – Deep dives into Java features, Spring Boot, Microservices, Hibernate, and performance tuning.
+        Databases &amp; Cloud** – Practical tips on PostgreSQL, MongoDB, AWS services, and real-world database optimization.
+        Programming Best Practices** – Clean code, design patterns, debugging strategies, and scalable architecture.
+        Learning Roadmaps** – Step-by-step guides to mastering new technologies for beginners and professionals.
+        AI &amp; Modern Tech** – Easy-to-understand posts on AI/ML, observability, and integrating LLMs into applications.
+    </h4>
+    <p>
+      <a class="btn" href="/projects" style="background:#4f46e5; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; margin-right:10px; transition:0.3s;">View Projects</a>
+      <a class="btn ghost" href="/blog" style="background:#4f46e5; border:2px solid white; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; transition:0.3s;">Read Blog</a>
+    </p>
+    <ul class="list-unstyled" style="margin-top:1.5rem; line-height:1.8;">
+      <li>✅ Delivered 10+ production microservices with AI/ML components</li>
+      <li>✅ Expert in Kafka streaming, idempotent event processing, and distributed systems</li>
+      <li>✅ Built AI pipelines: predictive analytics, NLP models, recommendation engines</li>
+      <li>✅ Observability &amp; monitoring: OpenTelemetry, Prometheus, Grafana</li>
+      <li>✅ Mentored teams, led code reviews, and enforced engineering best practices</li>
+      <li>✅ Hands-on implementation of AI-driven solutions in production systems</li>
+    </ul>
+  </div>
+
+  <div style="flex:1; min-width:250px; text-align:center;">
+    <img class="avatar" src="/assets/images/avatar-placeholder.png" alt="Developer avatar" style="border-radius:50%; max-width:200px; border:4px solid white; box-shadow:0 8px 20px rgba(0,0,0,0.25); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+  </div>
+</section>
+
+<h3 id="welcome-to-my-blog-where-i-share-insights-tutorials-and-experiences-from-my-journey-as-a-developer">Welcome to my <strong>Blog</strong>, where I share insights, tutorials, and experiences from my journey as a developer.</h3>
+
+<h4 id="here-youll-find">Here, you’ll find:</h4>
+
+<ul>
+  <li><strong>Java &amp; Backend Development</strong> – Deep dives into Java features, Spring Boot, Microservices, Hibernate, and performance tuning.</li>
+  <li><strong>Databases &amp; Cloud</strong> – Practical tips on PostgreSQL, MongoDB, AWS services, and real-world database optimization.</li>
+  <li><strong>Programming Best Practices</strong> – Clean code, design patterns, debugging strategies, and scalable architecture.</li>
+  <li><strong>Learning Roadmaps</strong> – Step-by-step guides to mastering new technologies for beginners and professionals.</li>
+  <li><strong>AI &amp; Modern Tech</strong> – Easy-to-understand posts on AI/ML, observability, and integrating LLMs into applications.</li>
+</ul>
+
+<hr />
+
+<p>✨My goal is to make complex concepts simple, practical, and industry-ready, so you can apply them directly to your projects.
+<input id="blogSearch" class="search" placeholder="Search posts…" /></p>
+<ul class="list-unstyled">
+  
+    <li class="post-item">
+      <a href="/java%20learning/2025/08/16/ultimate-java-learning-roadmap/">Ultimate Java Learning Roadmap: From Classic to Latest Features</a>
+      <span class="badge">Aug 16, 2025</span>
+      <div class="small">Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new features is crucial fo...</div>
+    </li>
+  
+    <li class="post-item">
+      <a href="/java/2025/08/15/first-post/">First Steps into Java: A Beginner's Guide</a>
+      <span class="badge">Aug 15, 2025</span>
+      <div class="small">Welcome to the World of Java!
+</div>
+    </li>
+  
+</ul>
+:ET

@@ -1,23 +1,107 @@
-<h1 id="-contact-me">📬 Contact Me</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Sujeet Prajapati — Java Developer</title>
+    <meta name="description" content="Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume.">
 
-<p>I love connecting with fellow developers, tech enthusiasts, and collaborators! Whether you want to discuss <strong>cloud architecture, full-stack development, or AI innovations</strong>, feel free to reach out. Let’s create something amazing together! 🚀</p>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="Sujeet Prajapati — Java Developer" href="/feed.xml">
 
-<hr />
-<form action="https://formspree.io/f/mgvzqdzb" method="POST">
-  <label for="name">Name</label>
-  <input id="name" name="name" required="" />
-  <label for="email">Email</label>
-  <input id="email" name="email" type="email" required="" />
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="5" required=""></textarea>
-  <p><button class="btn" type="submit">Send</button></p>
-</form>
+    <!-- Script (load once, deferred) -->
+    <script src="/assets/script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-bar">
+        <a class="brand" href="/">☕ Sujeet Prajapati</a>
 
-<hr />
-<p>or</p>
+        <!-- Hamburger for mobile -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-<h3 id="----"><a href="mailto:sujitprajapati557@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Gmail" /></a>  <a href="https://www.linkedin.com/in/sujeet-kumar-prajapati-a0572877"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn" /></a> <a href="https://www.youtube.com/channel/UC_brLz0bAwFTpwbWHvOi48A"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&amp;logo=youtube&amp;logoColor=white" alt="YouTube" /></a> <a href="https://www.instagram.com/yourhandle"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&amp;logo=instagram&amp;logoColor=white" alt="Instagram" /></a></h3>
-<hr />
-<blockquote>
-  <p>💡 <em>“Collaboration fuels innovation — reach out, and let’s turn ideas into reality!”</em></p>
-</blockquote>
+        <!-- Navigation -->
+        <nav class="nav" id="navMenu">
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/blog">Blog</a>
+            <a href="/videos">Videos</a>
+            <a href="/resume">Resume</a>
+            <a href="/contact">Contact</a>
+            <a href="/about">About Me</a>
+            <!-- Theme toggle button (floating) -->
+            <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="main-content">
+        <section class="hero" style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:2rem; padding:3rem 1rem; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+
+  <div style="flex:1; min-width:250px;">
+
+    <!-- Intro -->
+    <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:1rem;">
+      📬 Contact Me
+    </h2>
+
+    <p style="margin-bottom:1.5rem; font-size:0.95rem; line-height:1.5;">
+      I love connecting with fellow developers, tech enthusiasts, and collaborators! Whether you want to discuss <strong>cloud architecture, full-stack development, or AI innovations</strong>, feel free to reach out. Let’s create something amazing together! 🚀
+    </p>
+
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/mgvzqdzb" method="POST" style="display:flex; flex-direction:column; gap:12px; max-width:400px;">
+      <label for="name">Name</label>
+      <input id="name" name="name" required="" style="padding:8px 10px; border-radius:8px; border:1px solid var(--muted); background:transparent; color:var(--fg);" />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required="" style="padding:8px 10px; border-radius:8px; border:1px solid var(--muted); background:transparent; color:var(--fg);" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required="" style="padding:8px 10px; border-radius:8px; border:1px solid var(--muted); background:transparent; color:var(--fg);"></textarea>
+
+      <button class="btn" type="submit" style="padding:10px 14px; border-radius:10px; font-weight:600; max-width:150px;">Send</button>
+    </form>
+
+    <!-- Social Links -->
+<div style="margin-top:2rem; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+  <a href="mailto:sujitprajapati557@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Gmail" />
+  </a>
+  <a href="https://www.linkedin.com/in/sujeet-kumar-prajapati-a0572877">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://www.youtube.com/channel/UC_brLz0bAwFTpwbWHvOi48A">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&amp;logo=youtube&amp;logoColor=white" alt="YouTube" />
+  </a>
+  <a href="https://www.instagram.com/yourhandle">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&amp;logo=instagram&amp;logoColor=white" alt="Instagram" />
+  </a>
+</div>
+
+    <!-- Quote -->
+    <p style="margin-top:2rem; font-size:0.9rem; font-style:italic; color:var(--muted);">
+      💡 *“Collaboration fuels innovation — reach out, and let’s turn ideas into reality!”*
+    </p>
+
+  </div>
+
+</section>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Sujeet Prajapati — Lets Learn Together</p>
+        <p><a href="/feed.xml"></a><a href="https://github.com"></a></p>
+    </div>
+</footer>
+</body>
+</html>

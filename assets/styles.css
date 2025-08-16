@@ -27,9 +27,9 @@ a{color:var(--accent)}
 input,textarea,select{width:100%;padding:10px;border-radius:10px;border:1px solid #2a2f3a;background:transparent;color:var(--fg)}
 label{font-weight:600}
 hr{border:0;border-top:1px solid #2a2f3a;margin:24px 0}
-.list-unstyled{list-style:none;padding-left:0}
+.list-unstyled{list-style:none;padding:20px}
 .post-item{padding:8px 0;border-bottom:1px solid #2a2f3a}
-.search{margin:10px 0}
+.search{margin:50px 0, padding:50px}
 .small{color:var(--muted);font-size:.9rem}
 .badge{font-size:.75rem;background:#2a2f3a;padding:2px 8px;border-radius:8px;margin-left:6px}
 .hero{display:grid;gap:12px;grid-template-columns:1.2fr .8fr;align-items:center}

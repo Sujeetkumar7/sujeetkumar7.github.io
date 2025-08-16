@@ -1,28 +1,57 @@
 ---
 title: Resume
+layout: default
 ---
 
-# Resume
+<section class="hero" style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:2rem; padding:3rem 1rem; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
 
-Download: [Resume (PDF)](/assets/downloads/Sujeet-Prajapati-Resume.pdf)
+  <div style="flex:1; min-width:250px;">
 
-## Summary
-Senior Java Developer with experience in microservices, Kafka, AWS, and PostgreSQL. Team lead, mentor, and problem solver.
+    <!-- Welcome / Intro -->
+    <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:1rem;">
+      Welcome to my Resume, highlighting my experience, skills, and achievements as a Senior Java Developer.
+    </h2>
 
-## Skills
-- **Languages:** Java 8/17/21, Python
-- **Frameworks:** Spring Boot, Spring Cloud
-- **Cloud:** AWS (EKS, EC2, S3, MSK)
-- **Data:** PostgreSQL, MongoDB, Redis, Solr
-- **DevOps:** Docker, Kubernetes, CI/CD (Spinnaker, GitHub Actions)
-- **Observability:** OpenTelemetry, Grafana, Prometheus, Splunk
+    <!-- Download -->
+    <p style="margin-bottom:1rem; font-size:0.95rem;">
+      📄 Download: <a href="/assets/downloads/Sample.pdf" style="color:var(--accent); font-weight:600;">My Resume (PDF)</a>
+    </p>
 
-## Experience
-- Built audit systems, history tables, and CDC pipelines with Kafka + GoldenGate
-- Designed contracts for entity store publishers and downstream consumers
-- Led module delivery for Enterprise AI Research track
+    <!-- Summary -->
+    <h4 style="font-size:14px; font-weight:700; margin-bottom:0.5rem;">Summary</h4>
+    <p style="margin-bottom:1rem; font-size:0.95rem; line-height:1.5;">
+      Senior Java Developer with expertise in building scalable backend systems using microservices, Kafka, AWS, and PostgreSQL. Experienced team lead, mentor, and problem solver focused on delivering high-quality, maintainable solutions.
+    </p>
 
-## Education
-- B.Tech (or update yours)
+    <!-- Skills -->
+    <h4 style="font-size:14px; font-weight:700; margin-bottom:0.5rem;">Skills</h4>
+    <ul style="margin-bottom:1rem; font-size:0.95rem; line-height:1.5;">
+      <li><strong>Languages:</strong> Java (8/17/21), Python</li>
+      <li><strong>Frameworks:</strong> Spring Boot, Spring Cloud</li>
+      <li><strong>Cloud & DevOps:</strong> AWS (EKS, EC2, S3, MSK), Docker, Kubernetes, CI/CD (Spinnaker, GitHub Actions)</li>
+      <li><strong>Data & Caching:</strong> PostgreSQL, MongoDB, Redis, Solr</li>
+      <li><strong>Observability & Monitoring:</strong> OpenTelemetry, Grafana, Prometheus, Splunk</li>
+    </ul>
 
-> Replace this content with your real resume and PDF.
+    <!-- Experience -->
+    <h4 style="font-size:14px; font-weight:700; margin-bottom:0.5rem;">Experience</h4>
+    <ul style="margin-bottom:1rem; font-size:0.95rem; line-height:1.5;">
+      <li>Developed audit systems, history tables, and CDC pipelines using Kafka + GoldenGate</li>
+      <li>Designed contracts for entity store publishers and downstream consumers ensuring consistency and reliability</li>
+      <li>Led module delivery for Enterprise AI Research track, mentoring team members and enforcing engineering best practices</li>
+    </ul>
+
+    <!-- Education -->
+    <h4 style="font-size:14px; font-weight:700; margin-bottom:0.5rem;">Education</h4>
+    <p style="margin-bottom:1rem; font-size:0.95rem; line-height:1.5;">
+      B.Tech (replace with your actual degree)
+    </p>
+
+    <!-- Note -->
+    <p style="margin-top:1rem; font-size:0.9rem; color:var(--muted);">
+      ⚠️ Update this page and PDF link with your latest resume.
+    </p>
+
+  </div>
+
+</section>
