@@ -447,6 +447,89 @@ Rounded Salary: 45000
     <!-- ======= End Interactive Section ======= -->
 </article>
 
+<style>
+    /* Full-width post container */
+    .post-content {
+      width: 100%;
+      max-width: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .post-header {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .post-header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .post-date {
+      font-size: 0.9rem;
+    }
+
+    .post-body {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+    }
+
+    .post-interactions {
+      border-top: 1px solid #ddd;
+      padding-top: 30px;
+      margin-top: 40px;
+    }
+
+    /* Share Buttons Styling */
+    .share-buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .share-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .facebook { background: #3b5998; }
+    .twitter { background: #1da1f2; }
+    .linkedin { background: #0077b5; }
+    .whatsapp { background: #25d366; }
+
+    /* Like Button Styling */
+    .like-button {
+      margin-bottom: 30px;
+    }
+
+    /* Responsive typography */
+    @media (max-width: 768px) {
+      .post-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .post-body {
+        font-size: 1rem;
+      }
+    }
+</style>
+
 <script>
     // Dynamic sharing URLs
     const shareURL = encodeURIComponent(window.location.href);
