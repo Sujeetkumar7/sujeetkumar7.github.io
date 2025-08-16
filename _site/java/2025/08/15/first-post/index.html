@@ -17,12 +17,12 @@
 
         .sidebar-left,
         .sidebar-right {
-          flex: 0 0 10%; /* Fixed 10% width */
+          flex: 0 0 2%; /* Fixed 10% width */
           min-width: 50px; /* minimum width to prevent collapsing */
         }
 
         .main-content {
-          flex: 0 0 80%; /* Main content takes 80% */
+          flex: 0 0 96%; /* Main content takes 80% */
           min-width: 300px;
         }
 
@@ -154,10 +154,66 @@ java HelloJava
 <h3 id="java-is-not-just-a-language-its-a-toolkit-to-build-everything-from-small-apps-to-enterprise-level-systems-start-small-stay-consistent-and-soon-youll-be-writing-powerful-java-applications-confidently">Java is not just a language; it’s a toolkit to build everything from small apps to enterprise-level systems. Start small, stay consistent, and soon you’ll be writing powerful Java applications confidently!</h3>
 
     </div>
-    <!-- Add visit count here -->
-    <p style="margin-top: 20px; font-size: 14px; color: #555;">
-        👁️ Page Visits: <span id="visit-count">0</span>
-    </p>
+    <!-- Visitor Counter -->
+    <!-- VISITOR COUNTER (Clean & Neutral Style) -->
+<div style="display:flex; gap:12px; margin-top:1.5rem; flex-wrap:wrap; font-family:sans-serif;">
+
+    <!-- Page Visits -->
+    <div style="background:#f3f4f6; color:#1f2937; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);" title="Number of visitors to this page">
+        <span>📄</span>
+        <span>Page Visits:</span>
+        <span id="page-visit-count">0</span>
+    </div>
+
+    <!-- Total Visits -->
+    <div style="background:#f3f4f6; color:#1f2937; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);" title="Total visitors across all pages">
+        <span>🌐</span>
+        <span>Total Visits:</span>
+        <span id="total-visit-count">0</span>
+    </div>
+
+</div>
+
+<script>
+    // Page slug: home for homepage, slugified URL for posts
+    const pageSlug = "java-2025-08-15-first-post";
+    const namespace = "sujeetkumar7.github.io";
+
+    const pageApiUrl = `https://api.countapi.xyz/hit/${namespace}/${pageSlug}`;
+    const totalApiUrl = `https://api.countapi.xyz/hit/${namespace}/total`;
+
+    // Animate number counting
+    function animateCount(element, target) {
+      let count = 0;
+      const step = Math.ceil(target / 50);
+      const interval = setInterval(() => {
+        count += step;
+        if (count >= target) {
+          count = target;
+          clearInterval(interval);
+        }
+        element.innerText = count;
+      }, 20);
+    }
+
+    // Fetch count from CountAPI
+    async function fetchCount(url, elementId) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('API error');
+        const data = await res.json();
+        animateCount(document.getElementById(elementId), data.value);
+      } catch(err) {
+        console.error('CountAPI error:', err, url);
+        document.getElementById(elementId).innerText = 'N/A';
+      }
+    }
+
+    // Initialize visitor count
+    fetchCount(pageApiUrl, 'page-visit-count');
+    fetchCount(totalApiUrl, 'total-visit-count');
+</script>
+
     <!-- ======= Interactive Section ======= -->
     <div class="post-interactions">
 
@@ -250,17 +306,6 @@ java HelloJava
     document.querySelector('.share-btn.twitter').href = `https://twitter.com/intent/tweet?url=${shareURL}&text=${shareTitle}`;
     document.querySelector('.share-btn.linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareURL}&title=${shareTitle}`;
     document.querySelector('.share-btn.whatsapp').href = `https://api.whatsapp.com/send?text=${shareTitle}%20${shareURL}`;
-</script>
-<script>
-    const pageSlug = "java-programming-2025-08-15-first-post";
-    const apiUrl = `https://api.countapi.xyz/hit/sujeetkumar7.github.io/${pageSlug}`;
-
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('visit-count').innerText = data.value;
-      })
-      .catch(err => console.log('CountAPI error:', err));
 </script>
 
     </div>

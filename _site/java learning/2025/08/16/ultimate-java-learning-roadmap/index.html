@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Java Learning Roadmap: From Classic to Latest Features — Sujeet Prajapati — Java Developer</title>
+    <meta name="description" content="Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new features is crucial for writing robust, maintainable, and modern Java applications. Here’s a detailed roadmap to guide you.">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="Sujeet Prajapati — Java Developer" href="/feed.xml">
+    <style>
+        /* Flex layout for main content */
+        .flex-container {
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+
+        .sidebar-left,
+        .sidebar-right {
+          flex: 0 0 2%; /* Fixed 10% width */
+          min-width: 50px; /* minimum width to prevent collapsing */
+        }
+
+        .main-content {
+          flex: 0 0 96%; /* Main content takes 80% */
+          min-width: 300px;
+        }
+
+        /* Responsive: stack columns on small screens */
+        @media (max-width: 900px) {
+          .flex-container {
+            flex-direction: column;
+          }
+
+          .sidebar-left,
+          .sidebar-right,
+          .main-content {
+            min-width: 100%;
+            flex: 1 1 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-bar">
+        <a class="brand" href="/">☕ Sujeet Prajapati</a>
+        <nav class="nav">
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/blog">Blog</a>
+            <a href="/videos">Videos</a>
+            <a href="/resume">Resume</a>
+            <a href="/contact">Contact</a>
+            <a href="/about">About Me</a>
+            <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        </nav>
+    </div>
+</header>
+
+<!-- Main container with flexible sidebars -->
+<main class="container flex-container">
+
+    <!-- Left sidebar -->
+    <aside class="sidebar-left">
+        <!-- Future left content -->
+    </aside>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <article class="post-content container">
+    <header>
+        <h1>Ultimate Java Learning Roadmap: From Classic to Latest Features</h1>
+        <p class="post-date">August 16, 2025</p>
+    </header>
+
+    <div class="post-body">
+        <p>Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new features is crucial for writing robust, maintainable, and modern Java applications. Here’s a detailed roadmap to guide you.</p>
+
+<hr />
+
+<h2 id="1-core-java-fundamentals"><strong>1. Core Java Fundamentals</strong></h2>
+
+<p>Even with new versions, the foundation remains the same. Mastering these ensures you can adapt to new features easily.</p>
+
+<ul>
+  <li><strong>Data Types &amp; Variables</strong> – Primitive types, wrapper classes, and type casting.</li>
+  <li><strong>Operators</strong> – Arithmetic, relational, logical, bitwise, and assignment operators.</li>
+  <li><strong>Control Flow Statements</strong> – <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">else</code>, <code class="language-plaintext highlighter-rouge">switch</code>, loops (<code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>, <code class="language-plaintext highlighter-rouge">do-while</code>).</li>
+  <li><strong>Methods &amp; Recursion</strong> – Method overloading, recursion, variable arguments.</li>
+  <li><strong>Exception Handling</strong> – Checked vs unchecked exceptions, try-catch-finally, custom exceptions.</li>
+  <li><strong>Object-Oriented Programming (OOP)</strong> – Classes, objects, inheritance, polymorphism, abstraction, encapsulation.</li>
+  <li><strong>Access Modifiers &amp; Packages</strong> – <code class="language-plaintext highlighter-rouge">public</code>, <code class="language-plaintext highlighter-rouge">private</code>, <code class="language-plaintext highlighter-rouge">protected</code>, default, package structure.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-advanced-core-java-concepts"><strong>2. Advanced Core Java Concepts</strong></h2>
+
+<p>These are crucial for professional development and interview preparation.</p>
+
+<ul>
+  <li><strong>Collections Framework</strong> – <code class="language-plaintext highlighter-rouge">List</code>, <code class="language-plaintext highlighter-rouge">Set</code>, <code class="language-plaintext highlighter-rouge">Map</code>, <code class="language-plaintext highlighter-rouge">Queue</code>, <code class="language-plaintext highlighter-rouge">Deque</code>, and their implementations.</li>
+  <li><strong>Generics</strong> – Type safety, generic methods, wildcards.</li>
+  <li><strong>Streams &amp; Lambda Expressions</strong> – Functional programming in Java 8+, operations like <code class="language-plaintext highlighter-rouge">filter</code>, <code class="language-plaintext highlighter-rouge">map</code>, <code class="language-plaintext highlighter-rouge">reduce</code>.</li>
+  <li><strong>Functional Interfaces</strong> – <code class="language-plaintext highlighter-rouge">Predicate</code>, <code class="language-plaintext highlighter-rouge">Function</code>, <code class="language-plaintext highlighter-rouge">Consumer</code>, <code class="language-plaintext highlighter-rouge">Supplier</code>.</li>
+  <li><strong>Java I/O and NIO</strong> – File handling, buffered streams, serialization, Path API.</li>
+  <li><strong>Concurrency</strong> – Threads, Runnable, Callable, ExecutorService, thread safety, <code class="language-plaintext highlighter-rouge">synchronized</code>, <code class="language-plaintext highlighter-rouge">volatile</code>.</li>
+  <li><strong>Java Memory Model</strong> – Stack vs Heap, Garbage Collection, JVM internals.</li>
+</ul>
+
+<hr />
+
+<h2 id="3-modern-java-features-java-8-to-21"><strong>3. Modern Java Features (Java 8 to 21)</strong></h2>
+
+<p>Focus here to stay relevant in modern enterprise applications.</p>
+
+<ul>
+  <li>
+    <p><strong>Java 8</strong></p>
+
+    <ul>
+      <li>Lambda Expressions &amp; Functional Programming</li>
+      <li>Streams API &amp; Parallel Streams</li>
+      <li>Default &amp; Static Methods in Interfaces</li>
+      <li>Optional Class for null handling</li>
+      <li>Date &amp; Time API (<code class="language-plaintext highlighter-rouge">java.time</code>)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Java 9</strong></p>
+
+    <ul>
+      <li>Module System (<code class="language-plaintext highlighter-rouge">module-info.java</code>)</li>
+      <li>JShell (Java REPL)</li>
+      <li>Improved <code class="language-plaintext highlighter-rouge">Stream</code> API (<code class="language-plaintext highlighter-rouge">takeWhile</code>, <code class="language-plaintext highlighter-rouge">dropWhile</code>)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Java 10-11</strong></p>
+
+    <ul>
+      <li>Local-Variable Type Inference (<code class="language-plaintext highlighter-rouge">var</code>)</li>
+      <li>New <code class="language-plaintext highlighter-rouge">String</code> methods (<code class="language-plaintext highlighter-rouge">isBlank</code>, <code class="language-plaintext highlighter-rouge">lines</code>)</li>
+      <li>HTTP Client API</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Java 14-15</strong></p>
+
+    <ul>
+      <li>Records (compact data classes)</li>
+      <li>Pattern Matching for <code class="language-plaintext highlighter-rouge">instanceof</code></li>
+      <li>Text Blocks (<code class="language-plaintext highlighter-rouge">"""</code>)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Java 17 (LTS)</strong></p>
+
+    <ul>
+      <li>Sealed Classes</li>
+      <li>Enhanced <code class="language-plaintext highlighter-rouge">switch</code> expressions</li>
+      <li>Pattern Matching in <code class="language-plaintext highlighter-rouge">switch</code></li>
+      <li>Strong encapsulation in JDK</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Java 19-21 (Latest Features)</strong></p>
+
+    <ul>
+      <li>Virtual Threads (Project Loom)</li>
+      <li>Structured Concurrency</li>
+      <li>Record Patterns</li>
+      <li>String templates (Preview in Java 21)</li>
+      <li>Scoped Values and Foreign Function &amp; Memory API</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="4-java-design-patterns--best-practices"><strong>4. Java Design Patterns &amp; Best Practices</strong></h2>
+
+<p>Learning patterns ensures you can design maintainable and reusable code.</p>
+
+<ul>
+  <li><strong>Creational Patterns</strong> – Singleton, Factory, Builder</li>
+  <li><strong>Structural Patterns</strong> – Adapter, Decorator, Proxy</li>
+  <li><strong>Behavioral Patterns</strong> – Observer, Strategy, Command</li>
+  <li><strong>SOLID Principles</strong> – Maintainable code architecture</li>
+  <li><strong>Clean Code Practices</strong> – Naming conventions, code readability, modularization</li>
+</ul>
+
+<hr />
+
+<h2 id="5-java-ecosystem--tools"><strong>5. Java Ecosystem &amp; Tools</strong></h2>
+
+<p>To be a professional Java developer, you must also know the ecosystem:</p>
+
+<ul>
+  <li><strong>Build Tools</strong> – Maven, Gradle</li>
+  <li><strong>Unit Testing</strong> – JUnit 5, Mockito, TestNG</li>
+  <li><strong>Logging</strong> – SLF4J, Logback, Log4j2</li>
+  <li><strong>Version Control</strong> – Git &amp; GitHub</li>
+  <li><strong>IDEs</strong> – IntelliJ IDEA, Eclipse</li>
+</ul>
+
+<hr />
+
+<h2 id="6-java-in-real-world-applications"><strong>6. Java in Real-world Applications</strong></h2>
+
+<p>Learn how Java is applied in real projects:</p>
+
+<ul>
+  <li><strong>Spring Framework</strong> – Spring Boot, Spring Data, Spring Security</li>
+  <li><strong>Microservices</strong> – REST APIs, Spring Cloud, Kafka integration</li>
+  <li><strong>Database</strong> – JDBC, JPA/Hibernate, PostgreSQL, MongoDB</li>
+  <li><strong>Cloud &amp; DevOps</strong> – AWS Java SDK, Docker, Kubernetes</li>
+</ul>
+
+<hr />
+
+<h2 id="7-optional-advanced-java-concepts"><strong>7. Optional: Advanced Java Concepts</strong></h2>
+
+<p>These give you an edge for high-performance and scalable systems:</p>
+
+<ul>
+  <li><strong>Reactive Programming</strong> – Project Reactor, RxJava</li>
+  <li><strong>Concurrency Utilities</strong> – ForkJoinPool, CompletableFuture</li>
+  <li><strong>JVM Performance Tuning</strong> – Profiling, GC tuning, memory leaks analysis</li>
+  <li><strong>Security</strong> – Encryption, JWT, OAuth2</li>
+</ul>
+
+<hr />
+
+<h3 id="conclusion"><strong>Conclusion</strong></h3>
+
+<p>A modern Java developer should combine <strong>solid core Java knowledge</strong> with <strong>latest language features</strong> and <strong>framework expertise</strong>. Start from fundamentals, then explore streams, lambda expressions, modules, and finally embrace Java 17–21 innovations like virtual threads, records, and structured concurrency.</p>
+
+    </div>
+    <!-- Visitor Counter -->
+    <!-- VISITOR COUNTER (Clean & Neutral Style) -->
+<div style="display:flex; gap:12px; margin-top:1.5rem; flex-wrap:wrap; font-family:sans-serif;">
+
+    <!-- Page Visits -->
+    <div style="background:#f3f4f6; color:#1f2937; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);" title="Number of visitors to this page">
+        <span>📄</span>
+        <span>Page Visits:</span>
+        <span id="page-visit-count">0</span>
+    </div>
+
+    <!-- Total Visits -->
+    <div style="background:#f3f4f6; color:#1f2937; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);" title="Total visitors across all pages">
+        <span>🌐</span>
+        <span>Total Visits:</span>
+        <span id="total-visit-count">0</span>
+    </div>
+
+</div>
+
+<script>
+    // Page slug: home for homepage, slugified URL for posts
+    const pageSlug = "java-20learning-2025-08-16-ultimate-java-learning-roadmap";
+    const namespace = "sujeetkumar7.github.io";
+
+    const pageApiUrl = `https://api.countapi.xyz/hit/${namespace}/${pageSlug}`;
+    const totalApiUrl = `https://api.countapi.xyz/hit/${namespace}/total`;
+
+    // Animate number counting
+    function animateCount(element, target) {
+      let count = 0;
+      const step = Math.ceil(target / 50);
+      const interval = setInterval(() => {
+        count += step;
+        if (count >= target) {
+          count = target;
+          clearInterval(interval);
+        }
+        element.innerText = count;
+      }, 20);
+    }
+
+    // Fetch count from CountAPI
+    async function fetchCount(url, elementId) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('API error');
+        const data = await res.json();
+        animateCount(document.getElementById(elementId), data.value);
+      } catch(err) {
+        console.error('CountAPI error:', err, url);
+        document.getElementById(elementId).innerText = 'N/A';
+      }
+    }
+
+    // Initialize visitor count
+    fetchCount(pageApiUrl, 'page-visit-count');
+    fetchCount(totalApiUrl, 'total-visit-count');
+</script>
+
+    <!-- ======= Interactive Section ======= -->
+    <div class="post-interactions">
+
+        <!-- 1️⃣ Stylish Share Buttons -->
+        <div class="share-buttons">
+            <a class="share-btn facebook" href="#" target="_blank" title="Share on Facebook">F</a>
+            <a class="share-btn twitter" href="#" target="_blank" title="Share on Twitter">T</a>
+            <a class="share-btn linkedin" href="#" target="_blank" title="Share on LinkedIn">L</a>
+            <a class="share-btn whatsapp" href="#" target="_blank" title="Share on WhatsApp">W</a>
+        </div>
+
+        <!-- AddThis fallback (optional) -->
+        <div class="addthis_inline_share_toolbox" style="display:none;"></div>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-YOUR_ADDTHIS_ID" async></script>
+
+        <!-- 2️⃣ Like Button -->
+        <div class="like-button">
+            <a class="likebtn-wrapper"
+               data-identifier="post-ultimate-java-learning-roadmap"
+               data-theme="github"
+               data-ef_voting="bounce"
+               data-counter_clickable="true">
+            </a>
+            <script type="text/javascript" src="//w.likebtn.com/js/w/widget.js" async></script>
+        </div>
+
+        <!-- 3️⃣ Utterances Comments -->
+        <div id="comments"></div>
+        <script src="https://utteranc.es/client.js"
+                repo="sujeetkumar7/sujeetkumar7.github.io"
+                issue-term="pathname"
+                label="💬 comment"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+
+    </div>
+    <!-- ======= End Interactive Section ======= -->
+</article>
+
+<style>
+    .post-interactions {
+      border-top: 1px solid #ddd;
+      padding-top: 30px;
+      margin-top: 40px;
+    }
+
+    /* Share Buttons Styling */
+    .share-buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .share-btn {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .share-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .facebook { background: #3b5998; }
+    .twitter { background: #1da1f2; }
+    .linkedin { background: #0077b5; }
+    .whatsapp { background: #25d366; }
+
+    /* Like Button Styling */
+    .like-button {
+      margin-bottom: 30px;
+    }
+</style>
+
+<script>
+    // Optional: Dynamic sharing URLs
+    const shareURL = encodeURIComponent(window.location.href);
+    const shareTitle = encodeURIComponent(document.title);
+
+    document.querySelector('.share-btn.facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${shareURL}`;
+    document.querySelector('.share-btn.twitter').href = `https://twitter.com/intent/tweet?url=${shareURL}&text=${shareTitle}`;
+    document.querySelector('.share-btn.linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareURL}&title=${shareTitle}`;
+    document.querySelector('.share-btn.whatsapp').href = `https://api.whatsapp.com/send?text=${shareTitle}%20${shareURL}`;
+</script>
+
+    </div>
+
+    <!-- Right sidebar -->
+    <aside class="sidebar-right">
+        <!-- Future right content -->
+    </aside>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Sujeet Prajapati — Lets Learn Together</p>
+        <p><a href="/feed.xml"></a><a href="https://github.com"></a></p>
+    </div>
+</footer>
+
+<script src="/assets/script.js"></script>
+</body>
+</html>

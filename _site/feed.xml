@@ -1,4 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-16T01:36:36+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sujeet Prajapati — Java Developer</title><subtitle>Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume.</subtitle><author><name>Sujeet Prajapati</name></author><entry><title type="html">First Steps into Java: A Beginner’s Guide</title><link href="http://localhost:4000/java,/programming/2025/08/15/first-post/" rel="alternate" type="text/html" title="First Steps into Java: A Beginner’s Guide" /><published>2025-08-15T00:00:00+05:30</published><updated>2025-08-15T00:00:00+05:30</updated><id>http://localhost:4000/java,/programming/2025/08/15/first-post</id><content type="html" xml:base="http://localhost:4000/java,/programming/2025/08/15/first-post/"><![CDATA[<h1 id="welcome-to-the-world-of-java">Welcome to the World of Java!</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-16T11:56:16+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sujeet Prajapati — Java Developer</title><subtitle>Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume.</subtitle><author><name>Sujeet Prajapati</name></author><entry><title type="html">Ultimate Java Learning Roadmap: From Classic to Latest Features</title><link href="http://localhost:4000/java%20learning/2025/08/16/ultimate-java-learning-roadmap/" rel="alternate" type="text/html" title="Ultimate Java Learning Roadmap: From Classic to Latest Features" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java%20learning/2025/08/16/ultimate-java-learning-roadmap</id><content type="html" xml:base="http://localhost:4000/java%20learning/2025/08/16/ultimate-java-learning-roadmap/"><![CDATA[<p>Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new features is crucial for writing robust, maintainable, and modern Java applications. Here’s a detailed roadmap to guide you.</p>
+
+<hr />
+
+<h2 id="1-core-java-fundamentals"><strong>1. Core Java Fundamentals</strong></h2>
+
+<p>Even with new versions, the foundation remains the same. Mastering these ensures you can adapt to new features easily.</p>
+
+<ul>
+  <li><strong>Data Types &amp; Variables</strong> – Primitive types, wrapper classes, and type casting.</li>
+  <li><strong>Operators</strong> – Arithmetic, relational, logical, bitwise, and assignment operators.</li>
+  <li><strong>Control Flow Statements</strong> – <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">else</code>, <code class="language-plaintext highlighter-rouge">switch</code>, loops (<code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>, <code class="language-plaintext highlighter-rouge">do-while</code>).</li>
+  <li><strong>Methods &amp; Recursion</strong> – Method overloading, recursion, variable arguments.</li>
+  <li><strong>Exception Handling</strong> – Checked vs unchecked exceptions, try-catch-finally, custom exceptions.</li>
+  <li><strong>Object-Oriented Programming (OOP)</strong> – Classes, objects, inheritance, polymorphism, abstraction, encapsulation.</li>
+  <li><strong>Access Modifiers &amp; Packages</strong> – <code class="language-plaintext highlighter-rouge">public</code>, <code class="language-plaintext highlighter-rouge">private</code>, <code class="language-plaintext highlighter-rouge">protected</code>, default, package structure.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-advanced-core-java-concepts"><strong>2. Advanced Core Java Concepts</strong></h2>
+
+<p>These are crucial for professional development and interview preparation.</p>
+
+<ul>
+  <li><strong>Collections Framework</strong> – <code class="language-plaintext highlighter-rouge">List</code>, <code class="language-plaintext highlighter-rouge">Set</code>, <code class="language-plaintext highlighter-rouge">Map</code>, <code class="language-plaintext highlighter-rouge">Queue</code>, <code class="language-plaintext highlighter-rouge">Deque</code>, and their implementations.</li>
+  <li><strong>Generics</strong> – Type safety, generic methods, wildcards.</li>
+  <li><strong>Streams &amp; Lambda Expressions</strong> – Functional programming in Java 8+, operations like <code class="language-plaintext highlighter-rouge">filter</code>, <code class="language-plaintext highlighter-rouge">map</code>, <code class="language-plaintext highlighter-rouge">reduce</code>.</li>
+  <li><strong>Functional Interfaces</strong> – <code class="language-plaintext highlighter-rouge">Predicate</code>, <code class="language-plaintext highlighter-rouge">Function</code>, <code class="language-plaintext highlighter-rouge">Consumer</code>, <code class="language-plaintext highlighter-rouge">Supplier</code>.</li>
+  <li><strong>Java I/O and NIO</strong> – File handling, buffered streams, serialization, Path API.</li>
+  <li><strong>Concurrency</strong> – Threads, Runnable, Callable, ExecutorService, thread safety, <code class="language-plaintext highlighter-rouge">synchronized</code>, <code class="language-plaintext highlighter-rouge">volatile</code>.</li>
+  <li><strong>Java Memory Model</strong> – Stack vs Heap, Garbage Collection, JVM internals.</li>
+</ul>
+
+<hr />
+
+<h2 id="3-modern-java-features-java-8-to-21"><strong>3. Modern Java Features (Java 8 to 21)</strong></h2>
+
+<p>Focus here to stay relevant in modern enterprise applications.</p>
+
+<ul>
+  <li>
+    <p><strong>Java 8</strong></p>
+
+    <ul>
+      <li>Lambda Expressions &amp; Functional Programming</li>
+      <li>Streams API &amp; Parallel Streams</li>
+      <li>Default &amp; Static Methods in Interfaces</li>
+      <li>Optional Class for null handling</li>
+      <li>Date &amp; Time API (<code class="language-plaintext highlighter-rouge">java.time</code>)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Java 9</strong></p>
+
+    <ul>
+      <li>Module System (<code class="language-plaintext highlighter-rouge">module-info.java</code>)</li>
+      <li>JShell (Java REPL)</li>
+      <li>Improved <code class="language-plaintext highlighter-rouge">Stream</code> API (<code class="language-plaintext highlighter-rouge">takeWhile</code>, <code class="language-plaintext highlighter-rouge">dropWhile</code>)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Java 10-11</strong></p>
+
+    <ul>
+      <li>Local-Variable Type Inference (<code class="language-plaintext highlighter-rouge">var</code>)</li>
+      <li>New <code class="language-plaintext highlighter-rouge">String</code> methods (<code class="language-plaintext highlighter-rouge">isBlank</code>, <code class="language-plaintext highlighter-rouge">lines</code>)</li>
+      <li>HTTP Client API</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Java 14-15</strong></p>
+
+    <ul>
+      <li>Records (compact data classes)</li>
+      <li>Pattern Matching for <code class="language-plaintext highlighter-rouge">instanceof</code></li>
+      <li>Text Blocks (<code class="language-plaintext highlighter-rouge">"""</code>)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Java 17 (LTS)</strong></p>
+
+    <ul>
+      <li>Sealed Classes</li>
+      <li>Enhanced <code class="language-plaintext highlighter-rouge">switch</code> expressions</li>
+      <li>Pattern Matching in <code class="language-plaintext highlighter-rouge">switch</code></li>
+      <li>Strong encapsulation in JDK</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Java 19-21 (Latest Features)</strong></p>
+
+    <ul>
+      <li>Virtual Threads (Project Loom)</li>
+      <li>Structured Concurrency</li>
+      <li>Record Patterns</li>
+      <li>String templates (Preview in Java 21)</li>
+      <li>Scoped Values and Foreign Function &amp; Memory API</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="4-java-design-patterns--best-practices"><strong>4. Java Design Patterns &amp; Best Practices</strong></h2>
+
+<p>Learning patterns ensures you can design maintainable and reusable code.</p>
+
+<ul>
+  <li><strong>Creational Patterns</strong> – Singleton, Factory, Builder</li>
+  <li><strong>Structural Patterns</strong> – Adapter, Decorator, Proxy</li>
+  <li><strong>Behavioral Patterns</strong> – Observer, Strategy, Command</li>
+  <li><strong>SOLID Principles</strong> – Maintainable code architecture</li>
+  <li><strong>Clean Code Practices</strong> – Naming conventions, code readability, modularization</li>
+</ul>
+
+<hr />
+
+<h2 id="5-java-ecosystem--tools"><strong>5. Java Ecosystem &amp; Tools</strong></h2>
+
+<p>To be a professional Java developer, you must also know the ecosystem:</p>
+
+<ul>
+  <li><strong>Build Tools</strong> – Maven, Gradle</li>
+  <li><strong>Unit Testing</strong> – JUnit 5, Mockito, TestNG</li>
+  <li><strong>Logging</strong> – SLF4J, Logback, Log4j2</li>
+  <li><strong>Version Control</strong> – Git &amp; GitHub</li>
+  <li><strong>IDEs</strong> – IntelliJ IDEA, Eclipse</li>
+</ul>
+
+<hr />
+
+<h2 id="6-java-in-real-world-applications"><strong>6. Java in Real-world Applications</strong></h2>
+
+<p>Learn how Java is applied in real projects:</p>
+
+<ul>
+  <li><strong>Spring Framework</strong> – Spring Boot, Spring Data, Spring Security</li>
+  <li><strong>Microservices</strong> – REST APIs, Spring Cloud, Kafka integration</li>
+  <li><strong>Database</strong> – JDBC, JPA/Hibernate, PostgreSQL, MongoDB</li>
+  <li><strong>Cloud &amp; DevOps</strong> – AWS Java SDK, Docker, Kubernetes</li>
+</ul>
+
+<hr />
+
+<h2 id="7-optional-advanced-java-concepts"><strong>7. Optional: Advanced Java Concepts</strong></h2>
+
+<p>These give you an edge for high-performance and scalable systems:</p>
+
+<ul>
+  <li><strong>Reactive Programming</strong> – Project Reactor, RxJava</li>
+  <li><strong>Concurrency Utilities</strong> – ForkJoinPool, CompletableFuture</li>
+  <li><strong>JVM Performance Tuning</strong> – Profiling, GC tuning, memory leaks analysis</li>
+  <li><strong>Security</strong> – Encryption, JWT, OAuth2</li>
+</ul>
+
+<hr />
+
+<h3 id="conclusion"><strong>Conclusion</strong></h3>
+
+<p>A modern Java developer should combine <strong>solid core Java knowledge</strong> with <strong>latest language features</strong> and <strong>framework expertise</strong>. Start from fundamentals, then explore streams, lambda expressions, modules, and finally embrace Java 17–21 innovations like virtual threads, records, and structured concurrency.</p>]]></content><author><name>Sujeet Prajapati</name></author><category term="java learning" /><summary type="html"><![CDATA[Java in 2025, covering both latest features (Java 17, 21) and the classic/older Java topics]]></summary></entry><entry><title type="html">First Steps into Java: A Beginner’s Guide</title><link href="http://localhost:4000/java/2025/08/15/first-post/" rel="alternate" type="text/html" title="First Steps into Java: A Beginner’s Guide" /><published>2025-08-15T00:00:00+05:30</published><updated>2025-08-15T00:00:00+05:30</updated><id>http://localhost:4000/java/2025/08/15/first-post</id><content type="html" xml:base="http://localhost:4000/java/2025/08/15/first-post/"><![CDATA[<h1 id="welcome-to-the-world-of-java">Welcome to the World of Java!</h1>
 
 <p>Java is everywhere – from your Android apps to enterprise-level backend systems. It’s one of the most popular programming languages in the world, known for its simplicity, portability, and powerful features. Whether you are a beginner or coming from another programming language, Java is a great place to start.</p>
 
@@ -74,4 +234,4 @@ java HelloJava
 </ul>
 
 <hr />
-<h3 id="java-is-not-just-a-language-its-a-toolkit-to-build-everything-from-small-apps-to-enterprise-level-systems-start-small-stay-consistent-and-soon-youll-be-writing-powerful-java-applications-confidently">Java is not just a language; it’s a toolkit to build everything from small apps to enterprise-level systems. Start small, stay consistent, and soon you’ll be writing powerful Java applications confidently!</h3>]]></content><author><name>Sujeet Prajapati</name></author><category term="java," /><category term="programming" /><summary type="html"><![CDATA[How to run your first java program]]></summary></entry></feed>
+<h3 id="java-is-not-just-a-language-its-a-toolkit-to-build-everything-from-small-apps-to-enterprise-level-systems-start-small-stay-consistent-and-soon-youll-be-writing-powerful-java-applications-confidently">Java is not just a language; it’s a toolkit to build everything from small apps to enterprise-level systems. Start small, stay consistent, and soon you’ll be writing powerful Java applications confidently!</h3>]]></content><author><name>Sujeet Prajapati</name></author><category term="java" /><summary type="html"><![CDATA[How to run your first java program]]></summary></entry></feed>
