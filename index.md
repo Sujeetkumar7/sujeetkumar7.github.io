@@ -2,44 +2,75 @@
 title: Home
 ---
 
-<section class="hero">
-  <div>
-    <h1>Hi, I'm Sujeet — Senior Java Developer</h1>
-    <p class="small">Java • Spring Boot • Microservices • AWS • Kafka • PostgreSQL</p>
-    <p>I design and build reliable backend systems at scale. I love writing clean code, evolving architectures, mentoring teams, and sharing what I learn.</p>
-    <p>
-      <a class="btn" href="/projects">View Projects</a>
-      <a class="btn ghost" href="/blog">Read Blog</a>
+<!-- HERO SECTION -->
+<section class="hero" style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem; padding:3rem 1rem; background: linear-gradient(135deg, #1f2937, #4f46e5); color:white; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+  <div style="flex:1; min-width:300px;">
+    <h1 style="font-size:2.5rem; margin-bottom:0.5rem;">Hi, I'm Sujeet — Lead Java & AI Backend Architect</h1>
+    <p class="small" style="font-size:1rem; opacity:0.8; margin-bottom:1rem;">
+      Java • Spring Boot • Microservices • AWS • Kafka • PostgreSQL • AI/ML • Observability
     </p>
-    <ul class="list-unstyled">
-      <li>✅ 10+ production microservices delivered</li>
-      <li>✅ Kafka streaming, exactly-once semantics, idempotency</li>
-      <li>✅ Observability: OpenTelemetry, Grafana, Prometheus</li>
+    <p style="font-size:1.1rem; line-height:1.6; margin-bottom:1.5rem;">
+      I lead the design and delivery of scalable, intelligent backend systems. Passionate about clean code, evolving architectures, mentoring teams, and integrating AI-driven solutions into production systems.
+    </p>
+    <p>
+      <a class="btn" href="/projects" style="background:#4f46e5; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; margin-right:10px; transition:0.3s;">View Projects</a>
+      <a class="btn ghost" href="/blog" style="background:transparent; border:2px solid white; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; transition:0.3s;">Read Blog</a>
+    </p>
+    <ul class="list-unstyled" style="margin-top:1.5rem; line-height:1.8;">
+      <li>✅ Led 10+ production microservices with high scalability & reliability</li>
+      <li>✅ Kafka streaming expert: exactly-once semantics & idempotent event processing</li>
+      <li>✅ Built AI/ML pipelines: predictive analytics, NLP, recommendation engines</li>
+      <li>✅ Observability & monitoring: OpenTelemetry, Prometheus, Grafana</li>
+      <li>✅ Mentored teams & enforced engineering best practices</li>
+      <li>✅ Designing resilient, secure, cloud-native architectures on AWS</li>
     </ul>
   </div>
-  <div>
-    <img class="avatar" src="/assets/images/avatar-placeholder.png" alt="Developer avatar">
+
+  <div style="flex:1; min-width:250px; text-align:center;">
+    <img class="avatar" src="/assets/images/avatar-placeholder.png" alt="Developer avatar" style="border-radius:50%; max-width:200px; border:4px solid white; box-shadow:0 8px 20px rgba(0,0,0,0.25); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
   </div>
 </section>
+{% include visitor-counter.html %}
+<!-- FEATURED PROJECTS -->
+<div class="card" style="margin-top:3rem;">
+  <h2 style="margin-bottom:1rem;">Featured Projects</h2>
+  <div class="grid cards" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem;">
 
-<div class="card">
-  <h2>Featured Projects</h2>
-  <div class="grid cards">
-    <div class="card project-card">
-    <h3>LLM Observability Dashboard (In Progress)</h3>
-    <p class="small">Metrics & tracing for AI services, prompt latency, quality, and safety events.</p>
-    <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">OpenTelemetry</span>
-    <p><a class="btn" href="/projects/llm-obs.md">Details</a></p>
+    <div class="card project-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; background:white;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)'">
+      <h3 style="margin-bottom:0.5rem;">LLM Observability Dashboard (In Progress)</h3>
+      <p class="small" style="margin-bottom:0.8rem;">
+        Real-time observability platform for AI services: tracking prompt latency, model performance, quality metrics, and safety events to ensure reliable AI in production.
+      </p>
+      <div style="margin-bottom:0.8rem;">
+        <span class="tag" style="background:#f0f0f0; color:#333; padding:2px 6px; border-radius:6px; margin-right:4px; font-size:0.85rem;">Python</span>
+        <span class="tag" style="background:#f0f0f0; color:#333; padding:2px 6px; border-radius:6px; margin-right:4px; font-size:0.85rem;">FastAPI</span>
+        <span class="tag" style="background:#f0f0f0; color:#333; padding:2px 6px; border-radius:6px; margin-right:4px; font-size:0.85rem;">OpenTelemetry</span>
+        <span class="tag" style="background:#f0f0f0; color:#333; padding:2px 6px; border-radius:6px; font-size:0.85rem;">AI/ML</span>
+      </div>
+      <p><a class="btn" href="/projects/llm-obs.md" style="background:#4f46e5; color:white; padding:0.5rem 1rem; border-radius:8px; text-decoration:none; font-weight:600; transition:0.3s;">View Details</a></p>
     </div>
+
   </div>
 </div>
 
-<div class="card">
-  <h2>Latest from the Blog</h2>
-  <ul class="list-unstyled">
+<!-- LATEST BLOG POSTS -->
+<div class="card" style="margin-top:3rem;">
+  <h2 style="margin-bottom:1rem;">Latest from the Blog</h2>
+  <div class="grid cards" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
     {% for post in site.posts limit:3 %}
-      <li class="post-item"><a href="{{ post.url }}">{{ post.title }}</a> <span class="badge">{{ post.date | date: "%b %d, %Y" }}</span></li>
+    <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1); background:white; transition: transform 0.3s, box-shadow 0.3s;"
+         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+      <h3 style="margin-bottom:0.5rem;"><a href="{{ post.url }}" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">{{ post.title }}</a></h3>
+      <p class="small" style="color:#555; font-size:0.9rem; margin-bottom:0.5rem;">
+        {{ post.excerpt | strip_html | truncate: 120 }}
+      </p>
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+        <span class="badge" style="background:#e0e7ff; color:#1e3a8a; font-size:0.75rem; padding:2px 6px; border-radius:6px;">{{ post.date | date: "%b %d, %Y" }}</span>
+        <span class="tag" style="background:#fef3c7; color:#b45309; font-size:0.75rem; padding:2px 6px; border-radius:6px; margin-top:4px;">AI/ML</span>
+      </div>
+    </div>
     {% endfor %}
-  </ul>
-  <p><a class="btn" href="/blog">See all posts</a></p>
+  </div>
+  <p style="margin-top:1.5rem;"><a class="btn" href="/blog" style="background:#4f46e5; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; transition:0.3s;">See All Posts</a></p>
 </div>

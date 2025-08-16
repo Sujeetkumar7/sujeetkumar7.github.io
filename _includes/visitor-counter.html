@@ -1,32 +1,17 @@
-<div style="display:flex; gap:10px; font-family: 'Segoe UI', Tahoma, sans-serif; margin-top:15px;">
-    <!-- Page Visits Badge -->
-    <div style="
-      display:flex; align-items:center; gap:6px;
-      background: #4caf50; color: white;
-      padding:6px 12px; border-radius:20px; font-weight:500;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    ">
+<div style="display:flex; gap:10px; margin-top:1rem; flex-wrap:wrap;">
+    <div style="background:#4f46e5; color:white; padding:6px 12px; border-radius:20px; font-weight:500; display:flex; align-items:center; gap:6px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
         <span>📄 Page Visits:</span>
         <span id="page-visit-count">0</span>
     </div>
-
-    <!-- Total Site Visits Badge -->
-    <div style="
-      display:flex; align-items:center; gap:6px;
-      background: #2196f3; color: white;
-      padding:6px 12px; border-radius:20px; font-weight:500;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    ">
+    <div style="background:#10b981; color:white; padding:6px 12px; border-radius:20px; font-weight:500; display:flex; align-items:center; gap:6px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
         <span>🌍 Total Visits:</span>
         <span id="total-visit-count">0</span>
     </div>
 </div>
 
 <script>
-    // Generate page slug from Jekyll page URL
-    const pageSlug = "{{ page.url | slugify }}";
-
-    // CountAPI URLs
+    // Use page.url slug for each post, default to "home" if undefined
+    const pageSlug = "{{ page.url | slugify | default: 'home' }}";
     const pageApiUrl = `https://api.countapi.xyz/hit/sujeetkumar7.github.io/${pageSlug}`;
     const totalApiUrl = `https://api.countapi.xyz/hit/sujeetkumar7.github.io/total`;
 
