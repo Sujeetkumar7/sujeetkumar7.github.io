@@ -1,8 +1,4 @@
----
-title: Videos
-layout: default
----
-<!-- Main content area: Video Gallery -->
+I"ª<!-- Main content area: Video Gallery -->
 <div class="main-content">
 
 <h2 style="text-align:center; margin-bottom: 2rem;">Java 7 Tutorials</h2>
@@ -12,8 +8,7 @@ layout: default
     <!-- Video 1 -->
     <div class="video-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/rCfuYjpV42s?si=M418qZxyMJJeUV4_" 
-          title="Java 7 Course Overview" allowfullscreen>
+        <iframe src="https://www.youtube.com/embed/rCfuYjpV42s?si=M418qZxyMJJeUV4_" title="Java 7 Course Overview" allowfullscreen="">
         </iframe>
       </div>
       <h4>1. Java 7 Course Overview</h4>
@@ -22,8 +17,7 @@ layout: default
     <!-- Video 2 -->
     <div class="video-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" 
-          title="Introduction to Java | Core Concepts" allowfullscreen>
+        <iframe src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" title="Introduction to Java | Core Concepts" allowfullscreen="">
         </iframe>
       </div>
       <h4>2. Introduction to Java | Core Concepts</h4>
@@ -32,37 +26,47 @@ layout: default
     <!-- Video 3 -->
     <div class="video-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" 
-          title="First Step Towards Java Program" allowfullscreen>
+        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" title="First Step Towards Java Program" allowfullscreen="">
         </iframe>
       </div>
       <h4>3. First Step Towards Java Program</h4>
     </div>
 
 
-    <!-- Video 4 -->
+<!-- Video 3 -->
     <div class="video-card">
       <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZIk38jdep9U?si=QjFAsbgoA20p7ctY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZIk38jdep9U?si=QjFAsbgoA20p7ctY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
       </div>
-      <h4>3. Naming Conventions And Data Types | naming convention in java </h4>
+      <h4>3. First Step Towards Java Program</h4>
     </div>
 
-    <!-- Video 5-->
+<!-- Video 3 -->
     <div class="video-card">
       <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lOYvWDarIoE?si=tfTcHu1Asd8vDohE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" title="First Step Towards Java Program" allowfullscreen="">
+        </iframe>
       </div>
-      <h4>5. Operators In Java | operatore in java</h4>
+      <h4>3. First Step Towards Java Program</h4>
+    </div>
+
+<!-- Video 3 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" title="First Step Towards Java Program" allowfullscreen="">
+        </iframe>
+      </div>
+      <h4>3. First Step Towards Java Program</h4>
     </div>
 
 
-    <!-- Video 6 -->
+<!-- Video 3 -->
     <div class="video-card">
       <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mITpCECqT5Y?si=SBfZxzh0saEyLCJi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" title="First Step Towards Java Program" allowfullscreen="">
+        </iframe>
       </div>
-      <h4>6. control statement in java | If..else | if..else if..else statement | do..while loop | while loop</h4>
+      <h4>3. First Step Towards Java Program</h4>
     </div>
 
   </div>
@@ -132,3 +136,5 @@ layout: default
   font-size: 1rem;
 }
 </style>
+
+:ET

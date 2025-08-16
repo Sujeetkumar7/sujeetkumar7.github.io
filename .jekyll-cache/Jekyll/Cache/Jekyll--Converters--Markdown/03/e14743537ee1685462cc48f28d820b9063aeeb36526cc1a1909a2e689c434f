@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos — Sujeet Prajapati — Java Developer</title>
-    <meta name="description" content="Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume.">
-
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="/assets/styles.css">
-    <link rel="alternate" type="application/rss+xml" title="Sujeet Prajapati — Java Developer" href="/feed.xml">
-
-    <!-- Script (load once, deferred) -->
-    <script src="/assets/script.js" defer></script>
-</head>
-<body>
-<header class="site-header">
-    <div class="container header-bar">
-        <a class="brand" href="/">☕ Sujeet Prajapati</a>
-
-        <!-- Hamburger for mobile -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Navigation -->
-        <nav class="nav" id="navMenu">
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/blog">Blog</a>
-            <a href="/videos">Videos</a>
-            <a href="/resume">Resume</a>
-            <a href="/contact">Contact</a>
-            <a href="/about">About Me</a>
-            <!-- Theme toggle button (floating) -->
-            <button id="themeToggle" aria-label="Toggle theme">🌓</button>
-        </nav>
-    </div>
-</header>
-
-<main>
-    <div class="main-content">
-        <!-- Main content area: Video Gallery -->
+I"{<!-- Main content area: Video Gallery -->
 <div class="main-content">
 
 <h2 style="text-align:center; margin-bottom: 2rem;">Java 7 Tutorials</h2>
@@ -77,7 +33,7 @@
     </div>
 
 
-    <!-- Video 4 -->
+<!-- Video 3 -->
     <div class="video-card">
       <div class="video-wrapper">
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZIk38jdep9U?si=QjFAsbgoA20p7ctY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
@@ -85,21 +41,31 @@
       <h4>3. Naming Conventions And Data Types | naming convention in java </h4>
     </div>
 
-    <!-- Video 5-->
+<!-- Video 3 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" title="First Step Towards Java Program" allowfullscreen="">
+        </iframe>
+      </div>
+      <h4>4. First Step Towards Java Program</h4>
+    </div>
+
+<!-- Video 3 -->
     <div class="video-card">
       <div class="video-wrapper">
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lOYvWDarIoE?si=tfTcHu1Asd8vDohE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
       </div>
-      <h4>5. Operators In Java | operatore in java</h4>
+      <h4>5. First Step Towards Java Program</h4>
     </div>
 
 
-    <!-- Video 6 -->
+<!-- Video 3 -->
     <div class="video-card">
       <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mITpCECqT5Y?si=SBfZxzh0saEyLCJi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" title="First Step Towards Java Program" allowfullscreen="">
+        </iframe>
       </div>
-      <h4>6. control statement in java | If..else | if..else if..else statement | do..while loop | while loop</h4>
+      <h4>3. First Step Towards Java Program</h4>
     </div>
 
   </div>
@@ -170,15 +136,4 @@
 }
 </style>
 
-
-    </div>
-</main>
-
-<footer class="site-footer">
-    <div class="container">
-        <p>© 2025 Sujeet Prajapati — let's learn together and grow together</p>
-        <p><a href="/feed.xml"></a><a href="https://github.com"></a></p>
-    </div>
-</footer>
-</body>
-</html>
+:ET

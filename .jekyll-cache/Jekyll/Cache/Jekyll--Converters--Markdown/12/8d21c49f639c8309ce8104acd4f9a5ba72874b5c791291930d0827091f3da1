@@ -1,9 +1,4 @@
----
-title: Projects
-layout: default
----
-
-<section class="hero" style="padding:3rem 1rem; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+I"Ó<section class="hero" style="padding:3rem 1rem; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
     <!-- Welcome -->
     <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:1rem;">
      Explore a curated collection of my professional and personal projects.  
@@ -19,7 +14,7 @@ layout: default
     <div class="card project-card">
       <h3><a href="/projects/llm-obs">LLM Observability Dashboard (In Progress)</a></h3>
       <p class="small">
-        Metrics & tracing for AI services: prompt latency, quality monitoring, and safety event tracking.
+        Metrics &amp; tracing for AI services: prompt latency, quality monitoring, and safety event tracking.
       </p>
       <span class="tag">Python</span>
       <span class="tag">FastAPI</span>
@@ -42,3 +37,5 @@ layout: default
     });
   });
 </script>
+
+:ET
