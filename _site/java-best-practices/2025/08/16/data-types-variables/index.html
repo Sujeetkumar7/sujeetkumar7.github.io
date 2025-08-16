@@ -350,7 +350,7 @@ Rounded Salary: 45000
     </div>
 
     <!-- Visitor Counter -->
-    <!-- VISITOR COUNTER (Clean & Neutral Style) -->
+    <!-- VISITOR COUNTER -->
 <div style="display:flex; gap:12px; margin-top:1.5rem; flex-wrap:wrap; font-family:sans-serif;">
 
     <!-- Page Visits -->
@@ -370,11 +370,12 @@ Rounded Salary: 45000
 </div>
 
 <script>
+    // Page slug: use Jekyll slug for each post
     const pageSlug = "java-best-practices-2025-08-16-data-types-variables";
-    const site = "sujeetkumar7.github.io";
+    const namespace = "sujeetkumar7-github-io";
 
-    const pageApiUrl = `https://visitor-counter.netlify.app/api/count?site=${site}&page=${pageSlug}`;
-    const totalApiUrl = `https://visitor-counter.netlify.app/api/count?site=${site}&page=total`;
+    const pageApiUrl = `https://countapi.xyz/hit/${namespace}/${pageSlug}`;
+    const totalApiUrl = `https://countapi.xyz/hit/${namespace}/total`;
 
     function animateCount(element, target) {
       let count = 0;
@@ -389,25 +390,20 @@ Rounded Salary: 45000
       }, 20);
     }
 
-    async function fetchCount(url, elementId, fallback) {
+    async function fetchCount(url, elementId) {
       try {
         const res = await fetch(url);
         if (!res.ok) throw new Error('API error');
         const data = await res.json();
-        animateCount(document.getElementById(elementId), data.count || fallback);
+        animateCount(document.getElementById(elementId), data.value);
       } catch(err) {
-        console.warn('VisitorCounter error or local preview:', err);
-        // Show fallback value in local preview
-        document.getElementById(elementId).innerText = fallback;
+        console.error('CountAPI error:', err, url);
+        document.getElementById(elementId).innerText = 'N/A';
       }
     }
 
-    // Set fallback counts for local preview
-    const fallbackPageCount = 123;
-    const fallbackTotalCount = 456;
-
-    fetchCount(pageApiUrl, 'page-visit-count', fallbackPageCount);
-    fetchCount(totalApiUrl, 'total-visit-count', fallbackTotalCount);
+    fetchCount(pageApiUrl, 'page-visit-count');
+    fetchCount(totalApiUrl, 'total-visit-count');
 </script>
 
 
