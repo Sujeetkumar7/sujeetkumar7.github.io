@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling in Java – Checked vs Unchecked Exceptions, Try-Catch-Finally, and Custom Exceptions — Sujeet Prajapati — Java Developer</title>
+    <meta name="description" content="Exception handling is a critical part of building robust and resilient Java applications, especially in enterprise systems where failure handling is as important as the main logic. Java provides a rich exception handling mechanism that allows developers to gracefully handle errors without crashing the application.">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="Sujeet Prajapati — Java Developer" href="/feed.xml">
+
+    <!-- Script (load once, deferred) -->
+    <script src="/assets/script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-bar">
+        <a class="brand" href="/">☕ Sujeet Prajapati</a>
+
+        <!-- Hamburger for mobile -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav" id="navMenu">
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/blog">Blog</a>
+            <a href="/videos">Videos</a>
+            <a href="/resume">Resume</a>
+            <a href="/contact">Contact</a>
+            <a href="/about">About Me</a>
+            <!-- Theme toggle button (floating) -->
+            <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="main-content">
+        <article class="post-content">
+    <header class="post-header">
+        <h1>Exception Handling in Java – Checked vs Unchecked Exceptions, Try-Catch-Finally, and Custom Exceptions</h1>
+        <p class="post-date">August 16, 2025</p>
+    </header>
+
+    <div class="post-body">
+        <p>Exception handling is a <strong>critical part of building robust and resilient Java applications</strong>, especially in enterprise systems where failure handling is as important as the main logic. Java provides a rich exception handling mechanism that allows developers to gracefully handle errors without crashing the application.</p>
+
+<p>In this post, we’ll cover:</p>
+
+<ol>
+  <li><strong>Checked vs Unchecked Exceptions</strong></li>
+  <li><strong>Try-Catch-Finally</strong></li>
+  <li><strong>Custom Exceptions</strong></li>
+  <li><strong>Enterprise examples with modern Java best practices</strong></li>
+</ol>
+
+<hr />
+
+<h2 id="1-checked-vs-unchecked-exceptions">1. Checked vs Unchecked Exceptions</h2>
+
+<p>Java exceptions are categorized into <strong>checked</strong> and <strong>unchecked</strong> exceptions:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Checked Exception</strong></td>
+      <td>Must be either handled or declared in the method signature using <code class="language-plaintext highlighter-rouge">throws</code>. Typically recoverable.</td>
+      <td><code class="language-plaintext highlighter-rouge">IOException</code>, <code class="language-plaintext highlighter-rouge">SQLException</code></td>
+    </tr>
+    <tr>
+      <td><strong>Unchecked Exception</strong></td>
+      <td>Extends <code class="language-plaintext highlighter-rouge">RuntimeException</code>. Handling is optional. Usually indicates programming errors.</td>
+      <td><code class="language-plaintext highlighter-rouge">NullPointerException</code>, <code class="language-plaintext highlighter-rouge">IllegalArgumentException</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example – Enterprise Scenario: File Processing</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Files</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FileHandler</span> <span class="o">{</span>
+
+    <span class="c1">// Checked exception</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">readFile</span><span class="o">(</span><span class="nc">String</span> <span class="n">filePath</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">content</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">readString</span><span class="o">(</span><span class="nc">Path</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">filePath</span><span class="o">));</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">content</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Unchecked exception</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">divide</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalArgumentException</span><span class="o">(</span><span class="s">"Divider cannot be zero"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">FileHandler</span> <span class="n">handler</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileHandler</span><span class="o">();</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">handler</span><span class="o">.</span><span class="na">readFile</span><span class="o">(</span><span class="s">"config.yaml"</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Error reading file: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+        <span class="o">}</span>
+
+        <span class="n">handler</span><span class="o">.</span><span class="na">divide</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span> <span class="c1">// Throws unchecked exception</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Handling external resource failures (files, databases, API calls) with checked exceptions, and validating input or logic errors with unchecked exceptions.</p>
+
+<hr />
+
+<h2 id="2-try-catch-finally">2. Try-Catch-Finally</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">try-catch-finally</code> block allows <strong>capturing exceptions, handling them, and performing cleanup operations</strong>.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+    <span class="c1">// risky code</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SpecificException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// handle exception</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// handle generic exception</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+    <span class="c1">// always executed</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – Database Transaction Handling</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">processTransaction</span><span class="o">(</span><span class="nc">Transaction</span> <span class="n">tx</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">begin</span><span class="o">();</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">updateBalance</span><span class="o">();</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SQLException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">rollback</span><span class="o">();</span> <span class="c1">// handle failure</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Transaction failed: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> <span class="c1">// always close connection</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Transaction processing ended"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Tip:</em> In modern Java, use <strong>try-with-resources</strong> for automatic resource management:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">(</span><span class="kt">var</span> <span class="n">connection</span> <span class="o">=</span> <span class="nc">Database</span><span class="o">.</span><span class="na">getConnection</span><span class="o">();</span>
+     <span class="kt">var</span> <span class="n">stmt</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="na">createStatement</span><span class="o">())</span> <span class="o">{</span>
+
+    <span class="n">stmt</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">(</span><span class="s">"UPDATE accounts SET balance=balance-100 WHERE id=1"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SQLException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Database error: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This eliminates the need to manually close resources in <code class="language-plaintext highlighter-rouge">finally</code>.</p>
+
+<hr />
+
+<h2 id="3-custom-exceptions">3. Custom Exceptions</h2>
+
+<p>Custom exceptions allow enterprises to <strong>define domain-specific error handling</strong>, making code more expressive and maintainable.</p>
+
+<p><strong>Example – Enterprise: Payment Processing</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Custom checked exception</span>
+<span class="kd">class</span> <span class="nc">PaymentFailedException</span> <span class="kd">extends</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">PaymentFailedException</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Custom unchecked exception</span>
+<span class="kd">class</span> <span class="nc">InvalidPaymentMethodException</span> <span class="kd">extends</span> <span class="nc">RuntimeException</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">InvalidPaymentMethodException</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PaymentService</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">processPayment</span><span class="o">(</span><span class="nc">String</span> <span class="n">method</span><span class="o">,</span> <span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">PaymentFailedException</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="n">method</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"CREDIT_CARD"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">method</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"PAYPAL"</span><span class="o">))</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">InvalidPaymentMethodException</span><span class="o">(</span><span class="s">"Unsupported payment method: "</span> <span class="o">+</span> <span class="n">method</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">amount</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">PaymentFailedException</span><span class="o">(</span><span class="s">"Payment amount must be greater than zero"</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Payment of $"</span> <span class="o">+</span> <span class="n">amount</span> <span class="o">+</span> <span class="s">" processed via "</span> <span class="o">+</span> <span class="n">method</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">PaymentService</span> <span class="n">service</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PaymentService</span><span class="o">();</span>
+
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">service</span><span class="o">.</span><span class="na">processPayment</span><span class="o">(</span><span class="s">"UPI"</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span> <span class="c1">// Unchecked exception</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">PaymentFailedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Payment error: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Custom exceptions are invaluable in <strong>microservices, banking, and payment systems</strong>, where clear domain-specific error reporting is crucial.</p>
+
+<hr />
+
+<h2 id="4-modern-java-best-practices-for-exception-handling">4. Modern Java Best Practices for Exception Handling</h2>
+
+<ul>
+  <li><strong>Use <code class="language-plaintext highlighter-rouge">try-with-resources</code></strong> to manage IO, DB, and other closable resources.</li>
+  <li>Prefer <strong>unchecked exceptions</strong> for programming errors and <strong>checked exceptions</strong> for recoverable failures.</li>
+  <li><strong>Create meaningful custom exceptions</strong> for domain-specific error handling.</li>
+  <li>Avoid catching <code class="language-plaintext highlighter-rouge">Exception</code> unless absolutely necessary; be <strong>specific</strong>.</li>
+  <li><strong>Leverage records</strong> or pattern matching (Java 21) for structured exception messages if needed:</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">record</span> <span class="nf">ErrorResponse</span><span class="o">(</span><span class="nc">String</span> <span class="n">code</span><span class="o">,</span> <span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{}</span>
+
+<span class="k">try</span> <span class="o">{</span>
+    <span class="n">riskyOperation</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">var</span> <span class="n">error</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ErrorResponse</span><span class="o">(</span><span class="s">"IO_ERR"</span><span class="o">,</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="n">logError</span><span class="o">(</span><span class="n">error</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+
+<ul>
+  <li><strong>Checked exceptions</strong> → anticipate and handle recoverable failures.</li>
+  <li><strong>Unchecked exceptions</strong> → programming errors or invalid input.</li>
+  <li><strong>try-catch-finally</strong> → handle errors and ensure cleanup.</li>
+  <li><strong>Custom exceptions</strong> → make enterprise code expressive and maintainable.</li>
+  <li>Use <strong>modern Java features</strong> like try-with-resources, records, and pattern matching for more robust exception handling.</li>
+</ul>
+
+    </div>
+
+    <!-- Visitor Counter -->
+    <!-- VISITOR COUNTER -->
+<div style="display:flex; gap:12px; margin-top:1.5rem; flex-wrap:wrap; font-family:sans-serif;">
+
+    <!-- Page Visits -->
+    <div style="background:#f3f4f6; color:#1f2937; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);" title="Number of visitors to this page">
+        <span>📄</span>
+        <span>Page Visits:</span>
+        <span id="page-visit-count">0</span>
+    </div>
+
+    <!-- Total Visits -->
+    <div style="background:#f3f4f6; color:#1f2937; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);" title="Total visitors across all pages">
+        <span>🌐</span>
+        <span>Total Visits:</span>
+        <span id="total-visit-count">0</span>
+    </div>
+
+</div>
+
+<script>
+    // Page slug: use Jekyll slug for each post
+    const pageSlug = "java-learning-java-best-practices-2025-08-16-exception-handling-in-java";
+    const namespace = "sujeetkumar7-github-io";
+
+    const pageApiUrl = `https://countapi.xyz/hit/${namespace}/${pageSlug}`;
+    const totalApiUrl = `https://countapi.xyz/hit/${namespace}/total`;
+
+    function animateCount(element, target) {
+      let count = 0;
+      const step = Math.ceil(target / 50);
+      const interval = setInterval(() => {
+        count += step;
+        if (count >= target) {
+          count = target;
+          clearInterval(interval);
+        }
+        element.innerText = count;
+      }, 20);
+    }
+
+    async function fetchCount(url, elementId) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('API error');
+        const data = await res.json();
+        animateCount(document.getElementById(elementId), data.value);
+      } catch(err) {
+        console.error('CountAPI error:', err, url);
+        document.getElementById(elementId).innerText = 'N/A';
+      }
+    }
+
+    fetchCount(pageApiUrl, 'page-visit-count');
+    fetchCount(totalApiUrl, 'total-visit-count');
+</script>
+
+
+    <!-- ======= Interactive Section ======= -->
+    <div class="post-interactions">
+
+        <!-- 1️⃣ Stylish Share Buttons -->
+        <div class="share-buttons">
+            <a class="share-btn facebook" href="#" target="_blank" title="Share on Facebook">F</a>
+            <a class="share-btn twitter" href="#" target="_blank" title="Share on Twitter">T</a>
+            <a class="share-btn linkedin" href="#" target="_blank" title="Share on LinkedIn">L</a>
+            <a class="share-btn whatsapp" href="#" target="_blank" title="Share on WhatsApp">W</a>
+        </div>
+
+        <!-- AddThis fallback (optional) -->
+        <div class="addthis_inline_share_toolbox" style="display:none;"></div>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-YOUR_ADDTHIS_ID" async></script>
+
+        <!-- 2️⃣ Like Button -->
+        <div class="like-button">
+            <a class="likebtn-wrapper"
+               data-identifier="post-exception-handling-in-java"
+               data-theme="github"
+               data-ef_voting="bounce"
+               data-counter_clickable="true">
+            </a>
+            <script type="text/javascript" src="//w.likebtn.com/js/w/widget.js" async></script>
+        </div>
+
+        <!-- 3️⃣ Utterances Comments -->
+        <div id="comments"></div>
+        <script src="https://utteranc.es/client.js"
+                repo="sujeetkumar7/sujeetkumar7.github.io"
+                issue-term="pathname"
+                label="💬 comment"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+
+    </div>
+    <!-- LATEST BLOG POSTS -->
+    <div class="card" style="margin:1rem;">
+        <h2 style="margin-bottom:1rem;">Latest from the Blog</h2>
+        <div class="grid cards" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+            
+            <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);; transition: transform 0.3s, box-shadow 0.3s;"
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+                <h3 style="margin-bottom:0.5rem;"><a href="/java-learning/2025/08/16/ultimate-java-learning-roadmap/" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">Ultimate Java Learning Roadmap: From Classic to Latest Features</a></h3>
+                <p class="small" style="color:#555; font-size:0.9rem; margin-bottom:0.5rem;">
+                    Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new fe...
+                </p>
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+                    <span class="badge" style="background:#e0e7ff; color:#1e3a8a; font-size:0.75rem; padding:2px 6px; border-radius:6px;">Aug 16, 2025</span>
+                </div>
+            </div>
+            
+            <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);; transition: transform 0.3s, box-shadow 0.3s;"
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+                <h3 style="margin-bottom:0.5rem;"><a href="/java-learning/java-best-practices/2025/08/16/operator-in-java/" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">Operators in Java – Arithmetic, Relational, Logical, Bitwise, and Assignment Operators</a></h3>
+                <p class="small" style="color:#555; font-size:0.9rem; margin-bottom:0.5rem;">
+                    Java is a powerful, object-oriented language that provides a rich set of operators to perform different types of oper...
+                </p>
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+                    <span class="badge" style="background:#e0e7ff; color:#1e3a8a; font-size:0.75rem; padding:2px 6px; border-radius:6px;">Aug 16, 2025</span>
+                </div>
+            </div>
+            
+            <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);; transition: transform 0.3s, box-shadow 0.3s;"
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+                <h3 style="margin-bottom:0.5rem;"><a href="/java-learning/java-best-practices/2025/08/16/oop-in-java/" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">Object-Oriented Programming (OOP) in Java – Classes, Objects, Inheritance, Polymorphism, Abstraction, and Encapsulation</a></h3>
+                <p class="small" style="color:#555; font-size:0.9rem; margin-bottom:0.5rem;">
+                    Object-Oriented Programming (OOP) is the backbone of modern Java development, enabling modular, reusable, and maintai...
+                </p>
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+                    <span class="badge" style="background:#e0e7ff; color:#1e3a8a; font-size:0.75rem; padding:2px 6px; border-radius:6px;">Aug 16, 2025</span>
+                </div>
+            </div>
+            
+        </div>
+        <p style="margin-top:1.5rem;"><a class="btn" href="/blog" style="background:#4f46e5; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; transition:0.3s;">See All Posts</a></p>
+    <!-- ======= End Interactive Section ======= -->
+    </div>
+</article>
+
+<style>
+    /* Full-width post container */
+    .post-content {
+      width: 100%;
+      max-width: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .post-header {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .post-header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .post-date {
+      font-size: 0.9rem;
+    }
+
+    .post-body {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+    }
+
+    .post-interactions {
+      border-top: 1px solid #ddd;
+      padding-top: 30px;
+      margin-top: 40px;
+    }
+
+    /* Share Buttons Styling */
+    .share-buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .share-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .facebook { background: #3b5998; }
+    .twitter { background: #1da1f2; }
+    .linkedin { background: #0077b5; }
+    .whatsapp { background: #25d366; }
+
+    /* Like Button Styling */
+    .like-button {
+      margin-bottom: 30px;
+    }
+
+    /* Responsive typography */
+    @media (max-width: 768px) {
+      .post-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .post-body {
+        font-size: 1rem;
+      }
+    }
+</style>
+
+<script>
+    // Dynamic sharing URLs
+    const shareURL = encodeURIComponent(window.location.href);
+    const shareTitle = encodeURIComponent(document.title);
+
+    document.querySelector('.share-btn.facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${shareURL}`;
+    document.querySelector('.share-btn.twitter').href = `https://twitter.com/intent/tweet?url=${shareURL}&text=${shareTitle}`;
+    document.querySelector('.share-btn.linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareURL}&title=${shareTitle}`;
+    document.querySelector('.share-btn.whatsapp').href = `https://api.whatsapp.com/send?text=${shareTitle}%20${shareURL}`;
+</script>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Sujeet Prajapati — let's learn together and grow together</p>
+        <p><a href="/feed.xml"></a><a href="https://github.com"></a></p>
+    </div>
+</footer>
+</body>
+</html>

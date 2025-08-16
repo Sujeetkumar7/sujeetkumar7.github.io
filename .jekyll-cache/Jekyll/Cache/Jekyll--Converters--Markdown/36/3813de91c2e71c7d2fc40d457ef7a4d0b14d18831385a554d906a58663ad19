@@ -1,0 +1,181 @@
+I"�M<p>Methods are the <strong>building blocks of modular programming</strong> in Java. They allow you to encapsulate logic, promote code reusability, and improve maintainability. Recursion and variable arguments (varargs) add flexibility and elegance to solving complex problems.</p>
+
+<p>In this post, we’ll cover:</p>
+
+<ol>
+  <li><strong>Method Overloading</strong></li>
+  <li><strong>Recursion</strong></li>
+  <li><strong>Variable Arguments</strong></li>
+  <li>Real-world enterprise examples using Java 21+ features</li>
+</ol>
+
+<hr />
+
+<h2 id="1-method-overloading">1. Method Overloading</h2>
+
+<p><strong>Method overloading</strong> allows multiple methods with the same name but <strong>different parameter lists</strong> in a class. It improves readability and flexibility.</p>
+
+<p><strong>Key Rules:</strong></p>
+
+<ul>
+  <li>Methods must have the same name.</li>
+  <li>Parameters must differ in number or type.</li>
+  <li>Return type alone cannot overload a method.</li>
+</ul>
+
+<p><strong>Example – Enterprise: Logging System</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Logger</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">log</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[INFO]: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">log</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">,</span> <span class="kt">int</span> <span class="n">errorCode</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[ERROR-"</span> <span class="o">+</span> <span class="n">errorCode</span> <span class="o">+</span> <span class="s">"]: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">log</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">,</span> <span class="nc">Throwable</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[EXCEPTION]: "</span> <span class="o">+</span> <span class="n">message</span> <span class="o">+</span> <span class="s">" | Cause: "</span> <span class="o">+</span> <span class="n">ex</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Logger</span><span class="o">();</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="s">"Application started"</span><span class="o">);</span>
+        <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="s">"Database connection failed"</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span>
+        <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="s">"NullPointer encountered"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">NullPointerException</span><span class="o">(</span><span class="s">"Null user object"</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Enterprise logging frameworks, API responses, and auditing methods often use overloaded methods for flexibility.</p>
+
+<hr />
+
+<h2 id="2-recursion">2. Recursion</h2>
+
+<p><strong>Recursion</strong> is when a method <strong>calls itself</strong> to solve a problem. It is particularly useful for <strong>divide-and-conquer algorithms</strong>, tree traversal, and backtracking.</p>
+
+<p><strong>Example – Enterprise: Calculating Employee Hierarchy Levels</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">record</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">reports</span><span class="o">)</span> <span class="o">{}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hierarchy</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getHierarchyDepth</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">emp</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">emp</span><span class="o">.</span><span class="na">reports</span><span class="o">().</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">emp</span><span class="o">.</span><span class="na">reports</span><span class="o">().</span><span class="na">stream</span><span class="o">()</span>
+                        <span class="o">.</span><span class="na">mapToInt</span><span class="o">(</span><span class="nl">Hierarchy:</span><span class="o">:</span><span class="n">getHierarchyDepth</span><span class="o">)</span>
+                        <span class="o">.</span><span class="na">max</span><span class="o">()</span>
+                        <span class="o">.</span><span class="na">orElse</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Employee</span> <span class="n">emp3</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"Dev"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">());</span>
+        <span class="nc">Employee</span> <span class="n">emp2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"QA"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">());</span>
+        <span class="nc">Employee</span> <span class="n">emp1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"Manager"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">emp2</span><span class="o">,</span> <span class="n">emp3</span><span class="o">));</span>
+        <span class="nc">Employee</span> <span class="n">ceo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"CEO"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">emp1</span><span class="o">));</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hierarchy depth: "</span> <span class="o">+</span> <span class="n">getHierarchyDepth</span><span class="o">(</span><span class="n">ceo</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Calculating hierarchy levels, traversing organizational charts, and processing nested JSON or XML structures.</p>
+
+<p><strong>Tip:</strong> Always define a <strong>base case</strong> to prevent infinite recursion. Use recursion wisely in enterprise systems with large datasets to avoid <code class="language-plaintext highlighter-rouge">StackOverflowError</code>.</p>
+
+<hr />
+
+<h2 id="3-variable-arguments-varargs">3. Variable Arguments (Varargs)</h2>
+
+<p><strong>Varargs</strong> allow a method to accept <strong>zero or more arguments</strong> of the same type. Introduced in Java 5, they simplify methods that need flexible parameters.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodName</span><span class="o">(</span><span class="nc">Type</span><span class="o">...</span> <span class="n">parameterName</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p><strong>Example – Enterprise: Sending Notifications</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NotificationService</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendNotification</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">,</span> <span class="nc">String</span><span class="o">...</span> <span class="n">recipients</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">recipient</span> <span class="o">:</span> <span class="n">recipients</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Sending '"</span> <span class="o">+</span> <span class="n">message</span> <span class="o">+</span> <span class="s">"' to "</span> <span class="o">+</span> <span class="n">recipient</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">NotificationService</span> <span class="n">service</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NotificationService</span><span class="o">();</span>
+        <span class="n">service</span><span class="o">.</span><span class="na">sendNotification</span><span class="o">(</span><span class="s">"Server maintenance tonight"</span><span class="o">,</span> <span class="s">"alice@company.com"</span><span class="o">,</span> <span class="s">"bob@company.com"</span><span class="o">);</span>
+        <span class="n">service</span><span class="o">.</span><span class="na">sendNotification</span><span class="o">(</span><span class="s">"Welcome to the platform!"</span><span class="o">);</span> <span class="c1">// zero recipients</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Email/SMS/Push notification systems, batch processing, logging, and reporting frameworks.</p>
+
+<hr />
+
+<h2 id="4-combining-overloading-recursion-and-varargs">4. Combining Overloading, Recursion, and Varargs</h2>
+
+<p><strong>Example – Enterprise: File Processing with Flexible Options</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FileProcessor</span> <span class="o">{</span>
+
+    <span class="c1">// Overloaded method for single file</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="nc">String</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Processing single file: "</span> <span class="o">+</span> <span class="n">file</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Overloaded method for multiple files (varargs)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">f</span> <span class="o">:</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Processing file: "</span> <span class="o">+</span> <span class="n">f</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Recursive method to process nested folders</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">processFolder</span><span class="o">(</span><span class="nc">Folder</span> <span class="n">folder</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">folder</span><span class="o">.</span><span class="na">files</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="k">this</span><span class="o">::</span><span class="n">process</span><span class="o">);</span>
+        <span class="n">folder</span><span class="o">.</span><span class="na">subFolders</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="k">this</span><span class="o">::</span><span class="n">processFolder</span><span class="o">);</span> <span class="c1">// recursion</span>
+    <span class="o">}</span>
+
+    <span class="kd">record</span> <span class="nf">Folder</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">files</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Folder</span><span class="o">&gt;</span> <span class="n">subFolders</span><span class="o">)</span> <span class="o">{}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">FileProcessor</span> <span class="n">fp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileProcessor</span><span class="o">();</span>
+
+        <span class="c1">// Overloading &amp; Varargs</span>
+        <span class="n">fp</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="s">"report1.csv"</span><span class="o">);</span>
+        <span class="n">fp</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="s">"report1.csv"</span><span class="o">,</span> <span class="s">"report2.csv"</span><span class="o">,</span> <span class="s">"report3.csv"</span><span class="o">);</span>
+
+        <span class="c1">// Recursion</span>
+        <span class="nc">Folder</span> <span class="n">nestedFolder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Folder</span><span class="o">(</span><span class="s">"root"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"file1.txt"</span><span class="o">),</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span>
+                <span class="k">new</span> <span class="nf">Folder</span><span class="o">(</span><span class="s">"sub1"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"file2.txt"</span><span class="o">),</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">()),</span>
+                <span class="k">new</span> <span class="nf">Folder</span><span class="o">(</span><span class="s">"sub2"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"file3.txt"</span><span class="o">),</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">())</span>
+        <span class="o">));</span>
+        <span class="n">fp</span><span class="o">.</span><span class="na">processFolder</span><span class="o">(</span><span class="n">nestedFolder</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Enterprise ETL pipelines, batch processing systems, and hierarchical file/data processing.</p>
+
+<hr />
+
+<h2 id="5-key-takeaways">5. Key Takeaways</h2>
+
+<ul>
+  <li><strong>Method Overloading</strong> enhances flexibility for APIs and internal services.</li>
+  <li><strong>Recursion</strong> is powerful for hierarchical, tree-like, or nested data structures.</li>
+  <li><strong>Varargs</strong> simplify methods that accept flexible numbers of arguments.</li>
+  <li>Combine these concepts to build <strong>modular, reusable, and maintainable enterprise solutions</strong>.</li>
+</ul>
+
+<p><strong>Pro-tip:</strong> In modern Java, consider using <strong>records, streams, and enhanced for-each loops</strong> for clean, readable code alongside these constructs.</p>
+:ET

@@ -1,0 +1,350 @@
+I"DB<h1 id="operators-in-java--arithmetic-relational-logical-bitwise-and-assignment-operators">Operators in Java – Arithmetic, Relational, Logical, Bitwise, and Assignment Operators</h1>
+
+<p>Java is a powerful, object-oriented language that provides a rich set of operators to perform different types of operations. As a developer with over a decade of experience, understanding operators thoroughly is key to writing efficient and readable code. This blog post dives deep into <strong>arithmetic, relational, logical, bitwise, and assignment operators</strong>, with examples and use-cases.</p>
+
+<hr />
+
+<h2 id="1-arithmetic-operators">1. Arithmetic Operators</h2>
+
+<p>Arithmetic operators are used to perform basic mathematical operations such as addition, subtraction, multiplication, division, and modulus.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">+</code></td>
+      <td>Addition</td>
+      <td><code class="language-plaintext highlighter-rouge">int sum = 5 + 3; // 8</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-</code></td>
+      <td>Subtraction</td>
+      <td><code class="language-plaintext highlighter-rouge">int diff = 5 - 3; // 2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*</code></td>
+      <td>Multiplication</td>
+      <td><code class="language-plaintext highlighter-rouge">int prod = 5 * 3; // 15</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/</code></td>
+      <td>Division</td>
+      <td><code class="language-plaintext highlighter-rouge">int div = 10 / 3; // 3 (integer division)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%</code></td>
+      <td>Modulus (remainder)</td>
+      <td><code class="language-plaintext highlighter-rouge">int mod = 10 % 3; // 1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">++</code></td>
+      <td>Increment</td>
+      <td><code class="language-plaintext highlighter-rouge">int a = 5; a++; // a = 6</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--</code></td>
+      <td>Decrement</td>
+      <td><code class="language-plaintext highlighter-rouge">int b = 5; b--; // b = 4</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Addition: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">));</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Division: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="o">));</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Remainder: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="o">));</span>
+</code></pre></div></div>
+
+<p><em>Tip:</em> Always be careful with division, especially with integers, to avoid unexpected truncation.</p>
+
+<hr />
+
+<h2 id="2-relational-operators">2. Relational Operators</h2>
+
+<p>Relational operators are used to compare two values. The result is always a boolean (<code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code>).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">==</code></td>
+      <td>Equal to</td>
+      <td><code class="language-plaintext highlighter-rouge">5 == 5 // true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">!=</code></td>
+      <td>Not equal to</td>
+      <td><code class="language-plaintext highlighter-rouge">5 != 3 // true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;</code></td>
+      <td>Greater than</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &gt; 3 // true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;</code></td>
+      <td>Less than</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &lt; 3 // false</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;=</code></td>
+      <td>Greater than or equal to</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &gt;= 5 // true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;=</code></td>
+      <td>Less than or equal to</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &lt;= 3 // false</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a is smaller than b"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a is greater than or equal to b"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Essential in control statements like <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">while</code>, and <code class="language-plaintext highlighter-rouge">for</code>.</p>
+
+<hr />
+
+<h2 id="3-logical-operators">3. Logical Operators</h2>
+
+<p>Logical operators are used to combine multiple boolean expressions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;&amp;</code></td>
+      <td>Logical AND</td>
+      <td><code class="language-plaintext highlighter-rouge">true &amp;&amp; false // false</code></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>`       |             | `</td>
+      <td>Logical OR</td>
+      <td>`true |   | false // true`</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">!</code></td>
+      <td>Logical NOT</td>
+      <td><code class="language-plaintext highlighter-rouge">!true // false</code></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">boolean</span> <span class="n">isAdult</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">hasID</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="n">isAdult</span> <span class="o">&amp;&amp;</span> <span class="n">hasID</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Entry allowed"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Entry denied"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Tip:</em> Logical operators are commonly used in validation, authorization checks, and complex conditions.</p>
+
+<hr />
+
+<h2 id="4-bitwise-operators">4. Bitwise Operators</h2>
+
+<p>Bitwise operators operate on the binary representation of numbers. These are especially useful for low-level programming, masks, flags, or performance-critical applications.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;</code></td>
+      <td>AND</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &amp; 3 // 1</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>`       | `</td>
+      <td>OR</td>
+      <td>`5 | 3 // 7`</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">^</code></td>
+      <td>XOR</td>
+      <td><code class="language-plaintext highlighter-rouge">5 ^ 3 // 6</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~</code></td>
+      <td>NOT</td>
+      <td><code class="language-plaintext highlighter-rouge">~5 // -6</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;&lt;</code></td>
+      <td>Left shift</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &lt;&lt; 1 // 10</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;&gt;</code></td>
+      <td>Right shift</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &gt;&gt; 1 // 2</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;</code></td>
+      <td>Unsigned right shift</td>
+      <td><code class="language-plaintext highlighter-rouge">-5 &gt;&gt;&gt; 1 // large positive number</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span> <span class="c1">// 0101 in binary</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span> <span class="c1">// 0011 in binary</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"AND: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span><span class="o">));</span> <span class="c1">// 0001 -&gt; 1</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"OR: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">|</span> <span class="n">y</span><span class="o">));</span>  <span class="c1">// 0111 -&gt; 7</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"XOR: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">^</span> <span class="n">y</span><span class="o">));</span> <span class="c1">// 0110 -&gt; 6</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Useful in flag checking, bit manipulation, compression algorithms, and cryptography.</p>
+
+<hr />
+
+<h2 id="5-assignment-operators">5. Assignment Operators</h2>
+
+<p>Assignment operators are used to assign values to variables. Java also supports shorthand assignment operators.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">=</code></td>
+      <td>Assign</td>
+      <td><code class="language-plaintext highlighter-rouge">int x = 5;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">+=</code></td>
+      <td>Add and assign</td>
+      <td><code class="language-plaintext highlighter-rouge">x += 3; // x = x + 3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-=</code></td>
+      <td>Subtract and assign</td>
+      <td><code class="language-plaintext highlighter-rouge">x -= 2; // x = x - 2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*=</code></td>
+      <td>Multiply and assign</td>
+      <td><code class="language-plaintext highlighter-rouge">x *= 2; // x = x * 2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/=</code></td>
+      <td>Divide and assign</td>
+      <td><code class="language-plaintext highlighter-rouge">x /= 3; // x = x / 3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%=</code></td>
+      <td>Modulus and assign</td>
+      <td><code class="language-plaintext highlighter-rouge">x %= 2; // x = x % 2</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span><span class="o">;</span> <span class="c1">// 15</span>
+<span class="n">x</span> <span class="o">*=</span> <span class="mi">2</span><span class="o">;</span> <span class="c1">// 30</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Result: "</span> <span class="o">+</span> <span class="n">x</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p><em>Tip:</em> Shorthand assignment operators make code concise and readable.</p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Operators in Java are the building blocks of programming logic. As a developer, mastering them allows you to:</p>
+
+<ul>
+  <li>Write cleaner, efficient code.</li>
+  <li>Reduce redundancy with shorthand operators.</li>
+  <li>Leverage bitwise operations for performance-critical applications.</li>
+  <li>Combine multiple conditions logically for robust validation.</li>
+</ul>
+
+<p><strong>Pro-tip:</strong> Always be mindful of operator precedence and associativity in Java to avoid unexpected behavior. For example, <code class="language-plaintext highlighter-rouge">*</code> and <code class="language-plaintext highlighter-rouge">/</code> have higher precedence than <code class="language-plaintext highlighter-rouge">+</code> and <code class="language-plaintext highlighter-rouge">-</code>.</p>
+
+<hr />
+:ET

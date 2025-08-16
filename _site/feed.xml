@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-16T16:38:43+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sujeet Prajapati — Java Developer</title><subtitle>Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume.</subtitle><author><name>Sujeet Prajapati</name></author><entry><title type="html">Ultimate Java Learning Roadmap: From Classic to Latest Features</title><link href="http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap/" rel="alternate" type="text/html" title="Ultimate Java Learning Roadmap: From Classic to Latest Features" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap</id><content type="html" xml:base="http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap/"><![CDATA[<p>Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new features is crucial for writing robust, maintainable, and modern Java applications. Here’s a detailed roadmap to guide you.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-16T17:02:01+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sujeet Prajapati — Java Developer</title><subtitle>Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume.</subtitle><author><name>Sujeet Prajapati</name></author><entry><title type="html">Ultimate Java Learning Roadmap: From Classic to Latest Features</title><link href="http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap/" rel="alternate" type="text/html" title="Ultimate Java Learning Roadmap: From Classic to Latest Features" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap</id><content type="html" xml:base="http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap/"><![CDATA[<p>Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new features is crucial for writing robust, maintainable, and modern Java applications. Here’s a detailed roadmap to guide you.</p>
 
 <hr />
 
@@ -158,7 +158,460 @@
 
 <h3 id="conclusion"><strong>Conclusion</strong></h3>
 
-<p>A modern Java developer should combine <strong>solid core Java knowledge</strong> with <strong>latest language features</strong> and <strong>framework expertise</strong>. Start from fundamentals, then explore streams, lambda expressions, modules, and finally embrace Java 17–21 innovations like virtual threads, records, and structured concurrency.</p>]]></content><author><name>Sujeet Prajapati</name></author><category term="java-learning" /><summary type="html"><![CDATA[Java in 2025, covering both latest features (Java 17, 21) and the classic/older Java topics]]></summary></entry><entry><title type="html">Mastering Java Data Types &amp;amp; Variables: Primitive Types, Wrappers, and Type Casting</title><link href="http://localhost:4000/java-best-practices/2025/08/16/data-types-variables/" rel="alternate" type="text/html" title="Mastering Java Data Types &amp;amp; Variables: Primitive Types, Wrappers, and Type Casting" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-best-practices/2025/08/16/data-types-variables</id><content type="html" xml:base="http://localhost:4000/java-best-practices/2025/08/16/data-types-variables/"><![CDATA[<h1 id="java-data-types--variables--primitive-types-wrapper-classes-and-type-casting">Java Data Types &amp; Variables – Primitive Types, Wrapper Classes, and Type Casting</h1>
+<p>A modern Java developer should combine <strong>solid core Java knowledge</strong> with <strong>latest language features</strong> and <strong>framework expertise</strong>. Start from fundamentals, then explore streams, lambda expressions, modules, and finally embrace Java 17–21 innovations like virtual threads, records, and structured concurrency.</p>]]></content><author><name>Sujeet Prajapati</name></author><category term="java-learning" /><summary type="html"><![CDATA[Java in 2025, covering both latest features (Java 17, 21) and the classic/older Java topics]]></summary></entry><entry><title type="html">Access Modifiers &amp;amp; Packages in Java – public, private, protected, default, and Package Structure</title><link href="http://localhost:4000/java-learning/java-best-practices/2025/08/16/access-modifier-package-in-java/" rel="alternate" type="text/html" title="Access Modifiers &amp;amp; Packages in Java – public, private, protected, default, and Package Structure" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/java-best-practices/2025/08/16/access-modifier-package-in-java</id><content type="html" xml:base="http://localhost:4000/java-learning/java-best-practices/2025/08/16/access-modifier-package-in-java/"><![CDATA[<p>In Java, <strong>access modifiers and packages</strong> play a critical role in <strong>structuring large-scale enterprise applications</strong>. They help control visibility, enforce encapsulation, and maintain modularity across different modules or microservices.</p>
+
+<p>This post will cover:</p>
+
+<ol>
+  <li><strong>Java Access Modifiers</strong></li>
+  <li><strong>Default Access (Package-Private)</strong></li>
+  <li><strong>Package Structure</strong></li>
+  <li>Enterprise examples and best practices</li>
+</ol>
+
+<hr />
+
+<h2 id="1-java-access-modifiers">1. Java Access Modifiers</h2>
+
+<p>Java provides four access levels:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modifier</th>
+      <th>Class</th>
+      <th>Package</th>
+      <th>Subclass</th>
+      <th>World</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">public</code></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">protected</code></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">default</code></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">private</code></td>
+      <td>✅</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="11-public">1.1 Public</h3>
+
+<ul>
+  <li>Visible <strong>everywhere</strong>, including other packages and modules.</li>
+  <li>Use for APIs, services, and interfaces meant for external access.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.enterprise.utils</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Logger</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">log</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[LOG]: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Logging utilities, API service classes, or shared constants.</p>
+
+<hr />
+
+<h3 id="12-private">1.2 Private</h3>
+
+<ul>
+  <li>Visible <strong>only within the class</strong>.</li>
+  <li>Used for encapsulating internal state or implementation details.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getSalary</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">salary</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Protect sensitive data like passwords, salaries, or internal counters.</p>
+
+<hr />
+
+<h3 id="13-protected">1.3 Protected</h3>
+
+<ul>
+  <li>Visible <strong>within the package</strong> and <strong>subclasses</strong> (even in other packages).</li>
+  <li>Useful for controlled extension in inheritance hierarchies.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.enterprise.model</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="nc">String</span> <span class="n">department</span><span class="o">;</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">setDepartment</span><span class="o">(</span><span class="nc">String</span> <span class="n">dept</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">department</span> <span class="o">=</span> <span class="n">dept</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kn">package</span> <span class="nn">com.enterprise.hr</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.enterprise.model.Employee</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Manager</span> <span class="kd">extends</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">assignDepartment</span><span class="o">(</span><span class="nc">String</span> <span class="n">dept</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setDepartment</span><span class="o">(</span><span class="n">dept</span><span class="o">);</span> <span class="c1">// accessible because protected</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Base classes in frameworks, allowing controlled customization.</p>
+
+<hr />
+
+<h3 id="14-default-package-private">1.4 Default (Package-Private)</h3>
+
+<ul>
+  <li><strong>No modifier</strong> → visible <strong>only within the same package</strong>.</li>
+  <li>Used for internal utilities that should not be exposed outside a package.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.enterprise.utils</span><span class="o">;</span>
+
+<span class="kd">class</span> <span class="nc">Validator</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isValidEmail</span><span class="o">(</span><span class="nc">String</span> <span class="n">email</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">email</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"@"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Internal validation or helper classes in enterprise modules.</p>
+
+<hr />
+
+<h2 id="2-package-structure-in-enterprise-applications">2. Package Structure in Enterprise Applications</h2>
+
+<p>Packages organize Java classes <strong>logically and modularly</strong>, avoiding naming conflicts and improving maintainability.</p>
+
+<p><strong>Enterprise Example – Modular Application Structure:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.enterprise
+│
+├── model
+│   ├── Employee.java
+│   └── Department.java
+│
+├── service
+│   ├── EmployeeService.java
+│   └── NotificationService.java
+│
+├── utils
+│   └── Logger.java
+│
+└── controller
+    ├── EmployeeController.java
+    └── AuthController.java
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">model</code> → data classes and entities</li>
+  <li><code class="language-plaintext highlighter-rouge">service</code> → business logic</li>
+  <li><code class="language-plaintext highlighter-rouge">utils</code> → helper classes</li>
+  <li><code class="language-plaintext highlighter-rouge">controller</code> → API endpoints or request handling</li>
+</ul>
+
+<p><strong>Using <code class="language-plaintext highlighter-rouge">module-info.java</code> (Java 9+) for strong encapsulation:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">module</span> <span class="n">enterprise</span><span class="o">.</span><span class="na">app</span> <span class="o">{</span>
+    <span class="n">exports</span> <span class="n">com</span><span class="o">.</span><span class="na">enterprise</span><span class="o">.</span><span class="na">controller</span><span class="o">;</span>
+    <span class="n">exports</span> <span class="n">com</span><span class="o">.</span><span class="na">enterprise</span><span class="o">.</span><span class="na">service</span><span class="o">;</span>
+    <span class="c1">// utils and model remain internal</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Benefit:</em> Explicitly exposes only intended packages for external modules.</p>
+
+<hr />
+
+<h2 id="3-enterprise-best-practices">3. Enterprise Best Practices</h2>
+
+<ol>
+  <li><strong>Restrict access</strong> as much as possible (<code class="language-plaintext highlighter-rouge">private</code> &gt; <code class="language-plaintext highlighter-rouge">protected</code> &gt; <code class="language-plaintext highlighter-rouge">public</code>) to enforce encapsulation.</li>
+  <li><strong>Use packages</strong> to logically group classes and manage dependencies.</li>
+  <li><strong>Leverage modules (Java 9+)</strong> to hide internal implementation details and expose only APIs.</li>
+  <li><strong>Protected + inheritance</strong> allows controlled extensibility without exposing internals globally.</li>
+  <li>Keep helper classes and utilities <strong>package-private</strong> unless they need external access.</li>
+</ol>
+
+<hr />
+
+<h2 id="4-example--secure-employee-management-module">4. Example – Secure Employee Management Module</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.enterprise.model</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">;</span> <span class="c1">// private: sensitive</span>
+
+    <span class="kd">protected</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="nf">getSalary</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">salary</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kn">package</span> <span class="nn">com.enterprise.service</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.enterprise.model.Employee</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeService</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printSalary</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">emp</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Can access protected getter because it's in the same module/package</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Salary: $"</span> <span class="o">+</span> <span class="n">emp</span><span class="o">.</span><span class="na">getSalary</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Benefit:</em> Sensitive data (<code class="language-plaintext highlighter-rouge">salary</code>) is protected, access is controlled, and only authorized service classes can use it.</p>
+
+<hr />
+
+<h3 id="key-takeaways">Key Takeaways</h3>
+
+<ul>
+  <li>Access modifiers define <strong>visibility and encapsulation</strong>, crucial for enterprise-grade security and maintainability.</li>
+  <li>Packages <strong>organize code logically</strong> and prevent conflicts in large codebases.</li>
+  <li>Use <strong>module system</strong> to expose only APIs while hiding internal implementation.</li>
+  <li>Default access + private fields + protected inheritance = secure and extensible design.</li>
+</ul>]]></content><author><name>Sujeet Prajapati</name></author><category term="java-learning" /><category term="java-best-practices" /><summary type="html"><![CDATA[In Java, access modifiers and packages play a critical role in structuring large-scale enterprise applications. They help control visibility, enforce encapsulation, and maintain modularity across different modules or microservices.]]></summary></entry><entry><title type="html">Control Flow Statements in Java – if, else, switch, loops (for, while, do-while)</title><link href="http://localhost:4000/java-learning/java-best-practices/2025/08/16/control-flow-statement-in-java/" rel="alternate" type="text/html" title="Control Flow Statements in Java – if, else, switch, loops (for, while, do-while)" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/java-best-practices/2025/08/16/control-flow-statement-in-java</id><content type="html" xml:base="http://localhost:4000/java-learning/java-best-practices/2025/08/16/control-flow-statement-in-java/"><![CDATA[<p>Control flow statements are fundamental in Java programming, enabling developers to define <strong>decision-making</strong> and <strong>repetitive execution</strong> of code. As a senior Java developer, understanding and using these constructs efficiently is crucial for building robust enterprise-grade applications.</p>
+
+<p>In this post, we’ll cover:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">else if</code>, <code class="language-plaintext highlighter-rouge">else</code></li>
+  <li><code class="language-plaintext highlighter-rouge">switch</code></li>
+  <li>Loops: <code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>, <code class="language-plaintext highlighter-rouge">do-while</code></li>
+  <li>Real-world enterprise examples</li>
+</ol>
+
+<hr />
+
+<h2 id="1-if-else-if-else-statements">1. If, Else-If, Else Statements</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">if</code> statement allows executing code blocks based on a <strong>condition</strong>. <code class="language-plaintext highlighter-rouge">else if</code> and <code class="language-plaintext highlighter-rouge">else</code> handle multiple conditions or defaults.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// code if condition is true</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">anotherCondition</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// code if anotherCondition is true</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="c1">// code if none are true</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – User Role Authorization:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">userRole</span> <span class="o">=</span> <span class="n">getUserRole</span><span class="o">(</span><span class="n">userId</span><span class="o">);</span> <span class="c1">// Fetch from DB</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="s">"ADMIN"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">userRole</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">grantAccess</span><span class="o">(</span><span class="s">"ALL_RESOURCES"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="s">"MANAGER"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">userRole</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">grantAccess</span><span class="o">(</span><span class="s">"DEPARTMENT_RESOURCES"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="s">"EMPLOYEE"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">userRole</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">grantAccess</span><span class="o">(</span><span class="s">"SELF_RESOURCES"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">denyAccess</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Decision-making based on user roles, feature toggles, or workflow status in enterprise apps.</p>
+
+<hr />
+
+<h2 id="2-switch-statement">2. Switch Statement</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">switch</code> statement evaluates a variable and executes code based on <strong>matching cases</strong>. Java 14+ introduced enhanced <strong>switch expressions</strong> for cleaner code.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="o">(</span><span class="n">variable</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="n">value1</span> <span class="o">-&gt;</span> <span class="c1">// code;</span>
+    <span class="k">case</span> <span class="n">value2</span> <span class="o">-&gt;</span> <span class="c1">// code;</span>
+    <span class="k">default</span> <span class="o">-&gt;</span> <span class="c1">// code if no match;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – Payment Gateway Selection:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">paymentMethod</span> <span class="o">=</span> <span class="n">getPaymentMethod</span><span class="o">();</span> <span class="c1">// "CREDIT_CARD", "PAYPAL", "UPI"</span>
+
+<span class="k">switch</span> <span class="o">(</span><span class="n">paymentMethod</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="s">"CREDIT_CARD"</span> <span class="o">-&gt;</span> <span class="n">processCreditCardPayment</span><span class="o">();</span>
+    <span class="k">case</span> <span class="s">"PAYPAL"</span> <span class="o">-&gt;</span> <span class="n">processPayPalPayment</span><span class="o">();</span>
+    <span class="k">case</span> <span class="s">"UPI"</span> <span class="o">-&gt;</span> <span class="n">processUPIPayment</span><span class="o">();</span>
+    <span class="k">default</span> <span class="o">-&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalArgumentException</span><span class="o">(</span><span class="s">"Unsupported payment method"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Handling multiple business scenarios like payment processing, logging levels, or workflow states.</p>
+
+<hr />
+
+<h2 id="3-loops-in-java">3. Loops in Java</h2>
+
+<p>Loops allow repetitive execution of code based on a <strong>condition</strong> or a <strong>collection</strong>. Java provides <code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>, and <code class="language-plaintext highlighter-rouge">do-while</code> loops.</p>
+
+<hr />
+
+<h3 id="31-for-loop">3.1 For Loop</h3>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="o">(</span><span class="n">initialization</span><span class="o">;</span> <span class="n">condition</span><span class="o">;</span> <span class="n">increment</span><span class="o">/</span><span class="n">decrement</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// code to execute</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – Batch Processing Orders:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Order</span><span class="o">&gt;</span> <span class="n">orders</span> <span class="o">=</span> <span class="n">getPendingOrders</span><span class="o">();</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">orders</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">processOrder</span><span class="o">(</span><span class="n">orders</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enhanced For Loop (for-each)</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="o">(</span><span class="nc">Order</span> <span class="n">order</span> <span class="o">:</span> <span class="n">orders</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">processOrder</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Iterating over collections, arrays, or processing batches of transactions.</p>
+
+<hr />
+
+<h3 id="32-while-loop">3.2 While Loop</h3>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// code to execute while condition is true</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – Retry Mechanism:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">retryCount</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">success</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+
+<span class="k">while</span> <span class="o">(</span><span class="n">retryCount</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">success</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">success</span> <span class="o">=</span> <span class="n">callExternalService</span><span class="o">();</span>
+    <span class="n">retryCount</span><span class="o">++;</span>
+<span class="o">}</span>
+
+<span class="k">if</span> <span class="o">(!</span><span class="n">success</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">logError</span><span class="o">(</span><span class="s">"Service call failed after 3 attempts"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Retry logic, polling, or reading continuous input until a condition is met.</p>
+
+<hr />
+
+<h3 id="33-do-while-loop">3.3 Do-While Loop</h3>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">do</span> <span class="o">{</span>
+    <span class="c1">// code executes at least once</span>
+<span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">condition</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – User Input Validation:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">input</span><span class="o">;</span>
+
+<span class="k">do</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Enter a valid email: "</span><span class="o">);</span>
+    <span class="n">input</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">while</span> <span class="o">(!</span><span class="n">isValidEmail</span><span class="o">(</span><span class="n">input</span><span class="o">));</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Email accepted: "</span> <span class="o">+</span> <span class="n">input</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Validating user input, menu-driven applications, or ensuring at least one execution.</p>
+
+<hr />
+
+<h2 id="4-nested-control-flow">4. Nested Control Flow</h2>
+
+<p>Control flow statements can be <strong>nested</strong> for complex business logic.</p>
+
+<p><strong>Enterprise Example – Order Processing Workflow:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Order</span> <span class="n">order</span> <span class="o">=</span> <span class="n">fetchOrder</span><span class="o">(</span><span class="n">orderId</span><span class="o">);</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="n">order</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">switch</span> <span class="o">(</span><span class="n">order</span><span class="o">.</span><span class="na">getStatus</span><span class="o">())</span> <span class="o">{</span>
+        <span class="k">case</span> <span class="s">"NEW"</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">inventoryAvailable</span><span class="o">(</span><span class="n">order</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">processOrder</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="n">scheduleBackorder</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">case</span> <span class="s">"SHIPPED"</span> <span class="o">-&gt;</span> <span class="n">notifyCustomer</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+        <span class="k">case</span> <span class="s">"CANCELLED"</span> <span class="o">-&gt;</span> <span class="n">logCancellation</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+        <span class="k">default</span> <span class="o">-&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalStateException</span><span class="o">(</span><span class="s">"Unknown order status"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">logError</span><span class="o">(</span><span class="s">"Order not found: "</span> <span class="o">+</span> <span class="n">orderId</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Multi-condition decision-making in business-critical systems.</p>
+
+<hr />
+
+<h2 id="5-key-takeaways-for-enterprise-development">5. Key Takeaways for Enterprise Development</h2>
+
+<ul>
+  <li>Use <strong><code class="language-plaintext highlighter-rouge">if-else</code></strong> for straightforward conditional logic.</li>
+  <li>Use <strong><code class="language-plaintext highlighter-rouge">switch</code></strong> for multiple discrete cases to enhance readability.</li>
+  <li>Prefer <strong>enhanced for-loop</strong> when iterating over collections.</li>
+  <li><strong>While loops</strong> are best for unknown iterations; <strong>do-while</strong> ensures at least one execution.</li>
+  <li>Combine control flow statements judiciously for complex workflows, but keep readability in mind.</li>
+  <li>Always validate inputs and handle edge cases in enterprise applications.</li>
+</ul>]]></content><author><name>Sujeet Prajapati</name></author><category term="java-learning" /><category term="java-best-practices" /><summary type="html"><![CDATA[Control flow statements are fundamental in Java programming, enabling developers to define decision-making and repetitive execution of code. As a senior Java developer, understanding and using these constructs efficiently is crucial for building robust enterprise-grade applications.]]></summary></entry><entry><title type="html">Mastering Java Data Types &amp;amp; Variables: Primitive Types, Wrappers, and Type Casting</title><link href="http://localhost:4000/java-learning/java-best-practices/2025/08/16/data-types-variables/" rel="alternate" type="text/html" title="Mastering Java Data Types &amp;amp; Variables: Primitive Types, Wrappers, and Type Casting" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/java-best-practices/2025/08/16/data-types-variables</id><content type="html" xml:base="http://localhost:4000/java-learning/java-best-practices/2025/08/16/data-types-variables/"><![CDATA[<h1 id="java-data-types--variables--primitive-types-wrapper-classes-and-type-casting">Java Data Types &amp; Variables – Primitive Types, Wrapper Classes, and Type Casting</h1>
 
 <p>Java is a <strong>strongly-typed language</strong>, which means every variable has a type, and understanding these types is key to writing robust, efficient code.<br />
 In this guide, we explore <strong>primitive types</strong>, <strong>wrapper classes</strong>, and <strong>type casting</strong>, complete with examples, tips, and visual explanations.</p>
@@ -453,7 +906,979 @@ Rounded Salary: 45000
   margin: 12px 0;
   border-radius: 5px;
 }
-</style>]]></content><author><name>Sujeet Prajapati</name></author><category term="java-best-practices" /><summary type="html"><![CDATA[Java Data Types &amp; Variables – Primitive Types, Wrapper Classes, and Type Casting]]></summary></entry><entry><title type="html">First Steps into Java: A Beginner’s Guide</title><link href="http://localhost:4000/java/2025/08/15/first-post/" rel="alternate" type="text/html" title="First Steps into Java: A Beginner’s Guide" /><published>2025-08-15T00:00:00+05:30</published><updated>2025-08-15T00:00:00+05:30</updated><id>http://localhost:4000/java/2025/08/15/first-post</id><content type="html" xml:base="http://localhost:4000/java/2025/08/15/first-post/"><![CDATA[<h1 id="welcome-to-the-world-of-java">Welcome to the World of Java!</h1>
+</style>]]></content><author><name>Sujeet Prajapati</name></author><category term="java-learning" /><category term="java-best-practices" /><summary type="html"><![CDATA[Java Data Types &amp; Variables – Primitive Types, Wrapper Classes, and Type Casting]]></summary></entry><entry><title type="html">Exception Handling in Java – Checked vs Unchecked Exceptions, Try-Catch-Finally, and Custom Exceptions</title><link href="http://localhost:4000/java-learning/java-best-practices/2025/08/16/exception-handling-in-java/" rel="alternate" type="text/html" title="Exception Handling in Java – Checked vs Unchecked Exceptions, Try-Catch-Finally, and Custom Exceptions" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/java-best-practices/2025/08/16/exception-handling-in-java</id><content type="html" xml:base="http://localhost:4000/java-learning/java-best-practices/2025/08/16/exception-handling-in-java/"><![CDATA[<p>Exception handling is a <strong>critical part of building robust and resilient Java applications</strong>, especially in enterprise systems where failure handling is as important as the main logic. Java provides a rich exception handling mechanism that allows developers to gracefully handle errors without crashing the application.</p>
+
+<p>In this post, we’ll cover:</p>
+
+<ol>
+  <li><strong>Checked vs Unchecked Exceptions</strong></li>
+  <li><strong>Try-Catch-Finally</strong></li>
+  <li><strong>Custom Exceptions</strong></li>
+  <li><strong>Enterprise examples with modern Java best practices</strong></li>
+</ol>
+
+<hr />
+
+<h2 id="1-checked-vs-unchecked-exceptions">1. Checked vs Unchecked Exceptions</h2>
+
+<p>Java exceptions are categorized into <strong>checked</strong> and <strong>unchecked</strong> exceptions:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Checked Exception</strong></td>
+      <td>Must be either handled or declared in the method signature using <code class="language-plaintext highlighter-rouge">throws</code>. Typically recoverable.</td>
+      <td><code class="language-plaintext highlighter-rouge">IOException</code>, <code class="language-plaintext highlighter-rouge">SQLException</code></td>
+    </tr>
+    <tr>
+      <td><strong>Unchecked Exception</strong></td>
+      <td>Extends <code class="language-plaintext highlighter-rouge">RuntimeException</code>. Handling is optional. Usually indicates programming errors.</td>
+      <td><code class="language-plaintext highlighter-rouge">NullPointerException</code>, <code class="language-plaintext highlighter-rouge">IllegalArgumentException</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example – Enterprise Scenario: File Processing</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Files</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FileHandler</span> <span class="o">{</span>
+
+    <span class="c1">// Checked exception</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">readFile</span><span class="o">(</span><span class="nc">String</span> <span class="n">filePath</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">content</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">readString</span><span class="o">(</span><span class="nc">Path</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">filePath</span><span class="o">));</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">content</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Unchecked exception</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">divide</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalArgumentException</span><span class="o">(</span><span class="s">"Divider cannot be zero"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">FileHandler</span> <span class="n">handler</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileHandler</span><span class="o">();</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">handler</span><span class="o">.</span><span class="na">readFile</span><span class="o">(</span><span class="s">"config.yaml"</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Error reading file: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+        <span class="o">}</span>
+
+        <span class="n">handler</span><span class="o">.</span><span class="na">divide</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span> <span class="c1">// Throws unchecked exception</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Handling external resource failures (files, databases, API calls) with checked exceptions, and validating input or logic errors with unchecked exceptions.</p>
+
+<hr />
+
+<h2 id="2-try-catch-finally">2. Try-Catch-Finally</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">try-catch-finally</code> block allows <strong>capturing exceptions, handling them, and performing cleanup operations</strong>.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+    <span class="c1">// risky code</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SpecificException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// handle exception</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// handle generic exception</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+    <span class="c1">// always executed</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – Database Transaction Handling</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">processTransaction</span><span class="o">(</span><span class="nc">Transaction</span> <span class="n">tx</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">begin</span><span class="o">();</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">updateBalance</span><span class="o">();</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SQLException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">rollback</span><span class="o">();</span> <span class="c1">// handle failure</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Transaction failed: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> <span class="c1">// always close connection</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Transaction processing ended"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Tip:</em> In modern Java, use <strong>try-with-resources</strong> for automatic resource management:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">(</span><span class="kt">var</span> <span class="n">connection</span> <span class="o">=</span> <span class="nc">Database</span><span class="o">.</span><span class="na">getConnection</span><span class="o">();</span>
+     <span class="kt">var</span> <span class="n">stmt</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="na">createStatement</span><span class="o">())</span> <span class="o">{</span>
+
+    <span class="n">stmt</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">(</span><span class="s">"UPDATE accounts SET balance=balance-100 WHERE id=1"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SQLException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Database error: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This eliminates the need to manually close resources in <code class="language-plaintext highlighter-rouge">finally</code>.</p>
+
+<hr />
+
+<h2 id="3-custom-exceptions">3. Custom Exceptions</h2>
+
+<p>Custom exceptions allow enterprises to <strong>define domain-specific error handling</strong>, making code more expressive and maintainable.</p>
+
+<p><strong>Example – Enterprise: Payment Processing</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Custom checked exception</span>
+<span class="kd">class</span> <span class="nc">PaymentFailedException</span> <span class="kd">extends</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">PaymentFailedException</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Custom unchecked exception</span>
+<span class="kd">class</span> <span class="nc">InvalidPaymentMethodException</span> <span class="kd">extends</span> <span class="nc">RuntimeException</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">InvalidPaymentMethodException</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PaymentService</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">processPayment</span><span class="o">(</span><span class="nc">String</span> <span class="n">method</span><span class="o">,</span> <span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">PaymentFailedException</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="n">method</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"CREDIT_CARD"</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">method</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"PAYPAL"</span><span class="o">))</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">InvalidPaymentMethodException</span><span class="o">(</span><span class="s">"Unsupported payment method: "</span> <span class="o">+</span> <span class="n">method</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">amount</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">PaymentFailedException</span><span class="o">(</span><span class="s">"Payment amount must be greater than zero"</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Payment of $"</span> <span class="o">+</span> <span class="n">amount</span> <span class="o">+</span> <span class="s">" processed via "</span> <span class="o">+</span> <span class="n">method</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">PaymentService</span> <span class="n">service</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PaymentService</span><span class="o">();</span>
+
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">service</span><span class="o">.</span><span class="na">processPayment</span><span class="o">(</span><span class="s">"UPI"</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span> <span class="c1">// Unchecked exception</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">PaymentFailedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Payment error: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Custom exceptions are invaluable in <strong>microservices, banking, and payment systems</strong>, where clear domain-specific error reporting is crucial.</p>
+
+<hr />
+
+<h2 id="4-modern-java-best-practices-for-exception-handling">4. Modern Java Best Practices for Exception Handling</h2>
+
+<ul>
+  <li><strong>Use <code class="language-plaintext highlighter-rouge">try-with-resources</code></strong> to manage IO, DB, and other closable resources.</li>
+  <li>Prefer <strong>unchecked exceptions</strong> for programming errors and <strong>checked exceptions</strong> for recoverable failures.</li>
+  <li><strong>Create meaningful custom exceptions</strong> for domain-specific error handling.</li>
+  <li>Avoid catching <code class="language-plaintext highlighter-rouge">Exception</code> unless absolutely necessary; be <strong>specific</strong>.</li>
+  <li><strong>Leverage records</strong> or pattern matching (Java 21) for structured exception messages if needed:</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">record</span> <span class="nf">ErrorResponse</span><span class="o">(</span><span class="nc">String</span> <span class="n">code</span><span class="o">,</span> <span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{}</span>
+
+<span class="k">try</span> <span class="o">{</span>
+    <span class="n">riskyOperation</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">var</span> <span class="n">error</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ErrorResponse</span><span class="o">(</span><span class="s">"IO_ERR"</span><span class="o">,</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="n">logError</span><span class="o">(</span><span class="n">error</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+
+<ul>
+  <li><strong>Checked exceptions</strong> → anticipate and handle recoverable failures.</li>
+  <li><strong>Unchecked exceptions</strong> → programming errors or invalid input.</li>
+  <li><strong>try-catch-finally</strong> → handle errors and ensure cleanup.</li>
+  <li><strong>Custom exceptions</strong> → make enterprise code expressive and maintainable.</li>
+  <li>Use <strong>modern Java features</strong> like try-with-resources, records, and pattern matching for more robust exception handling.</li>
+</ul>]]></content><author><name>Sujeet Prajapati</name></author><category term="java-learning" /><category term="java-best-practices" /><summary type="html"><![CDATA[Exception handling is a critical part of building robust and resilient Java applications, especially in enterprise systems where failure handling is as important as the main logic. Java provides a rich exception handling mechanism that allows developers to gracefully handle errors without crashing the application.]]></summary></entry><entry><title type="html">Methods &amp;amp; Recursion in Java – Method Overloading, Recursion, and Variable Arguments</title><link href="http://localhost:4000/java-learning/java-best-practices/2025/08/16/methods-recursion-in-java/" rel="alternate" type="text/html" title="Methods &amp;amp; Recursion in Java – Method Overloading, Recursion, and Variable Arguments" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/java-best-practices/2025/08/16/methods-recursion-in-java</id><content type="html" xml:base="http://localhost:4000/java-learning/java-best-practices/2025/08/16/methods-recursion-in-java/"><![CDATA[<p>Methods are the <strong>building blocks of modular programming</strong> in Java. They allow you to encapsulate logic, promote code reusability, and improve maintainability. Recursion and variable arguments (varargs) add flexibility and elegance to solving complex problems.</p>
+
+<p>In this post, we’ll cover:</p>
+
+<ol>
+  <li><strong>Method Overloading</strong></li>
+  <li><strong>Recursion</strong></li>
+  <li><strong>Variable Arguments</strong></li>
+  <li>Real-world enterprise examples using Java 21+ features</li>
+</ol>
+
+<hr />
+
+<h2 id="1-method-overloading">1. Method Overloading</h2>
+
+<p><strong>Method overloading</strong> allows multiple methods with the same name but <strong>different parameter lists</strong> in a class. It improves readability and flexibility.</p>
+
+<p><strong>Key Rules:</strong></p>
+
+<ul>
+  <li>Methods must have the same name.</li>
+  <li>Parameters must differ in number or type.</li>
+  <li>Return type alone cannot overload a method.</li>
+</ul>
+
+<p><strong>Example – Enterprise: Logging System</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Logger</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">log</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[INFO]: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">log</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">,</span> <span class="kt">int</span> <span class="n">errorCode</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[ERROR-"</span> <span class="o">+</span> <span class="n">errorCode</span> <span class="o">+</span> <span class="s">"]: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">log</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">,</span> <span class="nc">Throwable</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[EXCEPTION]: "</span> <span class="o">+</span> <span class="n">message</span> <span class="o">+</span> <span class="s">" | Cause: "</span> <span class="o">+</span> <span class="n">ex</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Logger</span><span class="o">();</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="s">"Application started"</span><span class="o">);</span>
+        <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="s">"Database connection failed"</span><span class="o">,</span> <span class="mi">500</span><span class="o">);</span>
+        <span class="n">logger</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="s">"NullPointer encountered"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">NullPointerException</span><span class="o">(</span><span class="s">"Null user object"</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Enterprise logging frameworks, API responses, and auditing methods often use overloaded methods for flexibility.</p>
+
+<hr />
+
+<h2 id="2-recursion">2. Recursion</h2>
+
+<p><strong>Recursion</strong> is when a method <strong>calls itself</strong> to solve a problem. It is particularly useful for <strong>divide-and-conquer algorithms</strong>, tree traversal, and backtracking.</p>
+
+<p><strong>Example – Enterprise: Calculating Employee Hierarchy Levels</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">record</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">reports</span><span class="o">)</span> <span class="o">{}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hierarchy</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getHierarchyDepth</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">emp</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">emp</span><span class="o">.</span><span class="na">reports</span><span class="o">().</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">emp</span><span class="o">.</span><span class="na">reports</span><span class="o">().</span><span class="na">stream</span><span class="o">()</span>
+                        <span class="o">.</span><span class="na">mapToInt</span><span class="o">(</span><span class="nl">Hierarchy:</span><span class="o">:</span><span class="n">getHierarchyDepth</span><span class="o">)</span>
+                        <span class="o">.</span><span class="na">max</span><span class="o">()</span>
+                        <span class="o">.</span><span class="na">orElse</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Employee</span> <span class="n">emp3</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"Dev"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">());</span>
+        <span class="nc">Employee</span> <span class="n">emp2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"QA"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">());</span>
+        <span class="nc">Employee</span> <span class="n">emp1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"Manager"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">emp2</span><span class="o">,</span> <span class="n">emp3</span><span class="o">));</span>
+        <span class="nc">Employee</span> <span class="n">ceo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"CEO"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">emp1</span><span class="o">));</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hierarchy depth: "</span> <span class="o">+</span> <span class="n">getHierarchyDepth</span><span class="o">(</span><span class="n">ceo</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Calculating hierarchy levels, traversing organizational charts, and processing nested JSON or XML structures.</p>
+
+<p><strong>Tip:</strong> Always define a <strong>base case</strong> to prevent infinite recursion. Use recursion wisely in enterprise systems with large datasets to avoid <code class="language-plaintext highlighter-rouge">StackOverflowError</code>.</p>
+
+<hr />
+
+<h2 id="3-variable-arguments-varargs">3. Variable Arguments (Varargs)</h2>
+
+<p><strong>Varargs</strong> allow a method to accept <strong>zero or more arguments</strong> of the same type. Introduced in Java 5, they simplify methods that need flexible parameters.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodName</span><span class="o">(</span><span class="nc">Type</span><span class="o">...</span> <span class="n">parameterName</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p><strong>Example – Enterprise: Sending Notifications</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">NotificationService</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendNotification</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">,</span> <span class="nc">String</span><span class="o">...</span> <span class="n">recipients</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">recipient</span> <span class="o">:</span> <span class="n">recipients</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Sending '"</span> <span class="o">+</span> <span class="n">message</span> <span class="o">+</span> <span class="s">"' to "</span> <span class="o">+</span> <span class="n">recipient</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">NotificationService</span> <span class="n">service</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NotificationService</span><span class="o">();</span>
+        <span class="n">service</span><span class="o">.</span><span class="na">sendNotification</span><span class="o">(</span><span class="s">"Server maintenance tonight"</span><span class="o">,</span> <span class="s">"alice@company.com"</span><span class="o">,</span> <span class="s">"bob@company.com"</span><span class="o">);</span>
+        <span class="n">service</span><span class="o">.</span><span class="na">sendNotification</span><span class="o">(</span><span class="s">"Welcome to the platform!"</span><span class="o">);</span> <span class="c1">// zero recipients</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Email/SMS/Push notification systems, batch processing, logging, and reporting frameworks.</p>
+
+<hr />
+
+<h2 id="4-combining-overloading-recursion-and-varargs">4. Combining Overloading, Recursion, and Varargs</h2>
+
+<p><strong>Example – Enterprise: File Processing with Flexible Options</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FileProcessor</span> <span class="o">{</span>
+
+    <span class="c1">// Overloaded method for single file</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="nc">String</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Processing single file: "</span> <span class="o">+</span> <span class="n">file</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Overloaded method for multiple files (varargs)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">f</span> <span class="o">:</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Processing file: "</span> <span class="o">+</span> <span class="n">f</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Recursive method to process nested folders</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">processFolder</span><span class="o">(</span><span class="nc">Folder</span> <span class="n">folder</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">folder</span><span class="o">.</span><span class="na">files</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="k">this</span><span class="o">::</span><span class="n">process</span><span class="o">);</span>
+        <span class="n">folder</span><span class="o">.</span><span class="na">subFolders</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="k">this</span><span class="o">::</span><span class="n">processFolder</span><span class="o">);</span> <span class="c1">// recursion</span>
+    <span class="o">}</span>
+
+    <span class="kd">record</span> <span class="nf">Folder</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">files</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Folder</span><span class="o">&gt;</span> <span class="n">subFolders</span><span class="o">)</span> <span class="o">{}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">FileProcessor</span> <span class="n">fp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileProcessor</span><span class="o">();</span>
+
+        <span class="c1">// Overloading &amp; Varargs</span>
+        <span class="n">fp</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="s">"report1.csv"</span><span class="o">);</span>
+        <span class="n">fp</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="s">"report1.csv"</span><span class="o">,</span> <span class="s">"report2.csv"</span><span class="o">,</span> <span class="s">"report3.csv"</span><span class="o">);</span>
+
+        <span class="c1">// Recursion</span>
+        <span class="nc">Folder</span> <span class="n">nestedFolder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Folder</span><span class="o">(</span><span class="s">"root"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"file1.txt"</span><span class="o">),</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span>
+                <span class="k">new</span> <span class="nf">Folder</span><span class="o">(</span><span class="s">"sub1"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"file2.txt"</span><span class="o">),</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">()),</span>
+                <span class="k">new</span> <span class="nf">Folder</span><span class="o">(</span><span class="s">"sub2"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"file3.txt"</span><span class="o">),</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">())</span>
+        <span class="o">));</span>
+        <span class="n">fp</span><span class="o">.</span><span class="na">processFolder</span><span class="o">(</span><span class="n">nestedFolder</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Enterprise ETL pipelines, batch processing systems, and hierarchical file/data processing.</p>
+
+<hr />
+
+<h2 id="5-key-takeaways">5. Key Takeaways</h2>
+
+<ul>
+  <li><strong>Method Overloading</strong> enhances flexibility for APIs and internal services.</li>
+  <li><strong>Recursion</strong> is powerful for hierarchical, tree-like, or nested data structures.</li>
+  <li><strong>Varargs</strong> simplify methods that accept flexible numbers of arguments.</li>
+  <li>Combine these concepts to build <strong>modular, reusable, and maintainable enterprise solutions</strong>.</li>
+</ul>
+
+<p><strong>Pro-tip:</strong> In modern Java, consider using <strong>records, streams, and enhanced for-each loops</strong> for clean, readable code alongside these constructs.</p>]]></content><author><name>Sujeet Prajapati</name></author><category term="java-learning" /><category term="java-best-practices" /><summary type="html"><![CDATA[Methods are the building blocks of modular programming in Java. They allow you to encapsulate logic, promote code reusability, and improve maintainability. Recursion and variable arguments (varargs) add flexibility and elegance to solving complex problems.]]></summary></entry><entry><title type="html">Object-Oriented Programming (OOP) in Java – Classes, Objects, Inheritance, Polymorphism, Abstraction, and Encapsulation</title><link href="http://localhost:4000/java-learning/java-best-practices/2025/08/16/oop-in-java/" rel="alternate" type="text/html" title="Object-Oriented Programming (OOP) in Java – Classes, Objects, Inheritance, Polymorphism, Abstraction, and Encapsulation" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/java-best-practices/2025/08/16/oop-in-java</id><content type="html" xml:base="http://localhost:4000/java-learning/java-best-practices/2025/08/16/oop-in-java/"><![CDATA[<p>Object-Oriented Programming (OOP) is the backbone of <strong>modern Java development</strong>, enabling modular, reusable, and maintainable code. Enterprises rely heavily on OOP principles to build <strong>scalable and robust applications</strong>, from microservices to complex backend systems.</p>
+
+<p>In this post, we’ll cover:</p>
+
+<ol>
+  <li>Classes &amp; Objects</li>
+  <li>Inheritance</li>
+  <li>Polymorphism</li>
+  <li>Abstraction</li>
+  <li>Encapsulation</li>
+  <li>Enterprise examples with modern Java features</li>
+</ol>
+
+<hr />
+
+<h2 id="1-classes--objects">1. Classes &amp; Objects</h2>
+
+<p><strong>Class:</strong> A blueprint for creating objects.
+<strong>Object:</strong> An instance of a class with state (fields) and behavior (methods).</p>
+
+<p><strong>Example – Enterprise: Employee Management</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">employeeId</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">;</span>
+
+    <span class="c1">// Constructor</span>
+    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">employeeId</span><span class="o">,</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">employeeId</span> <span class="o">=</span> <span class="n">employeeId</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Getter and Setter</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getSalary</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">salary</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSalary</span><span class="o">(</span><span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span> <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">displayInfo</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Employee: "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">", ID: "</span> <span class="o">+</span> <span class="n">employeeId</span> <span class="o">+</span> <span class="s">", Salary: $"</span> <span class="o">+</span> <span class="n">salary</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"Alice"</span><span class="o">,</span> <span class="mi">101</span><span class="o">,</span> <span class="mi">75000</span><span class="o">);</span>
+        <span class="n">emp</span><span class="o">.</span><span class="na">displayInfo</span><span class="o">();</span>
+        <span class="n">emp</span><span class="o">.</span><span class="na">setSalary</span><span class="o">(</span><span class="mi">80000</span><span class="o">);</span>
+        <span class="n">emp</span><span class="o">.</span><span class="na">displayInfo</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Representing real-world entities like employees, products, or transactions in enterprise applications.</p>
+
+<hr />
+
+<h2 id="2-inheritance">2. Inheritance</h2>
+
+<p><strong>Inheritance</strong> allows a class to <strong>reuse fields and methods</strong> of another class. It promotes code reuse and establishes <strong>“is-a” relationships</strong>.</p>
+
+<p><strong>Example – Enterprise: Employee Hierarchy</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">name</span> <span class="o">+</span> <span class="s">" is working."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Subclass</span>
+<span class="kd">class</span> <span class="nc">Manager</span> <span class="kd">extends</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">Manager</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">manageTeam</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">name</span> <span class="o">+</span> <span class="s">" is managing the team."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Company</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Manager</span> <span class="n">mgr</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Manager</span><span class="o">(</span><span class="s">"Bob"</span><span class="o">,</span> <span class="mi">200</span><span class="o">);</span>
+        <span class="n">mgr</span><span class="o">.</span><span class="na">work</span><span class="o">();</span>         <span class="c1">// inherited</span>
+        <span class="n">mgr</span><span class="o">.</span><span class="na">manageTeam</span><span class="o">();</span>   <span class="c1">// subclass-specific</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Modeling real-world hierarchies, e.g., Employee → Manager → Director.</p>
+
+<hr />
+
+<h2 id="3-polymorphism">3. Polymorphism</h2>
+
+<p><strong>Polymorphism</strong> allows objects to take <strong>multiple forms</strong>. Two types:</p>
+
+<ul>
+  <li><strong>Compile-time (Method Overloading)</strong></li>
+  <li><strong>Runtime (Method Overriding)</strong></li>
+</ul>
+
+<p><strong>Example – Runtime Polymorphism in Enterprise: Notification System</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Notification</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">EmailNotification</span> <span class="kd">extends</span> <span class="nc">Notification</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Email sent: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">SMSNotification</span> <span class="kd">extends</span> <span class="nc">Notification</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"SMS sent: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NotificationService</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Notification</span> <span class="n">notification</span><span class="o">;</span>
+
+        <span class="n">notification</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">EmailNotification</span><span class="o">();</span>
+        <span class="n">notification</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="s">"Server down!"</span><span class="o">);</span>
+
+        <span class="n">notification</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SMSNotification</span><span class="o">();</span>
+        <span class="n">notification</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="s">"High CPU usage!"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Enterprise systems with multiple notification channels, payment methods, or document formats.</p>
+
+<hr />
+
+<h2 id="4-abstraction">4. Abstraction</h2>
+
+<p><strong>Abstraction</strong> hides implementation details and exposes <strong>only essential functionality</strong> using <strong>abstract classes or interfaces</strong>.</p>
+
+<p><strong>Example – Enterprise: Payment Gateway</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">PaymentGateway</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">pay</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">PayPal</span> <span class="kd">implements</span> <span class="nc">PaymentGateway</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">pay</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Paid $"</span> <span class="o">+</span> <span class="n">amount</span> <span class="o">+</span> <span class="s">" via PayPal"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">CreditCard</span> <span class="kd">implements</span> <span class="nc">PaymentGateway</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">pay</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Paid $"</span> <span class="o">+</span> <span class="n">amount</span> <span class="o">+</span> <span class="s">" via Credit Card"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PaymentProcessor</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">PaymentGateway</span> <span class="n">gateway</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PayPal</span><span class="o">();</span>
+        <span class="n">gateway</span><span class="o">.</span><span class="na">pay</span><span class="o">(</span><span class="mf">150.0</span><span class="o">);</span>
+
+        <span class="n">gateway</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CreditCard</span><span class="o">();</span>
+        <span class="n">gateway</span><span class="o">.</span><span class="na">pay</span><span class="o">(</span><span class="mf">200.0</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Abstracting implementation for flexible integration with multiple services or modules.</p>
+
+<hr />
+
+<h2 id="5-encapsulation">5. Encapsulation</h2>
+
+<p><strong>Encapsulation</strong> restricts direct access to fields and <strong>exposes controlled access</strong> via getters/setters.</p>
+
+<p><strong>Example – Enterprise: Secure Employee Salary Management</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">;</span> <span class="c1">// private field</span>
+
+    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="n">setSalary</span><span class="o">(</span><span class="n">salary</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getSalary</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">salary</span><span class="o">;</span> <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSalary</span><span class="o">(</span><span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">salary</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalArgumentException</span><span class="o">(</span><span class="s">"Salary cannot be negative"</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Prevent direct modification of sensitive data like salaries, passwords, or account balances.</p>
+
+<hr />
+
+<h2 id="6-modern-java-features-for-oop">6. Modern Java Features for OOP</h2>
+
+<ul>
+  <li><strong>Records</strong> for immutable data objects:</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">record</span> <span class="nf">EmployeeRecord</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">id</span><span class="o">,</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Sealed classes</strong> for controlled inheritance (Java 17+):</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sealed</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="n">permits</span> <span class="nc">Manager</span><span class="o">,</span> <span class="nc">Developer</span> <span class="o">{}</span>
+<span class="kd">final</span> <span class="kd">class</span> <span class="nc">Manager</span> <span class="kd">extends</span> <span class="nc">Employee</span> <span class="o">{}</span>
+<span class="kd">final</span> <span class="kd">class</span> <span class="nc">Developer</span> <span class="kd">extends</span> <span class="nc">Employee</span> <span class="o">{}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Pattern Matching</strong> (Java 21 preview) for cleaner type checks.</li>
+</ul>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+
+<ul>
+  <li><strong>Classes &amp; Objects</strong> → model real-world entities.</li>
+  <li><strong>Inheritance</strong> → promotes code reuse and hierarchy modeling.</li>
+  <li><strong>Polymorphism</strong> → enables flexible and extendable systems.</li>
+  <li><strong>Abstraction</strong> → hides implementation details, improves modularity.</li>
+  <li><strong>Encapsulation</strong> → protects internal state and ensures controlled access.</li>
+  <li><strong>Modern Java features</strong> (records, sealed classes, pattern matching) enhance OOP in enterprise applications.</li>
+</ul>]]></content><author><name>Sujeet Prajapati</name></author><category term="java-learning" /><category term="java-best-practices" /><summary type="html"><![CDATA[Object-Oriented Programming (OOP) is the backbone of modern Java development, enabling modular, reusable, and maintainable code. Enterprises rely heavily on OOP principles to build scalable and robust applications, from microservices to complex backend systems.]]></summary></entry><entry><title type="html">Operators in Java – Arithmetic, Relational, Logical, Bitwise, and Assignment Operators</title><link href="http://localhost:4000/java-learning/java-best-practices/2025/08/16/operator-in-java/" rel="alternate" type="text/html" title="Operators in Java – Arithmetic, Relational, Logical, Bitwise, and Assignment Operators" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/java-best-practices/2025/08/16/operator-in-java</id><content type="html" xml:base="http://localhost:4000/java-learning/java-best-practices/2025/08/16/operator-in-java/"><![CDATA[<p>Java is a powerful, object-oriented language that provides a rich set of operators to perform different types of operations. As a developer with over a decade of experience, understanding operators thoroughly is key to writing efficient and readable code. This blog post dives deep into <strong>arithmetic, relational, logical, bitwise, and assignment operators</strong>, with examples and use-cases.</p>
+
+<hr />
+
+<h2 id="1-arithmetic-operators">1. Arithmetic Operators</h2>
+
+<p>Arithmetic operators are used to perform basic mathematical operations such as addition, subtraction, multiplication, division, and modulus.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">+</code></td>
+      <td>Addition</td>
+      <td><code class="language-plaintext highlighter-rouge">int sum = 5 + 3; // 8</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-</code></td>
+      <td>Subtraction</td>
+      <td><code class="language-plaintext highlighter-rouge">int diff = 5 - 3; // 2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*</code></td>
+      <td>Multiplication</td>
+      <td><code class="language-plaintext highlighter-rouge">int prod = 5 * 3; // 15</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/</code></td>
+      <td>Division</td>
+      <td><code class="language-plaintext highlighter-rouge">int div = 10 / 3; // 3 (integer division)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%</code></td>
+      <td>Modulus (remainder)</td>
+      <td><code class="language-plaintext highlighter-rouge">int mod = 10 % 3; // 1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">++</code></td>
+      <td>Increment</td>
+      <td><code class="language-plaintext highlighter-rouge">int a = 5; a++; // a = 6</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--</code></td>
+      <td>Decrement</td>
+      <td><code class="language-plaintext highlighter-rouge">int b = 5; b--; // b = 4</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Addition: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">));</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Division: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="o">));</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Remainder: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="o">));</span>
+</code></pre></div></div>
+
+<p><em>Tip:</em> Always be careful with division, especially with integers, to avoid unexpected truncation.</p>
+
+<hr />
+
+<h2 id="2-relational-operators">2. Relational Operators</h2>
+
+<p>Relational operators are used to compare two values. The result is always a boolean (<code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code>).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">==</code></td>
+      <td>Equal to</td>
+      <td><code class="language-plaintext highlighter-rouge">5 == 5 // true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">!=</code></td>
+      <td>Not equal to</td>
+      <td><code class="language-plaintext highlighter-rouge">5 != 3 // true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;</code></td>
+      <td>Greater than</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &gt; 3 // true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;</code></td>
+      <td>Less than</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &lt; 3 // false</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;=</code></td>
+      <td>Greater than or equal to</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &gt;= 5 // true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;=</code></td>
+      <td>Less than or equal to</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &lt;= 3 // false</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a is smaller than b"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a is greater than or equal to b"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Essential in control statements like <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">while</code>, and <code class="language-plaintext highlighter-rouge">for</code>.</p>
+
+<hr />
+
+<h2 id="3-logical-operators">3. Logical Operators</h2>
+
+<p>Logical operators are used to combine multiple boolean expressions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;&amp;</code></td>
+      <td>Logical AND</td>
+      <td><code class="language-plaintext highlighter-rouge">true &amp;&amp; false // false</code></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>`       |             | `</td>
+      <td>Logical OR</td>
+      <td>`true |   | false // true`</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">!</code></td>
+      <td>Logical NOT</td>
+      <td><code class="language-plaintext highlighter-rouge">!true // false</code></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">boolean</span> <span class="n">isAdult</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">hasID</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="n">isAdult</span> <span class="o">&amp;&amp;</span> <span class="n">hasID</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Entry allowed"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Entry denied"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Tip:</em> Logical operators are commonly used in validation, authorization checks, and complex conditions.</p>
+
+<hr />
+
+<h2 id="4-bitwise-operators">4. Bitwise Operators</h2>
+
+<p>Bitwise operators operate on the binary representation of numbers. These are especially useful for low-level programming, masks, flags, or performance-critical applications.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;</code></td>
+      <td>AND</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &amp; 3 // 1</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>`       | `</td>
+      <td>OR</td>
+      <td>`5 | 3 // 7`</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">^</code></td>
+      <td>XOR</td>
+      <td><code class="language-plaintext highlighter-rouge">5 ^ 3 // 6</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~</code></td>
+      <td>NOT</td>
+      <td><code class="language-plaintext highlighter-rouge">~5 // -6</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;&lt;</code></td>
+      <td>Left shift</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &lt;&lt; 1 // 10</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;&gt;</code></td>
+      <td>Right shift</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &gt;&gt; 1 // 2</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;</code></td>
+      <td>Unsigned right shift</td>
+      <td><code class="language-plaintext highlighter-rouge">-5 &gt;&gt;&gt; 1 // large positive number</code></td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span> <span class="c1">// 0101 in binary</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span> <span class="c1">// 0011 in binary</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"AND: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span><span class="o">));</span> <span class="c1">// 0001 -&gt; 1</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"OR: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">|</span> <span class="n">y</span><span class="o">));</span>  <span class="c1">// 0111 -&gt; 7</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"XOR: "</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">^</span> <span class="n">y</span><span class="o">));</span> <span class="c1">// 0110 -&gt; 6</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Useful in flag checking, bit manipulation, compression algorithms, and cryptography.</p>
+
+<hr />
+
+<h2 id="5-assignment-operators">5. Assignment Operators</h2>
+
+<p>Assignment operators are used to assign values to variables. Java also supports shorthand assignment operators.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">=</code></td>
+      <td>Assign</td>
+      <td><code class="language-plaintext highlighter-rouge">int x = 5;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">+=</code></td>
+      <td>Add and assign</td>
+      <td><code class="language-plaintext highlighter-rouge">x += 3; // x = x + 3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-=</code></td>
+      <td>Subtract and assign</td>
+      <td><code class="language-plaintext highlighter-rouge">x -= 2; // x = x - 2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*=</code></td>
+      <td>Multiply and assign</td>
+      <td><code class="language-plaintext highlighter-rouge">x *= 2; // x = x * 2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/=</code></td>
+      <td>Divide and assign</td>
+      <td><code class="language-plaintext highlighter-rouge">x /= 3; // x = x / 3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%=</code></td>
+      <td>Modulus and assign</td>
+      <td><code class="language-plaintext highlighter-rouge">x %= 2; // x = x % 2</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span><span class="o">;</span> <span class="c1">// 15</span>
+<span class="n">x</span> <span class="o">*=</span> <span class="mi">2</span><span class="o">;</span> <span class="c1">// 30</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Result: "</span> <span class="o">+</span> <span class="n">x</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p><em>Tip:</em> Shorthand assignment operators make code concise and readable.</p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Operators in Java are the building blocks of programming logic. As a developer, mastering them allows you to:</p>
+
+<ul>
+  <li>Write cleaner, efficient code.</li>
+  <li>Reduce redundancy with shorthand operators.</li>
+  <li>Leverage bitwise operations for performance-critical applications.</li>
+  <li>Combine multiple conditions logically for robust validation.</li>
+</ul>
+
+<p><strong>Pro-tip:</strong> Always be mindful of operator precedence and associativity in Java to avoid unexpected behavior. For example, <code class="language-plaintext highlighter-rouge">*</code> and <code class="language-plaintext highlighter-rouge">/</code> have higher precedence than <code class="language-plaintext highlighter-rouge">+</code> and <code class="language-plaintext highlighter-rouge">-</code>.</p>]]></content><author><name>Sujeet Prajapati</name></author><category term="java-learning" /><category term="java-best-practices" /><summary type="html"><![CDATA[Java is a powerful, object-oriented language that provides a rich set of operators to perform different types of operations. As a developer with over a decade of experience, understanding operators thoroughly is key to writing efficient and readable code. This blog post dives deep into arithmetic, relational, logical, bitwise, and assignment operators, with examples and use-cases.]]></summary></entry><entry><title type="html">First Steps into Java: A Beginner’s Guide</title><link href="http://localhost:4000/java/2025/08/15/first-post/" rel="alternate" type="text/html" title="First Steps into Java: A Beginner’s Guide" /><published>2025-08-15T00:00:00+05:30</published><updated>2025-08-15T00:00:00+05:30</updated><id>http://localhost:4000/java/2025/08/15/first-post</id><content type="html" xml:base="http://localhost:4000/java/2025/08/15/first-post/"><![CDATA[<h1 id="welcome-to-the-world-of-java">Welcome to the World of Java!</h1>
 
 <p>Java is everywhere – from your Android apps to enterprise-level backend systems. It’s one of the most popular programming languages in the world, known for its simplicity, portability, and powerful features. Whether you are a beginner or coming from another programming language, Java is a great place to start.</p>
 

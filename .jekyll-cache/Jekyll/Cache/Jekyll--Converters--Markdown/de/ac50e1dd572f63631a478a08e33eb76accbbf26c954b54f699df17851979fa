@@ -1,0 +1,251 @@
+I"\6<p>In Java, <strong>access modifiers and packages</strong> play a critical role in <strong>structuring large-scale enterprise applications</strong>. They help control visibility, enforce encapsulation, and maintain modularity across different modules or microservices.</p>
+
+<p>This post will cover:</p>
+
+<ol>
+  <li><strong>Java Access Modifiers</strong></li>
+  <li><strong>Default Access (Package-Private)</strong></li>
+  <li><strong>Package Structure</strong></li>
+  <li>Enterprise examples and best practices</li>
+</ol>
+
+<hr />
+
+<h2 id="1-java-access-modifiers">1. Java Access Modifiers</h2>
+
+<p>Java provides four access levels:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modifier</th>
+      <th>Class</th>
+      <th>Package</th>
+      <th>Subclass</th>
+      <th>World</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">public</code></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">protected</code></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">default</code></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">private</code></td>
+      <td>✅</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="11-public">1.1 Public</h3>
+
+<ul>
+  <li>Visible <strong>everywhere</strong>, including other packages and modules.</li>
+  <li>Use for APIs, services, and interfaces meant for external access.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.enterprise.utils</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Logger</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">log</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"[LOG]: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Logging utilities, API service classes, or shared constants.</p>
+
+<hr />
+
+<h3 id="12-private">1.2 Private</h3>
+
+<ul>
+  <li>Visible <strong>only within the class</strong>.</li>
+  <li>Used for encapsulating internal state or implementation details.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getSalary</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">salary</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Protect sensitive data like passwords, salaries, or internal counters.</p>
+
+<hr />
+
+<h3 id="13-protected">1.3 Protected</h3>
+
+<ul>
+  <li>Visible <strong>within the package</strong> and <strong>subclasses</strong> (even in other packages).</li>
+  <li>Useful for controlled extension in inheritance hierarchies.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.enterprise.model</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="nc">String</span> <span class="n">department</span><span class="o">;</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">setDepartment</span><span class="o">(</span><span class="nc">String</span> <span class="n">dept</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">department</span> <span class="o">=</span> <span class="n">dept</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kn">package</span> <span class="nn">com.enterprise.hr</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.enterprise.model.Employee</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Manager</span> <span class="kd">extends</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">assignDepartment</span><span class="o">(</span><span class="nc">String</span> <span class="n">dept</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">setDepartment</span><span class="o">(</span><span class="n">dept</span><span class="o">);</span> <span class="c1">// accessible because protected</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Base classes in frameworks, allowing controlled customization.</p>
+
+<hr />
+
+<h3 id="14-default-package-private">1.4 Default (Package-Private)</h3>
+
+<ul>
+  <li><strong>No modifier</strong> → visible <strong>only within the same package</strong>.</li>
+  <li>Used for internal utilities that should not be exposed outside a package.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.enterprise.utils</span><span class="o">;</span>
+
+<span class="kd">class</span> <span class="nc">Validator</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isValidEmail</span><span class="o">(</span><span class="nc">String</span> <span class="n">email</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">email</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"@"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Internal validation or helper classes in enterprise modules.</p>
+
+<hr />
+
+<h2 id="2-package-structure-in-enterprise-applications">2. Package Structure in Enterprise Applications</h2>
+
+<p>Packages organize Java classes <strong>logically and modularly</strong>, avoiding naming conflicts and improving maintainability.</p>
+
+<p><strong>Enterprise Example – Modular Application Structure:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>com.enterprise
+│
+├── model
+│   ├── Employee.java
+│   └── Department.java
+│
+├── service
+│   ├── EmployeeService.java
+│   └── NotificationService.java
+│
+├── utils
+│   └── Logger.java
+│
+└── controller
+    ├── EmployeeController.java
+    └── AuthController.java
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">model</code> → data classes and entities</li>
+  <li><code class="language-plaintext highlighter-rouge">service</code> → business logic</li>
+  <li><code class="language-plaintext highlighter-rouge">utils</code> → helper classes</li>
+  <li><code class="language-plaintext highlighter-rouge">controller</code> → API endpoints or request handling</li>
+</ul>
+
+<p><strong>Using <code class="language-plaintext highlighter-rouge">module-info.java</code> (Java 9+) for strong encapsulation:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">module</span> <span class="n">enterprise</span><span class="o">.</span><span class="na">app</span> <span class="o">{</span>
+    <span class="n">exports</span> <span class="n">com</span><span class="o">.</span><span class="na">enterprise</span><span class="o">.</span><span class="na">controller</span><span class="o">;</span>
+    <span class="n">exports</span> <span class="n">com</span><span class="o">.</span><span class="na">enterprise</span><span class="o">.</span><span class="na">service</span><span class="o">;</span>
+    <span class="c1">// utils and model remain internal</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Benefit:</em> Explicitly exposes only intended packages for external modules.</p>
+
+<hr />
+
+<h2 id="3-enterprise-best-practices">3. Enterprise Best Practices</h2>
+
+<ol>
+  <li><strong>Restrict access</strong> as much as possible (<code class="language-plaintext highlighter-rouge">private</code> &gt; <code class="language-plaintext highlighter-rouge">protected</code> &gt; <code class="language-plaintext highlighter-rouge">public</code>) to enforce encapsulation.</li>
+  <li><strong>Use packages</strong> to logically group classes and manage dependencies.</li>
+  <li><strong>Leverage modules (Java 9+)</strong> to hide internal implementation details and expose only APIs.</li>
+  <li><strong>Protected + inheritance</strong> allows controlled extensibility without exposing internals globally.</li>
+  <li>Keep helper classes and utilities <strong>package-private</strong> unless they need external access.</li>
+</ol>
+
+<hr />
+
+<h2 id="4-example--secure-employee-management-module">4. Example – Secure Employee Management Module</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.enterprise.model</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">;</span> <span class="c1">// private: sensitive</span>
+
+    <span class="kd">protected</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="nf">getSalary</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">salary</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kn">package</span> <span class="nn">com.enterprise.service</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.enterprise.model.Employee</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeService</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printSalary</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">emp</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Can access protected getter because it's in the same module/package</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Salary: $"</span> <span class="o">+</span> <span class="n">emp</span><span class="o">.</span><span class="na">getSalary</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Benefit:</em> Sensitive data (<code class="language-plaintext highlighter-rouge">salary</code>) is protected, access is controlled, and only authorized service classes can use it.</p>
+
+<hr />
+
+<h3 id="key-takeaways">Key Takeaways</h3>
+
+<ul>
+  <li>Access modifiers define <strong>visibility and encapsulation</strong>, crucial for enterprise-grade security and maintainability.</li>
+  <li>Packages <strong>organize code logically</strong> and prevent conflicts in large codebases.</li>
+  <li>Use <strong>module system</strong> to expose only APIs while hiding internal implementation.</li>
+  <li>Default access + private fields + protected inheritance = secure and extensible design.</li>
+</ul>
+:ET

@@ -1,0 +1,206 @@
+I"	A<p>Control flow statements are fundamental in Java programming, enabling developers to define <strong>decision-making</strong> and <strong>repetitive execution</strong> of code. As a senior Java developer, understanding and using these constructs efficiently is crucial for building robust enterprise-grade applications.</p>
+
+<p>In this post, we’ll cover:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">else if</code>, <code class="language-plaintext highlighter-rouge">else</code></li>
+  <li><code class="language-plaintext highlighter-rouge">switch</code></li>
+  <li>Loops: <code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>, <code class="language-plaintext highlighter-rouge">do-while</code></li>
+  <li>Real-world enterprise examples</li>
+</ol>
+
+<hr />
+
+<h2 id="1-if-else-if-else-statements">1. If, Else-If, Else Statements</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">if</code> statement allows executing code blocks based on a <strong>condition</strong>. <code class="language-plaintext highlighter-rouge">else if</code> and <code class="language-plaintext highlighter-rouge">else</code> handle multiple conditions or defaults.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// code if condition is true</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">anotherCondition</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// code if anotherCondition is true</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="c1">// code if none are true</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – User Role Authorization:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">userRole</span> <span class="o">=</span> <span class="n">getUserRole</span><span class="o">(</span><span class="n">userId</span><span class="o">);</span> <span class="c1">// Fetch from DB</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="s">"ADMIN"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">userRole</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">grantAccess</span><span class="o">(</span><span class="s">"ALL_RESOURCES"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="s">"MANAGER"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">userRole</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">grantAccess</span><span class="o">(</span><span class="s">"DEPARTMENT_RESOURCES"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="s">"EMPLOYEE"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">userRole</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">grantAccess</span><span class="o">(</span><span class="s">"SELF_RESOURCES"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">denyAccess</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Decision-making based on user roles, feature toggles, or workflow status in enterprise apps.</p>
+
+<hr />
+
+<h2 id="2-switch-statement">2. Switch Statement</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">switch</code> statement evaluates a variable and executes code based on <strong>matching cases</strong>. Java 14+ introduced enhanced <strong>switch expressions</strong> for cleaner code.</p>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="o">(</span><span class="n">variable</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="n">value1</span> <span class="o">-&gt;</span> <span class="c1">// code;</span>
+    <span class="k">case</span> <span class="n">value2</span> <span class="o">-&gt;</span> <span class="c1">// code;</span>
+    <span class="k">default</span> <span class="o">-&gt;</span> <span class="c1">// code if no match;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – Payment Gateway Selection:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">paymentMethod</span> <span class="o">=</span> <span class="n">getPaymentMethod</span><span class="o">();</span> <span class="c1">// "CREDIT_CARD", "PAYPAL", "UPI"</span>
+
+<span class="k">switch</span> <span class="o">(</span><span class="n">paymentMethod</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="s">"CREDIT_CARD"</span> <span class="o">-&gt;</span> <span class="n">processCreditCardPayment</span><span class="o">();</span>
+    <span class="k">case</span> <span class="s">"PAYPAL"</span> <span class="o">-&gt;</span> <span class="n">processPayPalPayment</span><span class="o">();</span>
+    <span class="k">case</span> <span class="s">"UPI"</span> <span class="o">-&gt;</span> <span class="n">processUPIPayment</span><span class="o">();</span>
+    <span class="k">default</span> <span class="o">-&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalArgumentException</span><span class="o">(</span><span class="s">"Unsupported payment method"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Handling multiple business scenarios like payment processing, logging levels, or workflow states.</p>
+
+<hr />
+
+<h2 id="3-loops-in-java">3. Loops in Java</h2>
+
+<p>Loops allow repetitive execution of code based on a <strong>condition</strong> or a <strong>collection</strong>. Java provides <code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>, and <code class="language-plaintext highlighter-rouge">do-while</code> loops.</p>
+
+<hr />
+
+<h3 id="31-for-loop">3.1 For Loop</h3>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="o">(</span><span class="n">initialization</span><span class="o">;</span> <span class="n">condition</span><span class="o">;</span> <span class="n">increment</span><span class="o">/</span><span class="n">decrement</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// code to execute</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – Batch Processing Orders:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Order</span><span class="o">&gt;</span> <span class="n">orders</span> <span class="o">=</span> <span class="n">getPendingOrders</span><span class="o">();</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">orders</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">processOrder</span><span class="o">(</span><span class="n">orders</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enhanced For Loop (for-each)</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="o">(</span><span class="nc">Order</span> <span class="n">order</span> <span class="o">:</span> <span class="n">orders</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">processOrder</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Iterating over collections, arrays, or processing batches of transactions.</p>
+
+<hr />
+
+<h3 id="32-while-loop">3.2 While Loop</h3>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// code to execute while condition is true</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – Retry Mechanism:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">retryCount</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">success</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+
+<span class="k">while</span> <span class="o">(</span><span class="n">retryCount</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">success</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">success</span> <span class="o">=</span> <span class="n">callExternalService</span><span class="o">();</span>
+    <span class="n">retryCount</span><span class="o">++;</span>
+<span class="o">}</span>
+
+<span class="k">if</span> <span class="o">(!</span><span class="n">success</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">logError</span><span class="o">(</span><span class="s">"Service call failed after 3 attempts"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Retry logic, polling, or reading continuous input until a condition is met.</p>
+
+<hr />
+
+<h3 id="33-do-while-loop">3.3 Do-While Loop</h3>
+
+<p><strong>Syntax:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">do</span> <span class="o">{</span>
+    <span class="c1">// code executes at least once</span>
+<span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">condition</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p><strong>Enterprise Example – User Input Validation:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">input</span><span class="o">;</span>
+
+<span class="k">do</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Enter a valid email: "</span><span class="o">);</span>
+    <span class="n">input</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">while</span> <span class="o">(!</span><span class="n">isValidEmail</span><span class="o">(</span><span class="n">input</span><span class="o">));</span>
+
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Email accepted: "</span> <span class="o">+</span> <span class="n">input</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Validating user input, menu-driven applications, or ensuring at least one execution.</p>
+
+<hr />
+
+<h2 id="4-nested-control-flow">4. Nested Control Flow</h2>
+
+<p>Control flow statements can be <strong>nested</strong> for complex business logic.</p>
+
+<p><strong>Enterprise Example – Order Processing Workflow:</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Order</span> <span class="n">order</span> <span class="o">=</span> <span class="n">fetchOrder</span><span class="o">(</span><span class="n">orderId</span><span class="o">);</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="n">order</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">switch</span> <span class="o">(</span><span class="n">order</span><span class="o">.</span><span class="na">getStatus</span><span class="o">())</span> <span class="o">{</span>
+        <span class="k">case</span> <span class="s">"NEW"</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">inventoryAvailable</span><span class="o">(</span><span class="n">order</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">processOrder</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="n">scheduleBackorder</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">case</span> <span class="s">"SHIPPED"</span> <span class="o">-&gt;</span> <span class="n">notifyCustomer</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+        <span class="k">case</span> <span class="s">"CANCELLED"</span> <span class="o">-&gt;</span> <span class="n">logCancellation</span><span class="o">(</span><span class="n">order</span><span class="o">);</span>
+        <span class="k">default</span> <span class="o">-&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalStateException</span><span class="o">(</span><span class="s">"Unknown order status"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">logError</span><span class="o">(</span><span class="s">"Order not found: "</span> <span class="o">+</span> <span class="n">orderId</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Multi-condition decision-making in business-critical systems.</p>
+
+<hr />
+
+<h2 id="5-key-takeaways-for-enterprise-development">5. Key Takeaways for Enterprise Development</h2>
+
+<ul>
+  <li>Use <strong><code class="language-plaintext highlighter-rouge">if-else</code></strong> for straightforward conditional logic.</li>
+  <li>Use <strong><code class="language-plaintext highlighter-rouge">switch</code></strong> for multiple discrete cases to enhance readability.</li>
+  <li>Prefer <strong>enhanced for-loop</strong> when iterating over collections.</li>
+  <li><strong>While loops</strong> are best for unknown iterations; <strong>do-while</strong> ensures at least one execution.</li>
+  <li>Combine control flow statements judiciously for complex workflows, but keep readability in mind.</li>
+  <li>Always validate inputs and handle edge cases in enterprise applications.</li>
+</ul>
+:ET

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Oriented Programming (OOP) in Java – Classes, Objects, Inheritance, Polymorphism, Abstraction, and Encapsulation — Sujeet Prajapati — Java Developer</title>
+    <meta name="description" content="Object-Oriented Programming (OOP) is the backbone of modern Java development, enabling modular, reusable, and maintainable code. Enterprises rely heavily on OOP principles to build scalable and robust applications, from microservices to complex backend systems.">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="Sujeet Prajapati — Java Developer" href="/feed.xml">
+
+    <!-- Script (load once, deferred) -->
+    <script src="/assets/script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-bar">
+        <a class="brand" href="/">☕ Sujeet Prajapati</a>
+
+        <!-- Hamburger for mobile -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav" id="navMenu">
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/blog">Blog</a>
+            <a href="/videos">Videos</a>
+            <a href="/resume">Resume</a>
+            <a href="/contact">Contact</a>
+            <a href="/about">About Me</a>
+            <!-- Theme toggle button (floating) -->
+            <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="main-content">
+        <article class="post-content">
+    <header class="post-header">
+        <h1>Object-Oriented Programming (OOP) in Java – Classes, Objects, Inheritance, Polymorphism, Abstraction, and Encapsulation</h1>
+        <p class="post-date">August 16, 2025</p>
+    </header>
+
+    <div class="post-body">
+        <p>Object-Oriented Programming (OOP) is the backbone of <strong>modern Java development</strong>, enabling modular, reusable, and maintainable code. Enterprises rely heavily on OOP principles to build <strong>scalable and robust applications</strong>, from microservices to complex backend systems.</p>
+
+<p>In this post, we’ll cover:</p>
+
+<ol>
+  <li>Classes &amp; Objects</li>
+  <li>Inheritance</li>
+  <li>Polymorphism</li>
+  <li>Abstraction</li>
+  <li>Encapsulation</li>
+  <li>Enterprise examples with modern Java features</li>
+</ol>
+
+<hr />
+
+<h2 id="1-classes--objects">1. Classes &amp; Objects</h2>
+
+<p><strong>Class:</strong> A blueprint for creating objects.
+<strong>Object:</strong> An instance of a class with state (fields) and behavior (methods).</p>
+
+<p><strong>Example – Enterprise: Employee Management</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">employeeId</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">;</span>
+
+    <span class="c1">// Constructor</span>
+    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">employeeId</span><span class="o">,</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">employeeId</span> <span class="o">=</span> <span class="n">employeeId</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Getter and Setter</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getSalary</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">salary</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSalary</span><span class="o">(</span><span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span> <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">displayInfo</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Employee: "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">", ID: "</span> <span class="o">+</span> <span class="n">employeeId</span> <span class="o">+</span> <span class="s">", Salary: $"</span> <span class="o">+</span> <span class="n">salary</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"Alice"</span><span class="o">,</span> <span class="mi">101</span><span class="o">,</span> <span class="mi">75000</span><span class="o">);</span>
+        <span class="n">emp</span><span class="o">.</span><span class="na">displayInfo</span><span class="o">();</span>
+        <span class="n">emp</span><span class="o">.</span><span class="na">setSalary</span><span class="o">(</span><span class="mi">80000</span><span class="o">);</span>
+        <span class="n">emp</span><span class="o">.</span><span class="na">displayInfo</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Representing real-world entities like employees, products, or transactions in enterprise applications.</p>
+
+<hr />
+
+<h2 id="2-inheritance">2. Inheritance</h2>
+
+<p><strong>Inheritance</strong> allows a class to <strong>reuse fields and methods</strong> of another class. It promotes code reuse and establishes <strong>“is-a” relationships</strong>.</p>
+
+<p><strong>Example – Enterprise: Employee Hierarchy</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">name</span> <span class="o">+</span> <span class="s">" is working."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Subclass</span>
+<span class="kd">class</span> <span class="nc">Manager</span> <span class="kd">extends</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">Manager</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">id</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">manageTeam</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">name</span> <span class="o">+</span> <span class="s">" is managing the team."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Company</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Manager</span> <span class="n">mgr</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Manager</span><span class="o">(</span><span class="s">"Bob"</span><span class="o">,</span> <span class="mi">200</span><span class="o">);</span>
+        <span class="n">mgr</span><span class="o">.</span><span class="na">work</span><span class="o">();</span>         <span class="c1">// inherited</span>
+        <span class="n">mgr</span><span class="o">.</span><span class="na">manageTeam</span><span class="o">();</span>   <span class="c1">// subclass-specific</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Modeling real-world hierarchies, e.g., Employee → Manager → Director.</p>
+
+<hr />
+
+<h2 id="3-polymorphism">3. Polymorphism</h2>
+
+<p><strong>Polymorphism</strong> allows objects to take <strong>multiple forms</strong>. Two types:</p>
+
+<ul>
+  <li><strong>Compile-time (Method Overloading)</strong></li>
+  <li><strong>Runtime (Method Overriding)</strong></li>
+</ul>
+
+<p><strong>Example – Runtime Polymorphism in Enterprise: Notification System</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Notification</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">EmailNotification</span> <span class="kd">extends</span> <span class="nc">Notification</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Email sent: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">SMSNotification</span> <span class="kd">extends</span> <span class="nc">Notification</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"SMS sent: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NotificationService</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Notification</span> <span class="n">notification</span><span class="o">;</span>
+
+        <span class="n">notification</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">EmailNotification</span><span class="o">();</span>
+        <span class="n">notification</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="s">"Server down!"</span><span class="o">);</span>
+
+        <span class="n">notification</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SMSNotification</span><span class="o">();</span>
+        <span class="n">notification</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="s">"High CPU usage!"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Enterprise systems with multiple notification channels, payment methods, or document formats.</p>
+
+<hr />
+
+<h2 id="4-abstraction">4. Abstraction</h2>
+
+<p><strong>Abstraction</strong> hides implementation details and exposes <strong>only essential functionality</strong> using <strong>abstract classes or interfaces</strong>.</p>
+
+<p><strong>Example – Enterprise: Payment Gateway</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">PaymentGateway</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">pay</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">PayPal</span> <span class="kd">implements</span> <span class="nc">PaymentGateway</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">pay</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Paid $"</span> <span class="o">+</span> <span class="n">amount</span> <span class="o">+</span> <span class="s">" via PayPal"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">CreditCard</span> <span class="kd">implements</span> <span class="nc">PaymentGateway</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">pay</span><span class="o">(</span><span class="kt">double</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Paid $"</span> <span class="o">+</span> <span class="n">amount</span> <span class="o">+</span> <span class="s">" via Credit Card"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PaymentProcessor</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">PaymentGateway</span> <span class="n">gateway</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PayPal</span><span class="o">();</span>
+        <span class="n">gateway</span><span class="o">.</span><span class="na">pay</span><span class="o">(</span><span class="mf">150.0</span><span class="o">);</span>
+
+        <span class="n">gateway</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CreditCard</span><span class="o">();</span>
+        <span class="n">gateway</span><span class="o">.</span><span class="na">pay</span><span class="o">(</span><span class="mf">200.0</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Abstracting implementation for flexible integration with multiple services or modules.</p>
+
+<hr />
+
+<h2 id="5-encapsulation">5. Encapsulation</h2>
+
+<p><strong>Encapsulation</strong> restricts direct access to fields and <strong>exposes controlled access</strong> via getters/setters.</p>
+
+<p><strong>Example – Enterprise: Secure Employee Salary Management</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">;</span> <span class="c1">// private field</span>
+
+    <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="n">setSalary</span><span class="o">(</span><span class="n">salary</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getSalary</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">salary</span><span class="o">;</span> <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSalary</span><span class="o">(</span><span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">salary</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalArgumentException</span><span class="o">(</span><span class="s">"Salary cannot be negative"</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><em>Use-case:</em> Prevent direct modification of sensitive data like salaries, passwords, or account balances.</p>
+
+<hr />
+
+<h2 id="6-modern-java-features-for-oop">6. Modern Java Features for OOP</h2>
+
+<ul>
+  <li><strong>Records</strong> for immutable data objects:</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">record</span> <span class="nf">EmployeeRecord</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">id</span><span class="o">,</span> <span class="kt">double</span> <span class="n">salary</span><span class="o">)</span> <span class="o">{}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Sealed classes</strong> for controlled inheritance (Java 17+):</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sealed</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="n">permits</span> <span class="nc">Manager</span><span class="o">,</span> <span class="nc">Developer</span> <span class="o">{}</span>
+<span class="kd">final</span> <span class="kd">class</span> <span class="nc">Manager</span> <span class="kd">extends</span> <span class="nc">Employee</span> <span class="o">{}</span>
+<span class="kd">final</span> <span class="kd">class</span> <span class="nc">Developer</span> <span class="kd">extends</span> <span class="nc">Employee</span> <span class="o">{}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Pattern Matching</strong> (Java 21 preview) for cleaner type checks.</li>
+</ul>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+
+<ul>
+  <li><strong>Classes &amp; Objects</strong> → model real-world entities.</li>
+  <li><strong>Inheritance</strong> → promotes code reuse and hierarchy modeling.</li>
+  <li><strong>Polymorphism</strong> → enables flexible and extendable systems.</li>
+  <li><strong>Abstraction</strong> → hides implementation details, improves modularity.</li>
+  <li><strong>Encapsulation</strong> → protects internal state and ensures controlled access.</li>
+  <li><strong>Modern Java features</strong> (records, sealed classes, pattern matching) enhance OOP in enterprise applications.</li>
+</ul>
+
+    </div>
+
+    <!-- Visitor Counter -->
+    <!-- VISITOR COUNTER -->
+<div style="display:flex; gap:12px; margin-top:1.5rem; flex-wrap:wrap; font-family:sans-serif;">
+
+    <!-- Page Visits -->
+    <div style="background:#f3f4f6; color:#1f2937; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);" title="Number of visitors to this page">
+        <span>📄</span>
+        <span>Page Visits:</span>
+        <span id="page-visit-count">0</span>
+    </div>
+
+    <!-- Total Visits -->
+    <div style="background:#f3f4f6; color:#1f2937; padding:8px 16px; border-radius:24px; font-weight:600; display:flex; align-items:center; gap:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);" title="Total visitors across all pages">
+        <span>🌐</span>
+        <span>Total Visits:</span>
+        <span id="total-visit-count">0</span>
+    </div>
+
+</div>
+
+<script>
+    // Page slug: use Jekyll slug for each post
+    const pageSlug = "java-learning-java-best-practices-2025-08-16-oop-in-java";
+    const namespace = "sujeetkumar7-github-io";
+
+    const pageApiUrl = `https://countapi.xyz/hit/${namespace}/${pageSlug}`;
+    const totalApiUrl = `https://countapi.xyz/hit/${namespace}/total`;
+
+    function animateCount(element, target) {
+      let count = 0;
+      const step = Math.ceil(target / 50);
+      const interval = setInterval(() => {
+        count += step;
+        if (count >= target) {
+          count = target;
+          clearInterval(interval);
+        }
+        element.innerText = count;
+      }, 20);
+    }
+
+    async function fetchCount(url, elementId) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('API error');
+        const data = await res.json();
+        animateCount(document.getElementById(elementId), data.value);
+      } catch(err) {
+        console.error('CountAPI error:', err, url);
+        document.getElementById(elementId).innerText = 'N/A';
+      }
+    }
+
+    fetchCount(pageApiUrl, 'page-visit-count');
+    fetchCount(totalApiUrl, 'total-visit-count');
+</script>
+
+
+    <!-- ======= Interactive Section ======= -->
+    <div class="post-interactions">
+
+        <!-- 1️⃣ Stylish Share Buttons -->
+        <div class="share-buttons">
+            <a class="share-btn facebook" href="#" target="_blank" title="Share on Facebook">F</a>
+            <a class="share-btn twitter" href="#" target="_blank" title="Share on Twitter">T</a>
+            <a class="share-btn linkedin" href="#" target="_blank" title="Share on LinkedIn">L</a>
+            <a class="share-btn whatsapp" href="#" target="_blank" title="Share on WhatsApp">W</a>
+        </div>
+
+        <!-- AddThis fallback (optional) -->
+        <div class="addthis_inline_share_toolbox" style="display:none;"></div>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-YOUR_ADDTHIS_ID" async></script>
+
+        <!-- 2️⃣ Like Button -->
+        <div class="like-button">
+            <a class="likebtn-wrapper"
+               data-identifier="post-oop-in-java"
+               data-theme="github"
+               data-ef_voting="bounce"
+               data-counter_clickable="true">
+            </a>
+            <script type="text/javascript" src="//w.likebtn.com/js/w/widget.js" async></script>
+        </div>
+
+        <!-- 3️⃣ Utterances Comments -->
+        <div id="comments"></div>
+        <script src="https://utteranc.es/client.js"
+                repo="sujeetkumar7/sujeetkumar7.github.io"
+                issue-term="pathname"
+                label="💬 comment"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+
+    </div>
+    <!-- LATEST BLOG POSTS -->
+    <div class="card" style="margin:1rem;">
+        <h2 style="margin-bottom:1rem;">Latest from the Blog</h2>
+        <div class="grid cards" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+            
+            <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);; transition: transform 0.3s, box-shadow 0.3s;"
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+                <h3 style="margin-bottom:0.5rem;"><a href="/java-learning/2025/08/16/ultimate-java-learning-roadmap/" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">Ultimate Java Learning Roadmap: From Classic to Latest Features</a></h3>
+                <p class="small" style="color:#555; font-size:0.9rem; margin-bottom:0.5rem;">
+                    Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new fe...
+                </p>
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+                    <span class="badge" style="background:#e0e7ff; color:#1e3a8a; font-size:0.75rem; padding:2px 6px; border-radius:6px;">Aug 16, 2025</span>
+                </div>
+            </div>
+            
+            <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);; transition: transform 0.3s, box-shadow 0.3s;"
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+                <h3 style="margin-bottom:0.5rem;"><a href="/java-learning/java-best-practices/2025/08/16/operator-in-java/" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">Operators in Java – Arithmetic, Relational, Logical, Bitwise, and Assignment Operators</a></h3>
+                <p class="small" style="color:#555; font-size:0.9rem; margin-bottom:0.5rem;">
+                    Java is a powerful, object-oriented language that provides a rich set of operators to perform different types of oper...
+                </p>
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+                    <span class="badge" style="background:#e0e7ff; color:#1e3a8a; font-size:0.75rem; padding:2px 6px; border-radius:6px;">Aug 16, 2025</span>
+                </div>
+            </div>
+            
+            <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);; transition: transform 0.3s, box-shadow 0.3s;"
+                 onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+                <h3 style="margin-bottom:0.5rem;"><a href="/java-learning/java-best-practices/2025/08/16/oop-in-java/" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">Object-Oriented Programming (OOP) in Java – Classes, Objects, Inheritance, Polymorphism, Abstraction, and Encapsulation</a></h3>
+                <p class="small" style="color:#555; font-size:0.9rem; margin-bottom:0.5rem;">
+                    Object-Oriented Programming (OOP) is the backbone of modern Java development, enabling modular, reusable, and maintai...
+                </p>
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+                    <span class="badge" style="background:#e0e7ff; color:#1e3a8a; font-size:0.75rem; padding:2px 6px; border-radius:6px;">Aug 16, 2025</span>
+                </div>
+            </div>
+            
+        </div>
+        <p style="margin-top:1.5rem;"><a class="btn" href="/blog" style="background:#4f46e5; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; transition:0.3s;">See All Posts</a></p>
+    <!-- ======= End Interactive Section ======= -->
+    </div>
+</article>
+
+<style>
+    /* Full-width post container */
+    .post-content {
+      width: 100%;
+      max-width: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .post-header {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .post-header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .post-date {
+      font-size: 0.9rem;
+    }
+
+    .post-body {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+    }
+
+    .post-interactions {
+      border-top: 1px solid #ddd;
+      padding-top: 30px;
+      margin-top: 40px;
+    }
+
+    /* Share Buttons Styling */
+    .share-buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .share-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .facebook { background: #3b5998; }
+    .twitter { background: #1da1f2; }
+    .linkedin { background: #0077b5; }
+    .whatsapp { background: #25d366; }
+
+    /* Like Button Styling */
+    .like-button {
+      margin-bottom: 30px;
+    }
+
+    /* Responsive typography */
+    @media (max-width: 768px) {
+      .post-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .post-body {
+        font-size: 1rem;
+      }
+    }
+</style>
+
+<script>
+    // Dynamic sharing URLs
+    const shareURL = encodeURIComponent(window.location.href);
+    const shareTitle = encodeURIComponent(document.title);
+
+    document.querySelector('.share-btn.facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${shareURL}`;
+    document.querySelector('.share-btn.twitter').href = `https://twitter.com/intent/tweet?url=${shareURL}&text=${shareTitle}`;
+    document.querySelector('.share-btn.linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareURL}&title=${shareTitle}`;
+    document.querySelector('.share-btn.whatsapp').href = `https://api.whatsapp.com/send?text=${shareTitle}%20${shareURL}`;
+</script>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Sujeet Prajapati — let's learn together and grow together</p>
+        <p><a href="/feed.xml"></a><a href="https://github.com"></a></p>
+    </div>
+</footer>
+</body>
+</html>

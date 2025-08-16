@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — Sujeet Prajapati — Java Developer</title>
-    <meta name="description" content="Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume.">
-
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="/assets/styles.css">
-    <link rel="alternate" type="application/rss+xml" title="Sujeet Prajapati — Java Developer" href="/feed.xml">
-
-    <!-- Script (load once, deferred) -->
-    <script src="/assets/script.js" defer></script>
-</head>
-<body>
-<header class="site-header">
-    <div class="container header-bar">
-        <a class="brand" href="/">☕ Sujeet Prajapati</a>
-
-        <!-- Hamburger for mobile -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Navigation -->
-        <nav class="nav" id="navMenu">
-            <a href="/">Home</a>
-            <a href="/projects">Projects</a>
-            <a href="/blog">Blog</a>
-            <a href="/videos">Videos</a>
-            <a href="/resume">Resume</a>
-            <a href="/contact">Contact</a>
-            <a href="/about">About Me</a>
-            <!-- Theme toggle button (floating) -->
-            <button id="themeToggle" aria-label="Toggle theme">🌓</button>
-        </nav>
-    </div>
-</header>
-
-<main>
-    <div class="main-content">
-        <section class="hero" style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:2rem; padding:3rem 1rem; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+I":<section class="hero" style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:2rem; padding:3rem 1rem; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
 
   <div style="flex:1; min-width:250px;">
 
@@ -85,13 +41,7 @@
         </li>
       
         <li class="post-item" style="margin-bottom:1rem;">
-          <a href="/java-learning/java-best-practices/2025/08/16/oop-in-java/" style="font-weight:600; color:var(--accent); text-decoration:none;">Object-Oriented Programming (OOP) in Java – Classes, Objects, Inheritance, Polymorphism, Abstraction, and Encapsulation</a>
-          <span class="badge">Aug 16, 2025</span>
-          <div class="small">Object-Oriented Programming (OOP) is the backbone of modern Java development, enabling modular, reusable, and maintainable code. Enterpri...</div>
-        </li>
-      
-        <li class="post-item" style="margin-bottom:1rem;">
-          <a href="/java-learning/java-best-practices/2025/08/16/methods-recursion-in-java/" style="font-weight:600; color:var(--accent); text-decoration:none;">Methods &amp; Recursion in Java – Method Overloading, Recursion, and Variable Arguments</a>
+          <a href="/java-learning/java-best-practices/2025/08/16/methods-recursion-in-java/" style="font-weight:600; color:var(--accent); text-decoration:none;">Control Flow Statements in Java – if, else, switch, loops (for, while, do-while)</a>
           <span class="badge">Aug 16, 2025</span>
           <div class="small">Methods are the building blocks of modular programming in Java. They allow you to encapsulate logic, promote code reusability, and improv...</div>
         </li>
@@ -99,7 +49,7 @@
         <li class="post-item" style="margin-bottom:1rem;">
           <a href="/java-learning/java-best-practices/2025/08/16/exception-handling-in-java/" style="font-weight:600; color:var(--accent); text-decoration:none;">Exception Handling in Java – Checked vs Unchecked Exceptions, Try-Catch-Finally, and Custom Exceptions</a>
           <span class="badge">Aug 16, 2025</span>
-          <div class="small">Exception handling is a critical part of building robust and resilient Java applications, especially in enterprise systems where failure ...</div>
+          <div class="small">Control flow statements are fundamental in Java programming, enabling developers to define decision-making and repetitive execution of co...</div>
         </li>
       
         <li class="post-item" style="margin-bottom:1rem;">
@@ -116,12 +66,6 @@
         </li>
       
         <li class="post-item" style="margin-bottom:1rem;">
-          <a href="/java-learning/java-best-practices/2025/08/16/access-modifier-package-in-java/" style="font-weight:600; color:var(--accent); text-decoration:none;">Access Modifiers &amp; Packages in Java – public, private, protected, default, and Package Structure</a>
-          <span class="badge">Aug 16, 2025</span>
-          <div class="small">In Java, access modifiers and packages play a critical role in structuring large-scale enterprise applications. They help control visibil...</div>
-        </li>
-      
-        <li class="post-item" style="margin-bottom:1rem;">
           <a href="/java/2025/08/15/first-post/" style="font-weight:600; color:var(--accent); text-decoration:none;">First Steps into Java: A Beginner's Guide</a>
           <span class="badge">Aug 15, 2025</span>
           <div class="small">Welcome to the World of Java!
@@ -133,15 +77,4 @@
   </div>
 
 </section>
-
-    </div>
-</main>
-
-<footer class="site-footer">
-    <div class="container">
-        <p>© 2025 Sujeet Prajapati — let's learn together and grow together</p>
-        <p><a href="/feed.xml"></a><a href="https://github.com"></a></p>
-    </div>
-</footer>
-</body>
-</html>
+:ET

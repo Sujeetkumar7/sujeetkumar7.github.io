@@ -2,7 +2,7 @@
 layout: post
 title: "Mastering Java Data Types & Variables: Primitive Types, Wrappers, and Type Casting"
 date: 2025-08-16
-categories: [java-best-practices]
+categories: [java-learning, java-best-practices]
 ---
 
 # Java Data Types & Variables – Primitive Types, Wrapper Classes, and Type Casting
