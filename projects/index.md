@@ -1,9 +1,7 @@
 ---
 title: Projects
-layout: post
 ---
 
-<h1 class="text-3xl font-bold mb-4">🚀 Projects</h1>
 <p class="text-gray-600 mb-6">
 Here you’ll find a collection of my professional and personal projects.  
 Use the filter to quickly find projects by technology or name.
