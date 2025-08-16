@@ -11,6 +11,7 @@ layout: default
     <div class="post-body">
         {{ content }}
     </div>
+    {% include visitor-counter.html %}
     <!-- ======= Interactive Section ======= -->
     <div class="post-interactions">
 
@@ -103,7 +104,4 @@ layout: default
     document.querySelector('.share-btn.twitter').href = `https://twitter.com/intent/tweet?url=${shareURL}&text=${shareTitle}`;
     document.querySelector('.share-btn.linkedin').href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareURL}&title=${shareTitle}`;
     document.querySelector('.share-btn.whatsapp').href = `https://api.whatsapp.com/send?text=${shareTitle}%20${shareURL}`;
-</script>
-<script>
-    {% include visitor-counter.html %}
 </script>
