@@ -1,9 +1,10 @@
 ---
 title: Home
+layout: default
 ---
 
 <!-- HERO SECTION -->
-<section class="hero" style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem; padding:3rem 1rem; background: linear-gradient(135deg, #f9fafb, #e5e7eb); color:#111; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+<section class="hero" style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem; padding:3rem 1rem; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
   <div style="flex:1; min-width:250px;">
    <h1 style="font-size:2.5rem; font-weight:700; margin-bottom:1rem;">Welcome to My Java Blog 👋</h1>
     <p class="small" style="font-size:1rem; opacity:0.85; margin-bottom:1rem;">
@@ -39,7 +40,7 @@ title: Home
   <h2 style="margin-bottom:1rem;">Featured Projects</h2>
   <div class="grid cards" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem;">
 
-    <div class="card project-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; background:white;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)'">
+    <div class="card project-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)'">
       <h3 style="margin-bottom:0.5rem;">LLM Observability Dashboard (In Progress)</h3>
       <p class="small" style="margin-bottom:0.8rem;">
         Real-time observability for AI services: monitoring prompt latency, model performance, quality metrics, and safety events to ensure reliable AI in production.
@@ -61,7 +62,7 @@ title: Home
   <h2 style="margin-bottom:1rem;">Latest from the Blog</h2>
   <div class="grid cards" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
     {% for post in site.posts limit:3 %}
-    <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1); background:white; transition: transform 0.3s, box-shadow 0.3s;"
+    <div class="post-card" style="padding:1rem; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1);; transition: transform 0.3s, box-shadow 0.3s;"
          onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.2)';"
          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
       <h3 style="margin-bottom:0.5rem;"><a href="{{ post.url }}" style="color:#4f46e5; text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color='#4f46e5'">{{ post.title }}</a></h3>

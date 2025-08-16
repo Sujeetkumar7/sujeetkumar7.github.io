@@ -1,5 +1,6 @@
 ---
 title: Projects
+layout: post
 ---
 
 <h1 class="text-3xl font-bold mb-4">🚀 Projects</h1>
