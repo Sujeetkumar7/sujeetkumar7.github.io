@@ -2,20 +2,36 @@
 title: Home
 ---
 <!-- HERO SECTION -->
-<section class="hero" style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem; padding:3rem 1rem; color:#1f2937;">
-  <div style="flex:1; min-width:300px;">
-    <h1 style="font-size:2.5rem; margin-bottom:0.5rem;">Hi, I'm Sujeet — Senior Java & AI Specialist</h1>
-    <p class="small" style="font-size:1rem; opacity:0.85; margin-bottom:1rem;">
+<section class="hero" style="display:flex; flex-wrap:wrap; align-items:center; gap:3rem; padding:4rem 1rem; color:#1f2937; font-family:Arial, sans-serif;">
+
+  <!-- Left Content -->
+  <div style="flex:1; min-width:320px;">
+    <h1 style="font-size:2.8rem; margin-bottom:0.7rem; font-weight:700; line-height:1.2;">
+      👋 Hi, I'm <span style="color:#2563eb;">Sujeet</span> — Senior Java & AI Specialist
+    </h1>
+
+    <p class="small" style="font-size:1rem; opacity:0.85; margin-bottom:1.2rem; letter-spacing:0.3px;">
       Java • Spring Boot • Microservices • AWS • Kafka • PostgreSQL • AI/ML • NLP • Observability
     </p>
-    <p style="font-size:1.1rem; line-height:1.6; margin-bottom:1.5rem;">
-      I design and deliver intelligent backend systems with practical AI and ML integration. I mentor teams, enforce best practices, and build scalable solutions with measurable impact.
+    
+    <p style="font-size:1.15rem; line-height:1.7; margin-bottom:2rem; max-width:600px;">
+      I design and deliver <strong>scalable backend systems</strong> with practical 
+      <span style="color:#2563eb;">AI/ML integration</span>.  
+      I mentor teams, enforce engineering best practices, and build intelligent solutions with measurable impact.
     </p>
-    <p>
-      <a class="btn" href="/projects" style="background:#1f2937; color:white; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none; margin-right:10px;">View Projects</a>
-      <a class="btn ghost" href="/blog" style="background:transparent; border:2px solid #1f2937; color:#1f2937; padding:0.6rem 1.2rem; border-radius:8px; font-weight:600; text-decoration:none;">Read Blog</a>
-    </p>
-    <ul class="list-unstyled" style="margin-top:1.5rem; line-height:1.8;">
+    
+    <div style="margin-bottom:2rem;">
+      <a class="btn" href="/projects" 
+         style="background:#2563eb; color:white; padding:0.75rem 1.5rem; border-radius:10px; font-weight:600; text-decoration:none; margin-right:12px; transition:all 0.3s;">
+         🚀 View Projects
+      </a>
+      <a class="btn ghost" href="/blog" 
+         style="background:transparent; border:2px solid #2563eb; color:#2563eb; padding:0.75rem 1.5rem; border-radius:10px; font-weight:600; text-decoration:none; transition:all 0.3s;">
+         ✍️ Read Blog
+      </a>
+    </div>
+    
+    <ul class="list-unstyled" style="margin-top:1.5rem; line-height:1.9; font-size:1rem; list-style:none; padding-left:0;">
       <li>✅ Delivered 10+ production microservices with AI/ML components</li>
       <li>✅ Kafka streaming, idempotent event processing, distributed systems</li>
       <li>✅ Built AI pipelines: predictive analytics, NLP models, recommendation engines</li>
@@ -25,10 +41,29 @@ title: Home
     </ul>
   </div>
 
-  <div style="flex:1; min-width:250px; text-align:center;">
-    <img class="avatar" src="/assets/images/avatar-placeholder.png" alt="Developer avatar" style="border-radius:50%; max-width:200px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <!-- Right Avatar -->
+  <div style="flex:1; min-width:280px; text-align:center;">
+    <img class="avatar" src="/assets/images/avatar-placeholder.png" alt="Developer avatar" 
+         style="border-radius:50%; max-width:220px; box-shadow:0 8px 25px rgba(0,0,0,0.15); transition: transform 0.4s ease, box-shadow 0.4s ease;"
+         onmouseover="this.style.transform='scale(1.08) rotate(2deg)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.25)';"
+         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';">
   </div>
+
 </section>
+
+<!-- Small CSS for buttons hover -->
+<style>
+  .hero .btn:hover {
+    background:#1e40af !important;
+    color:white !important;
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  }
+  .hero .btn.ghost:hover {
+    background:#2563eb !important;
+    color:white !important;
+  }
+</style>
 
 <!-- VISITOR COUNTER -->
 {% include visitor-counter.html %}
