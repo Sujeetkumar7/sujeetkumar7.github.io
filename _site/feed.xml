@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-16T15:49:18+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sujeet Prajapati — Java Developer</title><subtitle>Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume.</subtitle><author><name>Sujeet Prajapati</name></author><entry><title type="html">Ultimate Java Learning Roadmap: From Classic to Latest Features</title><link href="http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap/" rel="alternate" type="text/html" title="Ultimate Java Learning Roadmap: From Classic to Latest Features" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap</id><content type="html" xml:base="http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap/"><![CDATA[<p>Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new features is crucial for writing robust, maintainable, and modern Java applications. Here’s a detailed roadmap to guide you.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-16T16:13:56+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sujeet Prajapati — Java Developer</title><subtitle>Senior Java developer portfolio: Spring Boot, Microservices, AWS, PostgreSQL, Kafka. Blog + Projects + Resume.</subtitle><author><name>Sujeet Prajapati</name></author><entry><title type="html">Ultimate Java Learning Roadmap: From Classic to Latest Features</title><link href="http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap/" rel="alternate" type="text/html" title="Ultimate Java Learning Roadmap: From Classic to Latest Features" /><published>2025-08-16T00:00:00+05:30</published><updated>2025-08-16T00:00:00+05:30</updated><id>http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap</id><content type="html" xml:base="http://localhost:4000/java-learning/2025/08/16/ultimate-java-learning-roadmap/"><![CDATA[<p>Java is constantly evolving. Whether you’re a beginner or an experienced developer, understanding both old and new features is crucial for writing robust, maintainable, and modern Java applications. Here’s a detailed roadmap to guide you.</p>
 
 <hr />
 
@@ -176,7 +176,7 @@ In this guide, we explore <strong>primitive types</strong>, <strong>wrapper clas
 </code></pre></div></div>
 
 <div class="tip">
- <strong>Tips:</strong>
+<strong>Tips:</strong>
 <ul>
 <li>Use descriptive variable names: <code>userAge</code>, <code>totalSalary</code>.</li>
 <li>Initialize variables when declaring whenever possible.</li>
@@ -188,75 +188,75 @@ In this guide, we explore <strong>primitive types</strong>, <strong>wrapper clas
 
 <h2 id="2️⃣-primitive-data-types">2️⃣ Primitive Data Types</h2>
 
-<p>Java has <strong>8 primitive types</strong>:</p>
-
-<table>
+<div style="overflow-x:auto; margin: 1rem 0;">
+<table style="width:100%; border-collapse: collapse; min-width: 400px;">
   <thead>
     <tr>
-      <th>Type</th>
-      <th>Size</th>
-      <th>Default Value</th>
-      <th>Example</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Type</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Size</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Default Value</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Example</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>byte</td>
-      <td>1 byte</td>
-      <td>0</td>
-      <td><code class="language-plaintext highlighter-rouge">byte b = 10;</code></td>
+      <td style="border: 1px solid #ddd; padding: 8px;">byte</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">1 byte</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>byte b = 10;</code></td>
     </tr>
     <tr>
-      <td>short</td>
-      <td>2 bytes</td>
-      <td>0</td>
-      <td><code class="language-plaintext highlighter-rouge">short s = 100;</code></td>
+      <td style="border: 1px solid #ddd; padding: 8px;">short</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">2 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>short s = 100;</code></td>
     </tr>
     <tr>
-      <td>int</td>
-      <td>4 bytes</td>
-      <td>0</td>
-      <td><code class="language-plaintext highlighter-rouge">int i = 1000;</code></td>
+      <td style="border: 1px solid #ddd; padding: 8px;">int</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">4 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>int i = 1000;</code></td>
     </tr>
     <tr>
-      <td>long</td>
-      <td>8 bytes</td>
-      <td>0L</td>
-      <td><code class="language-plaintext highlighter-rouge">long l = 10000L;</code></td>
+      <td style="border: 1px solid #ddd; padding: 8px;">long</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">8 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0L</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>long l = 10000L;</code></td>
     </tr>
     <tr>
-      <td>float</td>
-      <td>4 bytes</td>
-      <td>0.0f</td>
-      <td><code class="language-plaintext highlighter-rouge">float f = 10.5f;</code></td>
+      <td style="border: 1px solid #ddd; padding: 8px;">float</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">4 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0.0f</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>float f = 10.5f;</code></td>
     </tr>
     <tr>
-      <td>double</td>
-      <td>8 bytes</td>
-      <td>0.0d</td>
-      <td><code class="language-plaintext highlighter-rouge">double d = 99.99;</code></td>
+      <td style="border: 1px solid #ddd; padding: 8px;">double</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">8 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0.0d</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>double d = 99.99;</code></td>
     </tr>
     <tr>
-      <td>char</td>
-      <td>2 bytes</td>
-      <td>‘\u0000’</td>
-      <td><code class="language-plaintext highlighter-rouge">char c = 'A';</code></td>
+      <td style="border: 1px solid #ddd; padding: 8px;">char</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">2 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">'\u0000'</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>char c = 'A';</code></td>
     </tr>
     <tr>
-      <td>boolean</td>
-      <td>1 bit</td>
-      <td>false</td>
-      <td><code class="language-plaintext highlighter-rouge">boolean flag = true;</code></td>
+      <td style="border: 1px solid #ddd; padding: 8px;">boolean</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">1 bit</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">false</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>boolean flag = true;</code></td>
     </tr>
   </tbody>
 </table>
+</div>
 
 <h3 id="primitive-type-hierarchy-mermaid-diagram">Primitive Type Hierarchy (Mermaid Diagram)</h3>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Byte</span> <span class="o">--&gt;</span> <span class="nc">Short</span> <span class="o">--&gt;</span> <span class="nc">Int</span> <span class="o">--&gt;</span> <span class="nc">Long</span> <span class="o">--&gt;</span> <span class="nc">Float</span> <span class="o">--&gt;</span> <span class="nc">Double</span>
-<span class="nc">Char</span> <span class="o">--&gt;</span> <span class="nc">Int</span>
-<span class="nc">Boolean</span> <span class="o">--&gt;</span> <span class="nc">Boolean</span>
-</code></pre></div></div>
+<pre><code class="language-mermaid">Byte --&gt; Short --&gt; Int --&gt; Long --&gt; Float --&gt; Double
+Char --&gt; Int
+Boolean --&gt; Boolean
+</code></pre>
 
 <div class="tip">
 <strong>Best Practices:</strong>
@@ -273,48 +273,50 @@ In this guide, we explore <strong>primitive types</strong>, <strong>wrapper clas
 
 <p>Primitive types have <strong>object counterparts</strong>:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Primitive</th>
-      <th>Wrapper Class</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>byte</td>
-      <td>Byte</td>
-    </tr>
-    <tr>
-      <td>short</td>
-      <td>Short</td>
-    </tr>
-    <tr>
-      <td>int</td>
-      <td>Integer</td>
-    </tr>
-    <tr>
-      <td>long</td>
-      <td>Long</td>
-    </tr>
-    <tr>
-      <td>float</td>
-      <td>Float</td>
-    </tr>
-    <tr>
-      <td>double</td>
-      <td>Double</td>
-    </tr>
-    <tr>
-      <td>char</td>
-      <td>Character</td>
-    </tr>
-    <tr>
-      <td>boolean</td>
-      <td>Boolean</td>
-    </tr>
-  </tbody>
+<div style="overflow-x:auto; margin: 1rem 0;">
+<table style="width:100%; border-collapse: collapse; min-width: 300px;">
+<thead>
+<tr>
+<th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Primitive</th>
+<th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Wrapper Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">byte</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Byte</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">short</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Short</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">int</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Integer</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">long</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Long</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">float</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Float</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">double</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Double</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">char</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Character</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">boolean</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Boolean</td>
+</tr>
+</tbody>
 </table>
+</div>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
 <span class="nc">Integer</span> <span class="n">wrapperNum</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">num</span><span class="o">);</span> <span class="c1">// Boxing</span>
@@ -325,7 +327,7 @@ In this guide, we explore <strong>primitive types</strong>, <strong>wrapper clas
 </code></pre></div></div>
 
 <div class="tip">
- <strong>Why use wrappers?</strong>
+<strong>Why use wrappers?</strong>
 <ul>
 <li>Collections cannot store primitives (<code>ArrayList&lt;Integer&gt;</code> instead of <code>ArrayList&lt;int&gt;</code>).</li>
 <li>Utility methods: parsing, comparison, conversion.</li>
@@ -361,7 +363,7 @@ In this guide, we explore <strong>primitive types</strong>, <strong>wrapper clas
 </code></pre></div></div>
 
 <div class="tip">
- <strong>Tips:</strong>
+<strong>Tips:</strong>
 <ul>
 <li>Prefer implicit casting for safety.</li>
 <li>Avoid unnecessary explicit casting to prevent precision loss.</li>
@@ -437,8 +439,10 @@ Rounded Salary: 45000
   <li>Use <strong>primitives</strong> for performance, <strong>wrappers</strong> when objects are needed.</li>
   <li>Initialize variables and follow naming conventions.</li>
   <li>Use <strong>implicit casting</strong> where possible.</li>
-  <li>Watch for nulls and precision issues.</li>
+  <li>Watch for nulls and precision issues</li>
 </ul>
+
+<p>.</p>
 
 <hr />
 

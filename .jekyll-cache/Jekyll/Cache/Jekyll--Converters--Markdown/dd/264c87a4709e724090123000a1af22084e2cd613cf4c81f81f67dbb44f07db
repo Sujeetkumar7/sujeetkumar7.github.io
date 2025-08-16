@@ -1,0 +1,67 @@
+I"â<section class="hero" style="padding:2rem 1rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
+  <h2 style="font-size:1.8rem; font-weight:700; margin-bottom:2rem;">
+    Java 7 Tutorials
+  </h2>
+
+  <div class="video-gallery">
+
+    <!-- Video 1 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/rCfuYjpV42s?si=M418qZxyMJJeUV4_" title="Java 7 Course Overview" frameborder="0" allowfullscreen="">
+        </iframe>
+      </div>
+      <h4>1. Java 7 Course Overview</h4>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" title="Introduction to Java | Core Concepts" frameborder="0" allowfullscreen="">
+        </iframe>
+      </div>
+      <h4>2. Introduction to Java | Core Concepts</h4>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" title="First Step Towards Java Program" frameborder="0" allowfullscreen="">
+        </iframe>
+      </div>
+      <h4>3. First Step Towards Java Program</h4>
+    </div>
+
+    <!-- Video 4 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/exampleVideo4" title="Advanced Java Concepts" frameborder="0" allowfullscreen="">
+        </iframe>
+      </div>
+      <h4>4. Advanced Java Concepts</h4>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.video-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 videos per row */
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Responsive for tablets */
+@media (max-width: 1200px) {
+  .video-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .video-gallery {
+    grid-template-columns: 1fr; /* 1 vid*
+</style>
+:ET

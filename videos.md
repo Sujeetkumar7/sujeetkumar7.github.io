@@ -2,42 +2,107 @@
 title: Videos
 layout: default
 ---
-
 <!-- Main content area: Video Gallery -->
-<section class="hero" style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:2rem; padding:2rem 1rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-  <div style="flex:1; min-width:250px;">
+<div class="main-content">
 
-    <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:1rem;">Java 7 Tutorials</h2>
+<h2 style="text-align:center; margin-bottom: 2rem;">Java 7 Tutorials</h2>
 
-    <div class="video-gallery" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:flex-start;">
+  <div class="video-gallery">
 
-      <!-- Video 1 -->
-      <div style="flex:1 1 300px; min-width:250px; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+    <!-- Video 1 -->
+    <div class="video-card">
+      <div class="video-wrapper">
         <iframe src="https://www.youtube.com/embed/rCfuYjpV42s?si=M418qZxyMJJeUV4_" 
-          title="Java 7 Course Overview" frameborder="0" allowfullscreen
-          style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:10px;">
+          title="Java 7 Course Overview" allowfullscreen>
         </iframe>
-        <h4 style="text-align:center; margin-top:8px; font-weight:600;">1. Java 7 Course Overview</h4>
       </div>
-
-      <!-- Video 2 -->
-      <div style="flex:1 1 300px; min-width:250px; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
-        <iframe src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" 
-          title="Introduction to Java | Core Concepts" frameborder="0" allowfullscreen
-          style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:10px;">
-        </iframe>
-        <h4 style="text-align:center; margin-top:8px; font-weight:600;">2. Introduction to Java | Core Concepts</h4>
-      </div>
-
-      <!-- Video 3 -->
-      <div style="flex:1 1 300px; min-width:250px; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
-        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" 
-          title="First Step Towards Java Program" frameborder="0" allowfullscreen
-          style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:10px;">
-        </iframe>
-        <h4 style="text-align:center; margin-top:8px; font-weight:600;">3. First Step Towards Java Program</h4>
-      </div>
-
+      <h4>1. Java 7 Course Overview</h4>
     </div>
+
+    <!-- Video 2 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" 
+          title="Introduction to Java | Core Concepts" allowfullscreen>
+        </iframe>
+      </div>
+      <h4>2. Introduction to Java | Core Concepts</h4>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" 
+          title="First Step Towards Java Program" allowfullscreen>
+        </iframe>
+      </div>
+      <h4>3. First Step Towards Java Program</h4>
+    </div>
+
   </div>
-</section>
+
+</div>
+
+<style>
+/* Gallery Grid */
+.video-gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* single column on small screens */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) {
+  .video-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens (desktop) */
+@media (min-width: 1200px) {
+  .video-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra-large screens */
+@media (min-width: 1600px) {
+  .video-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Video Card */
+.video-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Video wrapper for 16:9 aspect ratio */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Video Title */
+.video-card h4 {
+  text-align: center;
+  margin: 8px 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+</style>

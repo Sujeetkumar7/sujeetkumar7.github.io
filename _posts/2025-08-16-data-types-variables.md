@@ -24,7 +24,7 @@ boolean isActive = true;
 ````
 
 <div class="tip">
- <strong>Tips:</strong>
+<strong>Tips:</strong>
 <ul>
 <li>Use descriptive variable names: <code>userAge</code>, <code>totalSalary</code>.</li>
 <li>Initialize variables when declaring whenever possible.</li>
@@ -36,22 +36,72 @@ boolean isActive = true;
 
 ## 2️⃣ Primitive Data Types
 
-Java has **8 primitive types**:
-
-| Type    | Size    | Default Value | Example                |
-| ------- | ------- | ------------- | ---------------------- |
-| byte    | 1 byte  | 0             | `byte b = 10;`         |
-| short   | 2 bytes | 0             | `short s = 100;`       |
-| int     | 4 bytes | 0             | `int i = 1000;`        |
-| long    | 8 bytes | 0L            | `long l = 10000L;`     |
-| float   | 4 bytes | 0.0f          | `float f = 10.5f;`     |
-| double  | 8 bytes | 0.0d          | `double d = 99.99;`    |
-| char    | 2 bytes | '\u0000'      | `char c = 'A';`        |
-| boolean | 1 bit   | false         | `boolean flag = true;` |
+<div style="overflow-x:auto; margin: 1rem 0;">
+<table style="width:100%; border-collapse: collapse; min-width: 400px;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Type</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Size</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Default Value</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">byte</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">1 byte</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>byte b = 10;</code></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">short</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">2 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>short s = 100;</code></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">int</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">4 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>int i = 1000;</code></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">long</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">8 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0L</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>long l = 10000L;</code></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">float</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">4 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0.0f</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>float f = 10.5f;</code></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">double</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">8 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">0.0d</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>double d = 99.99;</code></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">char</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">2 bytes</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">'\u0000'</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>char c = 'A';</code></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">boolean</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">1 bit</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">false</td>
+      <td style="border: 1px solid #ddd; padding: 8px;"><code>boolean flag = true;</code></td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ### Primitive Type Hierarchy (Mermaid Diagram)
 
-```java
+```mermaid
 Byte --> Short --> Int --> Long --> Float --> Double
 Char --> Int
 Boolean --> Boolean
@@ -72,16 +122,50 @@ Boolean --> Boolean
 
 Primitive types have **object counterparts**:
 
-| Primitive | Wrapper Class |
-| --------- | ------------- |
-| byte      | Byte          |
-| short     | Short         |
-| int       | Integer       |
-| long      | Long          |
-| float     | Float         |
-| double    | Double        |
-| char      | Character     |
-| boolean   | Boolean       |
+<div style="overflow-x:auto; margin: 1rem 0;">
+<table style="width:100%; border-collapse: collapse; min-width: 300px;">
+<thead>
+<tr>
+<th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Primitive</th>
+<th style="border: 1px solid #ddd; padding: 8px; text-align:left;">Wrapper Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">byte</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Byte</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">short</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Short</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">int</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Integer</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">long</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Long</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">float</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Float</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">double</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Double</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">char</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Character</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">boolean</td>
+<td style="border: 1px solid #ddd; padding: 8px;">Boolean</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ```java
 int num = 100;
@@ -93,7 +177,7 @@ int parsedNum = Integer.parseInt(str); // String -> int
 ```
 
 <div class="tip">
- <strong>Why use wrappers?</strong>
+<strong>Why use wrappers?</strong>
 <ul>
 <li>Collections cannot store primitives (<code>ArrayList&lt;Integer&gt;</code> instead of <code>ArrayList&lt;int&gt;</code>).</li>
 <li>Utility methods: parsing, comparison, conversion.</li>
@@ -132,7 +216,7 @@ Integer anotherInt = (int) d; // narrowing + boxing
 ```
 
 <div class="tip">
- <strong>Tips:</strong>
+<strong>Tips:</strong>
 <ul>
 <li>Prefer implicit casting for safety.</li>
 <li>Avoid unnecessary explicit casting to prevent precision loss.</li>
@@ -203,10 +287,13 @@ Rounded Salary: 45000
 
 ## 7️⃣ Key Takeaways
 
-- Use **primitives** for performance, **wrappers** when objects are needed.
-- Initialize variables and follow naming conventions. 
-- Use **implicit casting** where possible. 
-- Watch for nulls and precision issues.
+* Use **primitives** for performance, **wrappers** when objects are needed.
+* Initialize variables and follow naming conventions.
+* Use **implicit casting** where possible.
+* Watch for nulls and precision issues
+
+
+.
 
 ---
 

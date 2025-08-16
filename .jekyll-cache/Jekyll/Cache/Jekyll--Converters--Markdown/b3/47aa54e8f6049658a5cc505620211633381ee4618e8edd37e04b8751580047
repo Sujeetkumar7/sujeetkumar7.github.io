@@ -1,0 +1,109 @@
+I"Å
+<section class="hero" style="padding:2rem 1rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
+  <h2 style="font-size:1.8rem; font-weight:70; margin-bottom:2rem;">
+    Java 7 Tutorials
+  </h2>
+
+  <div class="video-gallery" style="
+      display:grid;
+      grid-template-columns: 1fr; /* single column by default */
+      gap:1.5rem;
+      max-width:1200px;
+      margin:0 auto; /* center the grid */
+  ">
+
+    <!-- Video 1 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/rCfuYjpV42s?si=M418qZxyMJJeUV4_" title="Java 7 Course Overview" frameborder="0" allowfullscreen="">
+        </iframe>
+      </div>
+      <h4>1. Java 7 Course Overview</h4>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/fqSknFfWVJk?si=DzDCYhwPOnc0WksG" title="Introduction to Java | Core Concepts" frameborder="0" allowfullscreen="">
+        </iframe>
+      </div>
+      <h4>2. Introduction to Java | Core Concepts</h4>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube-nocookie.com/embed/oAEcUft7SsM?si=msbw9dXH5syVcKrA" title="First Step Towards Java Program" frameborder="0" allowfullscreen="">
+        </iframe>
+      </div>
+      <h4>3. First Step Towards Java Program</h4>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.video-gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* one column by default */
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .video-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .video-gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+  }
+}
+
+/* Video card styling */
+.video-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.video-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover .video-wrapper iframe {
+  transform: scale(1.02);
+}
+
+.video-card h4 {
+  text-align: center;
+  margin: 12px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+</style>
+
+:ET
